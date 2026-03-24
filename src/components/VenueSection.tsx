@@ -5,6 +5,7 @@ import ucsfImg from "@/assets/venues/ucsf.jpg";
 const venues = [
   {
     name: "Stanford University",
+    day: "Day 1",
     tracks: "Opening Keynote · Aviation & Entrepreneurship",
     description:
       "Where research meets commercialization at the heart of Silicon Valley",
@@ -12,6 +13,7 @@ const venues = [
   },
   {
     name: "UC Berkeley",
+    day: "Day 2",
     tracks: "Space · Engineering · Advanced Systems",
     description:
       "Deep technical exploration across space technologies and infrastructure",
@@ -19,6 +21,7 @@ const venues = [
   },
   {
     name: "UCSF",
+    day: "Day 3",
     tracks: "BioSpace · Frontier Applications · Closing Gala",
     description:
       "Where space meets life sciences, health, and future human systems",
@@ -53,6 +56,9 @@ export const VenueSection = () => {
                 />
               </div>
               <div className="p-6 sm:p-8">
+                <span className="inline-block font-mono text-[10px] tracking-[0.2em] uppercase bg-navy text-navy-foreground px-3 py-1 rounded-sm mb-3">
+                  {venue.day}
+                </span>
                 <h3 className="text-lg sm:text-xl font-semibold tracking-tight text-foreground mb-2">
                   {venue.name}
                 </h3>
