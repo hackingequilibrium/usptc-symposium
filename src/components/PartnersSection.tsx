@@ -2,6 +2,7 @@ import usptcLogo from "@/assets/partners/usptc.png";
 import polsvLogo from "@/assets/partners/polsv.png";
 import taubeLogo from "@/assets/partners/taube.png";
 import top500Logo from "@/assets/partners/top500.webp";
+import embassyLogo from "@/assets/partners/embassy.png";
 
 const partnerCategories = [
   {
@@ -21,8 +22,7 @@ const partnerCategories = [
   {
     label: "Honorary Patrons",
     partners: [
-      { name: "Minister of Digital Affairs – Republic of Poland", logo: null },
-      { name: "NCBR – National Centre for Research and Development", logo: null },
+      { name: "Embassy of the Republic of Poland in Washington, D.C.", logo: embassyLogo },
     ],
   },
 ];
