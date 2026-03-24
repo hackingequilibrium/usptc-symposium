@@ -34,7 +34,7 @@ const venues = [
 
 export const VenueSection = () => {
   return (
-    <section className="py-24 sm:py-32 bg-navy">
+    <section id="venues" className="py-24 sm:py-32 bg-navy">
       <div className="container max-w-7xl mx-auto px-6 md:px-12">
         <p className="font-mono text-xs tracking-[0.3em] uppercase text-navy-foreground/60 mb-4">
           Venues
