@@ -12,8 +12,15 @@ export default {
         "2xl": "1400px",
       },
     },
+    fontFamily: {
+      serif: ['DM Serif Display', 'Georgia', 'serif'],
+      sans: ['DM Sans', 'system-ui', 'sans-serif'],
+      mono: ['JetBrains Mono', 'monospace'],
+    },
     extend: {
       colors: {
+        "accent-pink": "hsl(var(--accent-pink))",
+        "accent-blue": "hsl(var(--accent-blue))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
