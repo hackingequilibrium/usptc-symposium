@@ -7,7 +7,7 @@ export const HeroSection = () => {
   return (
     <section className="relative isolate min-h-screen flex items-center overflow-hidden bg-background">
       {/* Gradient shifted to the right half */}
-      <div className="absolute top-0 right-0 bottom-0 w-[60%]">
+      <div className="absolute top-0 right-0 bottom-0 w-[70%]" style={{ maskImage: 'linear-gradient(to right, transparent 0%, black 40%)', WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%)' }}>
         <AnimatedGradient />
         <div className="absolute inset-0 noise-overlay pointer-events-none" />
       </div>
@@ -61,7 +61,7 @@ export const HeroSection = () => {
           <img
             src={astronaut}
             alt="Astronaut floating in space"
-            className="w-[60%] max-w-sm object-contain drop-shadow-2xl relative z-10 animate-float"
+            className="w-full max-w-md object-contain drop-shadow-2xl relative z-10 animate-float"
           />
         </div>
       </div>
