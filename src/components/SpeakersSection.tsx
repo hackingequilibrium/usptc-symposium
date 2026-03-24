@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import slawoszImg from "@/assets/speakers/slawosz.jpg";
 import honorataImg from "@/assets/speakers/honorata.jpg";
+import dominikImg from "@/assets/speakers/dominik.png";
 
 const speakers = [
   {
@@ -10,7 +11,8 @@ const speakers = [
   },
   {
     name: "Dominik Schmidt",
-    role: "Aerospace Engineering",
+    role: "Translarity",
+    image: dominikImg,
   },
   {
     name: "Sławosz Uznański-Wiśniewski",
