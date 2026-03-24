@@ -5,7 +5,7 @@ export const CTASection = () => {
   return (
     <section id="register" className="relative py-24 sm:py-32 overflow-hidden bg-navy">
       <div className="absolute inset-0 noise-overlay pointer-events-none opacity-30" />
-      <div className="container max-w-3xl mx-auto px-6 text-center relative z-10">
+      <div className="container max-w-5xl mx-auto px-6 text-left relative z-10">
         {/* Eyebrow */}
         <p className="font-mono text-xs sm:text-sm tracking-[0.25em] uppercase text-navy-foreground/50 mb-6">
           Registration
@@ -17,7 +17,7 @@ export const CTASection = () => {
         </h2>
 
         {/* Value line */}
-        <p className="text-navy-foreground/70 text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+        <p className="text-navy-foreground/70 text-base sm:text-lg max-w-xl mb-10 leading-relaxed">
           Be part of a three-day experience across Stanford, UC Berkeley, and UCSF, connecting leaders in aviation, space, and advanced technologies.
         </p>
 
@@ -38,7 +38,7 @@ export const CTASection = () => {
         </p>
 
         {/* Trust signals */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-navy-foreground/60 text-sm mb-10">
+        <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-8 text-navy-foreground/60 text-sm mb-10">
           <span className="flex items-center gap-2">
             <CalendarDays className="w-4 h-4" />
             June 1–3, 2026
