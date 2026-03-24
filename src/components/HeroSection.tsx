@@ -19,7 +19,7 @@ export const HeroSection = () => {
           <img src={usptcLogo} alt="US-Polish Trade Council" className="w-24 h-24 mb-8 object-contain" />
 
           {/* Overline */}
-          <p className="font-mono text-xs tracking-[0.3em] uppercase text-muted-foreground mb-8">
+          <p className="font-mono text-sm sm:text-base tracking-[0.2em] uppercase text-foreground/70 font-medium mb-8">
             Stanford University · UC Berkeley · UCSF
           </p>
 
