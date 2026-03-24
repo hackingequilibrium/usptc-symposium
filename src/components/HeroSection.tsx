@@ -24,7 +24,7 @@ export const HeroSection = () => {
           </p>
 
           {/* Title */}
-          <h1 className="text-4xl sm:text-5xl md:text-7xl leading-[1.05] tracking-tight text-foreground mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl leading-[1.05] tracking-tight text-foreground mb-6">
             XXV US–Poland Science &<br />Technology Symposium
           </h1>
 
