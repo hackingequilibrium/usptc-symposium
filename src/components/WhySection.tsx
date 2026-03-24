@@ -54,16 +54,16 @@ export const WhySection = () => {
           {pillars.map((pillar) => (
             <div
               key={pillar.title}
-              className={`group rounded-md ${pillar.bg} p-6 transition-all hover:scale-[1.02]`}
+              className={`group rounded-md ${pillar.bg} p-7 transition-all hover:scale-[1.02]`}
             >
               <pillar.icon
-                className="w-7 h-7 text-navy mb-4 transition-transform group-hover:scale-110"
+                className="w-8 h-8 text-navy mb-4 transition-transform group-hover:scale-110"
                 strokeWidth={1.5}
               />
-              <h3 className="font-sans text-sm font-semibold mb-2 text-navy">
+              <h3 className="font-sans text-base font-semibold mb-2 text-navy">
                 {pillar.title}
               </h3>
-              <p className="font-sans text-xs text-navy/60 leading-relaxed">
+              <p className="font-sans text-sm text-navy/60 leading-relaxed">
                 {pillar.description}
               </p>
             </div>
