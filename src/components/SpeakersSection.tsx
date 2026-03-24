@@ -43,7 +43,6 @@ const speakers = [
     role: "EECS at UC Berkeley",
     image: alexanderImg,
   },
-  },
 ];
 
 export const SpeakersSection = () => {
