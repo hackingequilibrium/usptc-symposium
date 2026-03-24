@@ -6,28 +6,28 @@ const pillars = [
     title: "Space Economy Expansion",
     description:
       "Satellite systems, launch innovation, and commercialization redefining global infrastructure",
-    bg: "bg-[hsl(355,90%,94%)]",
+    bg: "bg-gradient-to-br from-white to-[hsl(355,90%,94%)]",
   },
   {
     icon: Bot,
     title: "AI & Autonomous Systems",
     description:
       "AI-driven aviation, space operations, and next-gen decision systems",
-    bg: "bg-[hsl(216,60%,93%)]",
+    bg: "bg-gradient-to-br from-white to-[hsl(216,60%,93%)]",
   },
   {
     icon: Shield,
     title: "Security & Resilience",
     description:
       "Cybersecurity, dual-use technologies, and strategic infrastructure",
-    bg: "bg-[hsl(330,50%,93%)]",
+    bg: "bg-gradient-to-br from-white to-[hsl(330,50%,93%)]",
   },
   {
     icon: Scale,
     title: "Policy, Law & Governance",
     description:
       "Space regulation, international cooperation, and long-term implications",
-    bg: "bg-[hsl(200,55%,92%)]",
+    bg: "bg-gradient-to-br from-white to-[hsl(200,55%,92%)]",
   },
 ];
 
