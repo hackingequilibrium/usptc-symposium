@@ -5,6 +5,7 @@ import ucsfImg from "@/assets/venues/ucsf.jpg";
 const venues = [
   {
     name: "Stanford University",
+    day: "Day 1",
     tracks: "Opening Keynote · Aviation & Entrepreneurship",
     description:
       "Where research meets commercialization at the heart of Silicon Valley",
@@ -12,6 +13,7 @@ const venues = [
   },
   {
     name: "UC Berkeley",
+    day: "Day 2",
     tracks: "Space · Engineering · Advanced Systems",
     description:
       "Deep technical exploration across space technologies and infrastructure",
@@ -19,6 +21,7 @@ const venues = [
   },
   {
     name: "UCSF",
+    day: "Day 3",
     tracks: "BioSpace · Frontier Applications · Closing Gala",
     description:
       "Where space meets life sciences, health, and future human systems",
