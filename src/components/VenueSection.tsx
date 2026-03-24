@@ -10,6 +10,7 @@ const venues = [
     description:
       "Where research meets commercialization at the heart of Silicon Valley",
     image: stanfordImg,
+    bg: "bg-gradient-to-br from-white to-[hsl(355,90%,94%)]",
   },
   {
     name: "UC Berkeley",
@@ -18,6 +19,7 @@ const venues = [
     description:
       "Deep technical exploration across space technologies and infrastructure",
     image: berkeleyImg,
+    bg: "bg-gradient-to-br from-white to-[hsl(216,60%,93%)]",
   },
   {
     name: "UCSF",
@@ -26,6 +28,7 @@ const venues = [
     description:
       "Where space meets life sciences, health, and future human systems",
     image: ucsfImg,
+    bg: "bg-gradient-to-br from-white to-[hsl(330,50%,93%)]",
   },
 ];
 
