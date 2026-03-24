@@ -4,6 +4,7 @@ import honorataImg from "@/assets/speakers/honorata.jpg";
 import dominikImg from "@/assets/speakers/dominik.png";
 import annaImg from "@/assets/speakers/anna.jpg";
 import michalImg from "@/assets/speakers/michal.png";
+import jenniferImg from "@/assets/speakers/jennifer.jpg";
 
 const speakers = [
   {
@@ -33,7 +34,8 @@ const speakers = [
   },
   {
     name: "Jennifer Granholm",
-    role: "Energy & Technology",
+    role: "DGA Group",
+    image: jenniferImg,
   },
   {
     name: "Alexander Bayen",
