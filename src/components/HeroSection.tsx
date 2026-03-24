@@ -3,10 +3,9 @@ import { AnimatedGradient } from "@/components/AnimatedGradient";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+    <section className="relative isolate min-h-screen flex flex-col items-center justify-center overflow-hidden bg-background">
       <AnimatedGradient />
-      {/* Noise layer */}
-      <div className="absolute inset-0 -z-[5] noise-overlay pointer-events-none" />
+      <div className="absolute inset-0 z-[1] noise-overlay pointer-events-none" />
 
       <div className="container max-w-4xl mx-auto px-6 text-center relative z-10">
         {/* Overline */}
