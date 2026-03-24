@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import slawoszImg from "@/assets/speakers/slawosz.jpg";
 import honorataImg from "@/assets/speakers/honorata.jpg";
 import dominikImg from "@/assets/speakers/dominik.png";
+import annaImg from "@/assets/speakers/anna.jpg";
 
 const speakers = [
   {
@@ -21,7 +22,8 @@ const speakers = [
   },
   {
     name: "Anna Mikulska",
-    role: "Energy & Geopolitics",
+    role: "CGCN",
+    image: annaImg,
   },
   {
     name: "Michał Kurtyka",
