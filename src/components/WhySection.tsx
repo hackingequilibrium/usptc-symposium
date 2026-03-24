@@ -1,4 +1,5 @@
 import { Rocket, Bot, Shield, Scale } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 const pillars = [
   {
@@ -32,29 +33,53 @@ const pillars = [
 ];
 
 export const WhySection = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="why" className="bg-navy text-navy-foreground py-24 md:py-32">
+    <section id="why" ref={sectionRef} className="bg-navy text-navy-foreground py-24 md:py-32">
       <div className="container max-w-7xl mx-auto px-6 md:px-12">
         {/* Header */}
-        <p className="font-mono text-xs tracking-[0.3em] uppercase text-navy-foreground/50 mb-4">
-          Focus Areas
-        </p>
-        <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight mb-6">
-          Why Aviation & Space, Why Now
-        </h2>
-        <div className="w-16 h-px bg-navy-foreground/20 mb-8" />
-        <p className="font-sans text-lg sm:text-xl text-navy-foreground/75 max-w-2xl leading-relaxed mb-16">
-          Aviation and space are entering a new phase of rapid commercialization,
-          driven by AI, advanced materials, and global competition. This
-          symposium brings together the actors shaping what comes next.
-        </p>
+        <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+          <p className="font-mono text-xs tracking-[0.3em] uppercase text-navy-foreground/50 mb-4">
+            Focus Areas
+          </p>
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight mb-6">
+            Why Aviation & Space, Why Now
+          </h2>
+          <div className="w-16 h-px bg-navy-foreground/20 mb-8" />
+          <p className="font-sans text-lg sm:text-xl text-navy-foreground/75 max-w-2xl leading-relaxed mb-16">
+            Aviation and space are entering a new phase of rapid commercialization,
+            driven by AI, advanced materials, and global competition. This
+            symposium brings together the actors shaping what comes next.
+          </p>
+        </div>
 
         {/* Pillars grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {pillars.map((pillar) => (
+          {pillars.map((pillar, index) => (
             <div
               key={pillar.title}
-              className={`group rounded-md ${pillar.bg} p-7 transition-all hover:scale-[1.02]`}
+              className={`group rounded-md ${pillar.bg} p-7 transition-all hover:scale-[1.02] duration-600 ${
+                isVisible
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 translate-y-8'
+              }`}
+              style={{ transitionDelay: isVisible ? `${200 + index * 150}ms` : '0ms' }}
             >
               <pillar.icon
                 className="w-8 h-8 text-navy mb-4 transition-transform group-hover:scale-110"
