@@ -1,5 +1,6 @@
 import usptcLogo from "@/assets/partners/usptc.png";
 import polsvLogo from "@/assets/partners/polsv.png";
+import taubeLogo from "@/assets/partners/taube.png";
 
 const partnerCategories = [
   {
@@ -12,7 +13,7 @@ const partnerCategories = [
   {
     label: "Strategic Partner",
     partners: [
-      { name: "City of Warsaw", logo: null },
+      { name: "Taube Philanthropies", logo: taubeLogo },
     ],
   },
   {
