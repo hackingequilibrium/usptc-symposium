@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import slawoszImg from "@/assets/speakers/slawosz.jpg";
 import honorataImg from "@/assets/speakers/honorata.jpg";
 import dominikImg from "@/assets/speakers/dominik.png";
@@ -8,63 +9,58 @@ import jenniferImg from "@/assets/speakers/jennifer.jpg";
 import alexanderImg from "@/assets/speakers/alexander.jpg";
 
 const speakers = [
-  {
-    name: "Honorata Hencel",
-    role: "Boeing",
-    image: honorataImg,
-  },
-  {
-    name: "Dominik Schmidt",
-    role: "Translarity",
-    image: dominikImg,
-  },
-  {
-    name: "Sławosz Uznański-Wiśniewski",
-    role: "European Space Agency (ESA)",
-    image: slawoszImg,
-  },
-  {
-    name: "Anna Mikulska",
-    role: "CGCN",
-    image: annaImg,
-  },
-  {
-    name: "Michał Kurtyka",
-    role: "Organization for Economic Cooperation and Development",
-    image: michalImg,
-  },
-  {
-    name: "Jennifer Granholm",
-    role: "DGA Group",
-    image: jenniferImg,
-  },
-  {
-    name: "Alexander Bayen",
-    role: "EECS at UC Berkeley",
-    image: alexanderImg,
-  },
+  { name: "Honorata Hencel", role: "Boeing", image: honorataImg },
+  { name: "Dominik Schmidt", role: "Translarity", image: dominikImg },
+  { name: "Sławosz Uznański-Wiśniewski", role: "European Space Agency (ESA)", image: slawoszImg },
+  { name: "Anna Mikulska", role: "CGCN", image: annaImg },
+  { name: "Michał Kurtyka", role: "Organization for Economic Cooperation and Development", image: michalImg },
+  { name: "Jennifer Granholm", role: "DGA Group", image: jenniferImg },
+  { name: "Alexander Bayen", role: "EECS at UC Berkeley", image: alexanderImg },
 ];
 
 export const SpeakersSection = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.15 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="speakers" className="bg-background py-24 md:py-32">
+    <section id="speakers" ref={sectionRef} className="bg-background py-24 md:py-32">
       <div className="container max-w-7xl mx-auto px-6 md:px-12">
         {/* Header */}
-        <p className="font-mono text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4">
-          Featured Voices
-        </p>
-        <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight text-foreground mb-6">
-          Speakers
-        </h2>
-        <div className="w-16 h-px bg-foreground/20 mb-8" />
-        <p className="font-sans text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed mb-16">
-          Leaders across science, policy, industry, and innovation shaping the
-          future of aviation and space.
-        </p>
+        <div
+          className={`transition-all duration-800 ease-out ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+          }`}
+        >
+          <p className="font-mono text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4">
+            Featured Voices
+          </p>
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight text-foreground mb-6">
+            Speakers
+          </h2>
+          <div className="w-16 h-px bg-foreground/20 mb-8" />
+          <p className="font-sans text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed mb-16">
+            Leaders across science, policy, industry, and innovation shaping the
+            future of aviation and space.
+          </p>
+        </div>
 
         {/* Speaker grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {speakers.map((speaker) => {
+          {speakers.map((speaker, index) => {
             const initials = speaker.name
               .split(" ")
               .map((n) => n[0])
@@ -73,9 +69,11 @@ export const SpeakersSection = () => {
             return (
               <div
                 key={speaker.name}
-                className="group relative rounded-md bg-secondary overflow-hidden transition-all hover:scale-[1.02]"
+                className={`group relative rounded-md bg-secondary overflow-hidden transition-all duration-700 ease-out hover:scale-[1.02] ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+                style={{ transitionDelay: isVisible ? `${300 + index * 100}ms` : '0ms' }}
               >
-                {/* Avatar */}
                 <div className="aspect-[3/4] bg-gradient-to-br from-accent-blue/40 to-accent-pink/30 flex items-center justify-center">
                   {speaker.image ? (
                     <img
@@ -89,8 +87,6 @@ export const SpeakersSection = () => {
                     </span>
                   )}
                 </div>
-
-                {/* Info overlay */}
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 via-navy/60 to-transparent p-6 pt-16">
                   <h3 className="font-sans text-base font-semibold text-navy-foreground leading-snug">
                     {speaker.name}
@@ -106,7 +102,10 @@ export const SpeakersSection = () => {
           {/* View all speakers card */}
           <a
             href="#speakers"
-            className="group relative rounded-md bg-navy overflow-hidden flex flex-col items-center justify-center aspect-[3/4] transition-all hover:scale-[1.02] cursor-pointer"
+            className={`group relative rounded-md bg-navy overflow-hidden flex flex-col items-center justify-center aspect-[3/4] transition-all duration-700 ease-out hover:scale-[1.02] cursor-pointer ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+            style={{ transitionDelay: isVisible ? `${300 + speakers.length * 100}ms` : '0ms' }}
           >
             <div className="flex flex-col items-center gap-4">
               <div className="w-14 h-14 rounded-full border border-navy-foreground/20 flex items-center justify-center transition-transform group-hover:scale-110">
