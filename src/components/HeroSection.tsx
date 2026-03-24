@@ -61,7 +61,7 @@ export const HeroSection = () => {
           <img
             src={astronaut}
             alt="Astronaut floating in space"
-            className="w-[85%] max-w-lg object-contain drop-shadow-2xl relative z-10"
+            className="w-[60%] max-w-sm object-contain drop-shadow-2xl relative z-10 animate-float"
           />
         </div>
       </div>
