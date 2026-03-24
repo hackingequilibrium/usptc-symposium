@@ -1,5 +1,5 @@
 import usptcLogo from "@/assets/partners/usptc.png";
-import polsvLogo from "@/assets/partners/polsv.jpg";
+import polsvLogo from "@/assets/partners/polsv.png";
 
 const partnerCategories = [
   {
