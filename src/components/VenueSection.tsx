@@ -56,6 +56,9 @@ export const VenueSection = () => {
                 />
               </div>
               <div className="p-6 sm:p-8">
+                <span className="inline-block font-mono text-[10px] tracking-[0.2em] uppercase bg-navy text-navy-foreground px-3 py-1 rounded-sm mb-3">
+                  {venue.day}
+                </span>
                 <h3 className="text-lg sm:text-xl font-semibold tracking-tight text-foreground mb-2">
                   {venue.name}
                 </h3>
