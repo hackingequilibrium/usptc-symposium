@@ -48,7 +48,7 @@ export const VenueSection = () => {
           {venues.map((venue) => (
             <div
               key={venue.name}
-              className="group rounded-md overflow-hidden bg-card shadow-sm hover:shadow-md transition-shadow"
+              className={`group rounded-md overflow-hidden ${venue.bg} shadow-sm hover:shadow-md transition-all hover:scale-[1.02]`}
             >
               <div className="aspect-[3/2] overflow-hidden">
                 <img
