@@ -68,8 +68,8 @@ export const AnimatedGradient = ({ className = "" }: AnimatedGradientProps) => {
   return (
     <canvas
       ref={canvasRef}
-      className={`absolute inset-0 w-full h-full ${className}`}
-      style={{ zIndex: -10 }}
+      className={`absolute inset-0 h-full w-full pointer-events-none ${className}`}
+      style={{ zIndex: 0 }}
     />
   );
 };
