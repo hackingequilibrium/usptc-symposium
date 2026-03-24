@@ -73,7 +73,7 @@ export const SpeakersSection = () => {
                     <img
                       src={speaker.image}
                       alt={speaker.name}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-top"
                     />
                   ) : (
                     <span className="font-serif text-4xl text-foreground/25 select-none">
