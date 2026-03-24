@@ -28,15 +28,15 @@ const venues = [
 
 export const VenueSection = () => {
   return (
-    <section className="py-24 sm:py-32 border-t border-border">
+    <section className="py-24 sm:py-32 bg-navy">
       <div className="container max-w-7xl mx-auto px-6 md:px-12">
-        <p className="font-mono text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4">
+        <p className="font-mono text-xs tracking-[0.3em] uppercase text-navy-foreground/60 mb-4">
           Venues
         </p>
-        <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight text-foreground mb-6">
+        <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight text-navy-foreground mb-6">
           A Three-Campus Experience
         </h2>
-        <div className="w-16 h-px bg-foreground/20 mb-16" />
+        <div className="w-16 h-px bg-navy-foreground/20 mb-16" />
 
         <div className="grid md:grid-cols-3 gap-6">
           {venues.map((venue) => (
@@ -56,7 +56,7 @@ export const VenueSection = () => {
                 <h3 className="text-lg sm:text-xl font-semibold tracking-tight text-foreground mb-2">
                   {venue.name}
                 </h3>
-                <p className="font-mono text-xs tracking-wide text-accent-blue mb-3">
+                <p className="font-mono text-xs tracking-wide text-navy mb-3">
                   {venue.tracks}
                 </p>
                 <p className="text-sm text-muted-foreground leading-relaxed">
