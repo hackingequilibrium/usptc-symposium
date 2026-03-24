@@ -1,30 +1,66 @@
 import { Button } from "@/components/ui/button";
+import { CalendarDays, MapPin, Users } from "lucide-react";
 
 export const CTASection = () => {
   return (
-    <section id="register" className="relative py-24 sm:py-32 noise-overlay overflow-hidden">
-      <div
-        className="absolute inset-0 -z-10"
-        style={{
-          background:
-            "radial-gradient(ellipse 60% 80% at 50% 50%, hsl(216 60% 93% / 0.4), transparent 70%), radial-gradient(ellipse 50% 60% at 80% 30%, hsl(355 90% 94% / 0.3), transparent 60%), hsl(0 0% 100%)",
-        }}
-      />
+    <section id="register" className="relative py-24 sm:py-32 overflow-hidden bg-navy">
+      <div className="absolute inset-0 noise-overlay pointer-events-none opacity-30" />
       <div className="container max-w-3xl mx-auto px-6 text-center relative z-10">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl tracking-tight text-foreground mb-6">
-          Shape the future of<br />transatlantic innovation
-        </h2>
-        <p className="text-muted-foreground text-base sm:text-lg max-w-lg mx-auto mb-10 leading-relaxed">
-          Join leading researchers, founders, and policymakers at the intersection of US and Polish science & technology.
+        {/* Eyebrow */}
+        <p className="font-mono text-xs sm:text-sm tracking-[0.25em] uppercase text-navy-foreground/50 mb-6">
+          Registration
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button variant="hero" size="lg" className="px-10 py-6 rounded-sm">
-            Register Now
-          </Button>
-          <Button variant="hero-outline" size="lg" className="px-10 py-6 rounded-sm">
-            Become a Sponsor
-          </Button>
+
+        {/* Title */}
+        <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight text-navy-foreground mb-6 leading-[1.1]">
+          Join the XXV US–Poland<br />Science & Technology Symposium
+        </h2>
+
+        {/* Value line */}
+        <p className="text-navy-foreground/70 text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+          Be part of a three-day experience across Stanford, UC Berkeley, and UCSF, connecting leaders in aviation, space, and advanced technologies.
+        </p>
+
+        {/* Primary CTA */}
+        <div className="mb-3">
+          <a href="https://eventify.com" target="_blank" rel="noopener noreferrer">
+            <Button
+              variant="hero"
+              size="lg"
+              className="px-12 py-7 rounded-sm bg-navy-foreground text-navy hover:bg-navy-foreground/90 text-sm"
+            >
+              Register Now
+            </Button>
+          </a>
         </div>
+        <p className="text-navy-foreground/40 text-xs font-mono tracking-wide mb-10">
+          Secure registration via Eventify
+        </p>
+
+        {/* Trust signals */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-navy-foreground/60 text-sm mb-10">
+          <span className="flex items-center gap-2">
+            <CalendarDays className="w-4 h-4" />
+            June 1–3, 2026
+          </span>
+          <span className="flex items-center gap-2">
+            <MapPin className="w-4 h-4" />
+            Stanford · UC Berkeley · UCSF
+          </span>
+          <span className="flex items-center gap-2">
+            <Users className="w-4 h-4" />
+            Limited capacity
+          </span>
+        </div>
+
+        {/* Secondary CTA */}
+        <Button
+          variant="hero-outline"
+          size="lg"
+          className="px-10 py-6 rounded-sm border-navy-foreground/20 text-navy-foreground hover:bg-navy-foreground/10"
+        >
+          Partner with Us
+        </Button>
       </div>
     </section>
   );
