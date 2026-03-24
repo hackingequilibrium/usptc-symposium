@@ -3,6 +3,7 @@ import slawoszImg from "@/assets/speakers/slawosz.jpg";
 import honorataImg from "@/assets/speakers/honorata.jpg";
 import dominikImg from "@/assets/speakers/dominik.png";
 import annaImg from "@/assets/speakers/anna.jpg";
+import michalImg from "@/assets/speakers/michal.png";
 
 const speakers = [
   {
@@ -27,7 +28,8 @@ const speakers = [
   },
   {
     name: "Michał Kurtyka",
-    role: "Climate & Innovation Policy",
+    role: "Organization for Economic Cooperation and Development",
+    image: michalImg,
   },
   {
     name: "Jennifer Granholm",
