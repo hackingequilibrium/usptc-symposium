@@ -54,7 +54,7 @@ export const WhySection = () => {
     <section id="why" ref={sectionRef} className="bg-navy text-navy-foreground py-24 md:py-32">
       <div className="container max-w-7xl mx-auto px-6 md:px-12">
         {/* Header */}
-        <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+        <div className={`transition-all duration-800 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
           <p className="font-mono text-xs tracking-[0.3em] uppercase text-navy-foreground/50 mb-4">
             Focus Areas
           </p>
@@ -74,10 +74,10 @@ export const WhySection = () => {
           {pillars.map((pillar, index) => (
             <div
               key={pillar.title}
-              className={`group rounded-md ${pillar.bg} p-7 transition-all hover:scale-[1.02] duration-600 ${
+              className={`group rounded-md ${pillar.bg} p-7 transition-all duration-700 ease-out hover:scale-[1.02] ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
-                  : 'opacity-0 translate-y-8'
+                  : 'opacity-0 translate-y-10'
               }`}
               style={{ transitionDelay: isVisible ? `${200 + index * 150}ms` : '0ms' }}
             >
