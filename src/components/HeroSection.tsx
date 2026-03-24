@@ -4,13 +4,13 @@ import usptcLogo from "@/assets/usptc-logo.png";
 
 export const HeroSection = () => {
   return (
-    <section className="relative isolate min-h-screen flex flex-col items-center justify-center overflow-hidden bg-background">
+    <section className="relative isolate min-h-screen flex flex-col items-start justify-center overflow-hidden bg-background">
       <AnimatedGradient />
       <div className="absolute inset-0 z-[1] noise-overlay pointer-events-none" />
 
-      <div className="container max-w-4xl mx-auto px-6 text-center relative z-10">
+      <div className="container max-w-5xl mx-auto px-6 md:px-12 text-left relative z-10">
         {/* Logo */}
-        <img src={usptcLogo} alt="US-Polish Trade Council" className="w-24 h-24 mx-auto mb-8 object-contain" />
+        <img src={usptcLogo} alt="US-Polish Trade Council" className="w-24 h-24 mb-8 object-contain" />
 
         {/* Overline */}
         <p className="font-mono text-xs tracking-[0.3em] uppercase text-muted-foreground mb-8">
@@ -32,15 +32,15 @@ export const HeroSection = () => {
         </p>
 
         {/* Hairline */}
-        <div className="w-16 h-px bg-foreground/15 mx-auto mb-8" />
+        <div className="w-16 h-px bg-foreground/15 mb-8" />
 
         {/* Value prop */}
-        <p className="font-sans text-base sm:text-lg text-muted-foreground max-w-xl mx-auto mb-12 leading-relaxed">
+        <p className="font-sans text-base sm:text-lg text-muted-foreground max-w-xl mb-12 leading-relaxed">
           Where science meets commercialization across the US–Poland innovation ecosystem.
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="flex flex-col sm:flex-row items-start gap-4">
           <Button variant="hero" size="lg" className="px-10 py-6 rounded-sm">
             Register Now
           </Button>
