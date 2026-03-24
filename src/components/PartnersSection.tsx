@@ -1,6 +1,7 @@
 import usptcLogo from "@/assets/partners/usptc.png";
 import polsvLogo from "@/assets/partners/polsv.png";
 import taubeLogo from "@/assets/partners/taube.png";
+import top500Logo from "@/assets/partners/top500.webp";
 
 const partnerCategories = [
   {
@@ -11,9 +12,10 @@ const partnerCategories = [
     ],
   },
   {
-    label: "Strategic Partner",
+    label: "Strategic Partners",
     partners: [
       { name: "Taube Philanthropies", logo: taubeLogo },
+      { name: "Top 500 Innovators", logo: top500Logo },
     ],
   },
   {
@@ -43,13 +45,13 @@ export const PartnersSection = () => {
                 {category.partners.map((partner) => (
                   <div
                     key={partner.name}
-                    className="flex items-center justify-center rounded-md border border-border bg-white p-8 min-h-[120px] hover:shadow-md transition-shadow"
+                    className="flex items-center justify-center rounded-md border border-border bg-white p-4 min-h-[100px] hover:shadow-md transition-shadow"
                   >
                     {partner.logo ? (
                       <img
                         src={partner.logo}
                         alt={partner.name}
-                        className="max-h-16 object-contain"
+                        className="max-h-20 object-contain"
                       />
                     ) : (
                       <span className="text-sm font-semibold text-foreground text-center tracking-tight">
