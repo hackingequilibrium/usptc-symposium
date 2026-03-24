@@ -5,7 +5,11 @@ export const HeroSection = () => {
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden noise-overlay">
       {/* Gradient background */}
       <div
-        className="absolute inset-0 -z-10 bg-background"
+        className="absolute inset-0 -z-10"
+        style={{
+          background:
+            "radial-gradient(ellipse 80% 60% at 30% 20%, hsl(355 90% 94% / 0.5), transparent 60%), radial-gradient(ellipse 70% 50% at 70% 80%, hsl(216 60% 93% / 0.6), transparent 60%), hsl(0 0% 100%)",
+        }}
       />
 
       <div className="container max-w-4xl mx-auto px-6 text-center relative z-10">
