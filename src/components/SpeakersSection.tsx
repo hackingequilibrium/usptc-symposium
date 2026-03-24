@@ -5,6 +5,7 @@ import dominikImg from "@/assets/speakers/dominik.png";
 import annaImg from "@/assets/speakers/anna.jpg";
 import michalImg from "@/assets/speakers/michal.png";
 import jenniferImg from "@/assets/speakers/jennifer.jpg";
+import alexanderImg from "@/assets/speakers/alexander.jpg";
 
 const speakers = [
   {
@@ -39,7 +40,9 @@ const speakers = [
   },
   {
     name: "Alexander Bayen",
-    role: "AI & Transportation Systems",
+    role: "EECS at UC Berkeley",
+    image: alexanderImg,
+  },
   },
 ];
 
