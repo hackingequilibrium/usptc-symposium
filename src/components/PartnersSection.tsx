@@ -13,7 +13,7 @@ const partnerCategories = [
   {
     label: "Strategic Partner",
     partners: [
-      { name: "City of Warsaw", logo: null },
+      { name: "Taube Philanthropies", logo: taubeLogo },
     ],
   },
   {
