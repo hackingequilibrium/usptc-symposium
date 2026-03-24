@@ -20,10 +20,6 @@ const speakers = [
     role: "Aerospace Engineering",
   },
   {
-    name: "Sławosz Uznański-Wiśniewski",
-    role: "Astronaut & Researcher",
-  },
-  {
     name: "Anna Mikulska",
     role: "Energy & Geopolitics",
   },
