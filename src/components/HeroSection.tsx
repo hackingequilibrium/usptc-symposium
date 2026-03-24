@@ -25,7 +25,7 @@ export const HeroSection = () => {
 
           {/* Title */}
           <h1 className="text-4xl sm:text-5xl md:text-7xl leading-[1.05] tracking-tight text-foreground mb-6">
-            US–Poland Science &<br />Technology Symposium
+            XXV US–Poland Science &<br />Technology Symposium
           </h1>
 
           {/* Subtitle */}
