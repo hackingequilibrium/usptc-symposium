@@ -45,7 +45,7 @@ export const HeroSection = () => {
             Register Now
           </Button>
           <Button variant="hero-outline" size="lg" className="px-10 py-6 rounded-sm">
-            Apply / Partner / Sponsor
+            Partner with Us
           </Button>
         </div>
       </div>
