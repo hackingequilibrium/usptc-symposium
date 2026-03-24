@@ -1,17 +1,11 @@
 import { Button } from "@/components/ui/button";
+import { AnimatedGradient } from "@/components/AnimatedGradient";
 
 export const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-      {/* Gradient background */}
-      <div
-        className="absolute inset-0 -z-10"
-        style={{
-          background:
-            "radial-gradient(ellipse 80% 60% at 25% 15%, hsl(355 80% 90% / 0.7), transparent 55%), radial-gradient(ellipse 70% 55% at 75% 75%, hsl(216 70% 88% / 0.8), transparent 55%), hsl(0 0% 100%)",
-        }}
-      />
-      {/* Noise layer on top of gradient */}
+      <AnimatedGradient />
+      {/* Noise layer */}
       <div className="absolute inset-0 -z-[5] noise-overlay pointer-events-none" />
 
       <div className="container max-w-4xl mx-auto px-6 text-center relative z-10">
