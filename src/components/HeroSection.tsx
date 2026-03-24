@@ -15,7 +15,7 @@ export const HeroSection = () => {
       <div className="container max-w-4xl mx-auto px-6 text-center relative z-10">
         {/* Overline */}
         <p className="font-mono text-xs tracking-[0.3em] uppercase text-muted-foreground mb-8">
-          2026 · Stanford · Berkeley · UCSF
+          2026 · Stanford University · UC Berkeley · UCSF
         </p>
 
         {/* Title */}
