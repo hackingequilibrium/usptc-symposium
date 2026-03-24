@@ -6,24 +6,28 @@ const pillars = [
     title: "Space Economy Expansion",
     description:
       "Satellite systems, launch innovation, and commercialization redefining global infrastructure",
+    bg: "bg-[hsl(355,90%,94%)]",
   },
   {
     icon: Bot,
     title: "AI & Autonomous Systems",
     description:
       "AI-driven aviation, space operations, and next-gen decision systems",
+    bg: "bg-[hsl(216,60%,93%)]",
   },
   {
     icon: Shield,
     title: "Security & Resilience",
     description:
       "Cybersecurity, dual-use technologies, and strategic infrastructure",
+    bg: "bg-[hsl(330,50%,93%)]",
   },
   {
     icon: Scale,
     title: "Policy, Law & Governance",
     description:
       "Space regulation, international cooperation, and long-term implications",
+    bg: "bg-[hsl(200,55%,92%)]",
   },
 ];
 
@@ -46,20 +50,20 @@ export const WhySection = () => {
         </p>
 
         {/* Pillars grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {pillars.map((pillar) => (
             <div
               key={pillar.title}
-              className="group rounded-md border border-navy-foreground/10 bg-navy-foreground/[0.04] p-8 transition-colors hover:bg-navy-foreground/[0.08]"
+              className={`group rounded-md ${pillar.bg} p-6 transition-all hover:scale-[1.02]`}
             >
               <pillar.icon
-                className="w-8 h-8 text-accent-pink mb-5 transition-transform group-hover:scale-110"
+                className="w-7 h-7 text-navy mb-4 transition-transform group-hover:scale-110"
                 strokeWidth={1.5}
               />
-              <h3 className="font-sans text-lg font-medium mb-3 text-navy-foreground">
+              <h3 className="font-sans text-sm font-semibold mb-2 text-navy">
                 {pillar.title}
               </h3>
-              <p className="font-sans text-sm text-navy-foreground/60 leading-relaxed">
+              <p className="font-sans text-xs text-navy/60 leading-relaxed">
                 {pillar.description}
               </p>
             </div>
