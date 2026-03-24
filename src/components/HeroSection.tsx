@@ -28,6 +28,10 @@ export const HeroSection = () => {
           Opportunities in Aviation and Space
         </p>
 
+        <p className="font-mono text-sm tracking-wide text-foreground/70 mb-8">
+          June 1–3, 2026
+        </p>
+
         {/* Hairline */}
         <div className="w-16 h-px bg-foreground/15 mx-auto mb-8" />
 
