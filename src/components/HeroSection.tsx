@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { AnimatedGradient } from "@/components/AnimatedGradient";
+import usptcLogo from "@/assets/usptc-logo.png";
 
 export const HeroSection = () => {
   return (
@@ -8,6 +9,9 @@ export const HeroSection = () => {
       <div className="absolute inset-0 z-[1] noise-overlay pointer-events-none" />
 
       <div className="container max-w-4xl mx-auto px-6 text-center relative z-10">
+        {/* Logo */}
+        <img src={usptcLogo} alt="US-Polish Trade Council" className="w-24 h-24 mx-auto mb-8 object-contain" />
+
         {/* Overline */}
         <p className="font-mono text-xs tracking-[0.3em] uppercase text-muted-foreground mb-8">
           Stanford University · UC Berkeley · UCSF
