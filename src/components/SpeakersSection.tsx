@@ -1,9 +1,19 @@
 import { ArrowRight } from "lucide-react";
+import slawoszImg from "@/assets/speakers/slawosz.jpg";
 
 const speakers = [
   {
     name: "Honorata Hencel",
     role: "Space Policy & Strategy",
+  },
+  {
+    name: "Dominik Schmidt",
+    role: "Aerospace Engineering",
+  },
+  {
+    name: "Sławosz Uznański-Wiśniewski",
+    role: "European Space Agency (ESA)",
+    image: slawoszImg,
   },
   {
     name: "Dominik Schmidt",
