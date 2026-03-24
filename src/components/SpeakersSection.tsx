@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import slawoszImg from "@/assets/speakers/slawosz.jpg";
 
 const speakers = [
   {
@@ -11,7 +12,12 @@ const speakers = [
   },
   {
     name: "Sławosz Uznański-Wiśniewski",
-    role: "Astronaut & Researcher",
+    role: "European Space Agency (ESA)",
+    image: slawoszImg,
+  },
+  {
+    name: "Dominik Schmidt",
+    role: "Aerospace Engineering",
   },
   {
     name: "Anna Mikulska",
@@ -61,11 +67,19 @@ export const SpeakersSection = () => {
                 key={speaker.name}
                 className="group relative rounded-md bg-secondary overflow-hidden transition-all hover:scale-[1.02]"
               >
-                {/* Avatar placeholder */}
+                {/* Avatar */}
                 <div className="aspect-[3/4] bg-gradient-to-br from-accent-blue/40 to-accent-pink/30 flex items-center justify-center">
-                  <span className="font-serif text-4xl text-foreground/25 select-none">
-                    {initials}
-                  </span>
+                  {speaker.image ? (
+                    <img
+                      src={speaker.image}
+                      alt={speaker.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <span className="font-serif text-4xl text-foreground/25 select-none">
+                      {initials}
+                    </span>
+                  )}
                 </div>
 
                 {/* Info overlay */}
