@@ -14,7 +14,7 @@ export const HeroSection = () => {
 
       <div className="container max-w-7xl mx-auto px-6 md:px-12 relative z-10 flex items-center">
         {/* Left: Text content */}
-        <div className="w-full md:w-1/2 text-left">
+        <div className="w-full md:w-[70%] text-left">
           {/* Logo */}
           <img src={usptcLogo} alt="US-Polish Trade Council" className="w-24 h-24 mb-8 object-contain" />
 
@@ -57,7 +57,7 @@ export const HeroSection = () => {
         </div>
 
         {/* Right: Astronaut on gradient */}
-        <div className="hidden md:flex w-1/2 justify-center items-center relative">
+        <div className="hidden md:flex w-[30%] justify-center items-center relative">
           <img
             src={astronaut}
             alt="Astronaut floating in space"
