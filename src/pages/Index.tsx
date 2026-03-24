@@ -14,6 +14,7 @@ const Index = () => {
       <WhySection />
       <SpeakersSection />
       <VenueSection />
+      <PartnersSection />
       <CTASection />
       <Footer />
     </div>
