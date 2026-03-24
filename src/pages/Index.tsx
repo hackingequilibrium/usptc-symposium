@@ -1,5 +1,6 @@
 import { HeroSection } from "@/components/HeroSection";
 import { WhySection } from "@/components/WhySection";
+import { SpeakersSection } from "@/components/SpeakersSection";
 import { TracksSection } from "@/components/TracksSection";
 import { VenueSection } from "@/components/VenueSection";
 import { CTASection } from "@/components/CTASection";
