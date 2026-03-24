@@ -29,7 +29,7 @@ const partnerCategories = [
 
 export const PartnersSection = () => {
   return (
-    <section className="py-24 sm:py-32 bg-background">
+    <section id="partners" className="py-24 sm:py-32 bg-background">
       <div className="container max-w-7xl mx-auto px-6 md:px-12">
         <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight text-foreground mb-16">
           Partners

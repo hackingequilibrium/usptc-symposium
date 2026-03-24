@@ -33,7 +33,7 @@ const pillars = [
 
 export const WhySection = () => {
   return (
-    <section className="bg-navy text-navy-foreground py-24 md:py-32">
+    <section id="why" className="bg-navy text-navy-foreground py-24 md:py-32">
       <div className="container max-w-7xl mx-auto px-6 md:px-12">
         {/* Header */}
         <p className="font-mono text-xs tracking-[0.3em] uppercase text-navy-foreground/50 mb-4">

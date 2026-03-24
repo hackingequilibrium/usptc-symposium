@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 export const CTASection = () => {
   return (
-    <section className="relative py-24 sm:py-32 noise-overlay overflow-hidden">
+    <section id="register" className="relative py-24 sm:py-32 noise-overlay overflow-hidden">
       <div
         className="absolute inset-0 -z-10"
         style={{
