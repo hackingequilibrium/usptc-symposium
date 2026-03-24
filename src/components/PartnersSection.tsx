@@ -1,5 +1,6 @@
 import usptcLogo from "@/assets/partners/usptc.png";
 import polsvLogo from "@/assets/partners/polsv.png";
+import taubeLogo from "@/assets/partners/taube.png";
 
 const partnerCategories = [
   {
