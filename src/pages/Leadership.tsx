@@ -12,7 +12,7 @@ import magdalenaHImg from "@/assets/leaders/magdalena-hryb.jpg";
 import kamilaImg from "@/assets/leaders/kamila-krawic.png";
 
 const baseLeaders = [
-  { name: "Piotr Moncarz", role: "USPTC General Chair", image: piotrImg, linkedin: "#" },
+  { name: "Piotr Moncarz", role: "USPTC General Chair", image: piotrImg, linkedin: "https://www.linkedin.com/in/piotr-d-moncarz-ph-d-p-e-nae-8989a41/" },
   { name: "Jerzy Orkiszewski", role: "USPTC Co-Chair", image: jerzyImg, linkedin: "#" },
   { name: "Michał Bańka", role: "Warsaw University of Technology", image: michalBImg, linkedin: "#" },
   { name: "Jacek Chmielewski", role: "PolSV, Auburn University, Cracow University of Technology", image: jacekImg, linkedin: "#" },
