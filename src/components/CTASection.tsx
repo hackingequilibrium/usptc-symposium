@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CalendarDays, MapPin, Users } from "lucide-react";
+import { ContactDialog } from "@/components/ContactDialog";
 
 export const CTASection = () => {
   return (
