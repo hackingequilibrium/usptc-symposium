@@ -11,6 +11,7 @@ import patrickImg from "@/assets/leaders/patrick-consorti.png";
 import magdalenaHImg from "@/assets/leaders/magdalena-hryb.jpg";
 import kamilaImg from "@/assets/leaders/kamila-krawic.png";
 import janMImg from "@/assets/leaders/jan-murlewski.png";
+import alicjaImg from "@/assets/leaders/alicja-orkiszewski.webp";
 
 const baseLeaders = [
   { name: "Piotr Moncarz", role: "USPTC General Chair", image: piotrImg, linkedin: "https://www.linkedin.com/in/piotr-d-moncarz-ph-d-p-e-nae-8989a41/" },
@@ -21,7 +22,7 @@ const baseLeaders = [
   { name: "Magdalena Hryb", role: "Poznan University of Technology", image: magdalenaHImg, linkedin: "https://www.linkedin.com/in/magdalena-hryb-33b70155/" },
   { name: "Kamila Krawic", role: "PolSV", image: kamilaImg, linkedin: "" },
   { name: "Jan Murlewski", role: "PolSV", image: janMImg, linkedin: "https://www.linkedin.com/in/murlewski/" },
-  { name: "Paweł Jankowski", role: "Advisory Board", image: "", linkedin: "#" },
+  { name: "Alicja Orkiszewski", role: "Private practice", image: alicjaImg, linkedin: "https://www.linkedin.com/in/alicja-orkiszewski-md-phd-63563160/" },
   { name: "Ewa Mazur", role: "Advisory Board", image: "", linkedin: "#" },
   { name: "Marek Kamiński", role: "Advisory Board", image: "", linkedin: "#" },
   { name: "Joanna Wójcik", role: "Advisory Board", image: "", linkedin: "#" },
