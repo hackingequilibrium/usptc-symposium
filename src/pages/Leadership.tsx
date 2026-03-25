@@ -14,7 +14,7 @@ import janMImg from "@/assets/leaders/jan-murlewski.png";
 import alicjaImg from "@/assets/leaders/alicja-orkiszewski.webp";
 import annaTImg from "@/assets/leaders/anna-timofiejczuk.webp";
 import malgorzataTImg from "@/assets/leaders/malgorzata-tomaka.png";
-import mariuszTImg from "@/assets/leaders/mariusz-tomaka.jpg";
+import mariuszTImg from "@/assets/leaders/mariusz-tomaka.png";
 import cariaTImg from "@/assets/leaders/caria-tomczykowska.jpg";
 
 const baseLeaders = [
