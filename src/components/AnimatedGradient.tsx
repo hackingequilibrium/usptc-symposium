@@ -24,10 +24,10 @@ export const AnimatedGradient = ({ className = "" }: AnimatedGradientProps) => {
     window.addEventListener("resize", resize);
 
     const blobs = [
-      { x: 0.3, y: 0.55, r: 0.45, color: [230, 80, 120], speedX: 0.15, speedY: 0.1 },
-      { x: 0.7, y: 0.85, r: 0.5, color: [60, 120, 220], speedX: -0.12, speedY: 0.18 },
-      { x: 0.5, y: 0.75, r: 0.35, color: [210, 70, 140], speedX: 0.1, speedY: -0.14 },
-      { x: 0.2, y: 0.9, r: 0.3, color: [50, 100, 200], speedX: 0.18, speedY: -0.08 },
+      { x: 0.15, y: 0.5, r: 0.45, color: [240, 120, 150], speedX: 0.12, speedY: 0.08 },
+      { x: 0.8, y: 0.9, r: 0.5, color: [80, 140, 235], speedX: -0.1, speedY: 0.15 },
+      { x: 0.25, y: 0.8, r: 0.3, color: [245, 150, 170], speedX: 0.08, speedY: -0.12 },
+      { x: 0.75, y: 0.55, r: 0.35, color: [90, 155, 240], speedX: -0.14, speedY: -0.06 },
     ];
 
     const draw = () => {
