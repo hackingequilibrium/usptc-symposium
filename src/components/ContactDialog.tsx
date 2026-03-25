@@ -16,9 +16,10 @@ import { supabase } from "@/integrations/supabase/client";
 
 interface ContactDialogProps {
   children: React.ReactNode;
+  description?: string;
 }
 
-export const ContactDialog = ({ children }: ContactDialogProps) => {
+export const ContactDialog = ({ children, description = "Interested in sponsoring or partnering? Fill out the form and we'll be in touch." }: ContactDialogProps) => {
   const [open, setOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -70,7 +71,8 @@ export const ContactDialog = ({ children }: ContactDialogProps) => {
         <DialogHeader>
           <DialogTitle className="font-serif text-xl">Contact Us</DialogTitle>
           <DialogDescription>
-            Interested in sponsoring or partnering? Fill out the form and we'll be in touch.
+            {description}
+          </DialogDescription>
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4 mt-2">
