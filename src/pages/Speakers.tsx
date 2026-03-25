@@ -14,7 +14,7 @@ import alexanderImg from "@/assets/speakers/alexander.jpg";
 const baseSpeakers = [
   { name: "Honorata Hencel", role: "Boeing", image: honorataImg, linkedin: "https://www.linkedin.com/in/honorata-hencel-2528aa56/", virtual: false },
   { name: "Dominik Schmidt", role: "Translarity", image: dominikImg, linkedin: "https://www.linkedin.com/in/dominikschmidt/", virtual: false },
-  { name: "Sławosz Uznański-Wiśniewski", role: "European Space Agency (ESA)", image: slawoszImg, linkedin: "#", virtual: true },
+  { name: "Sławosz Uznański-Wiśniewski", role: "European Space Agency (ESA)", image: slawoszImg, linkedin: "https://www.linkedin.com/in/slawoszuznanski/", virtual: true },
   { name: "Anna Mikulska", role: "CGCN", image: annaImg, linkedin: "#", virtual: false },
   { name: "Michał Kurtyka", role: "OECD", image: michalImg, linkedin: "#", virtual: false },
   { name: "Jennifer Granholm", role: "DGA Group", image: jenniferImg, linkedin: "#", virtual: false },
