@@ -14,6 +14,7 @@ import janMImg from "@/assets/leaders/jan-murlewski.png";
 import alicjaImg from "@/assets/leaders/alicja-orkiszewski.webp";
 import annaTImg from "@/assets/leaders/anna-timofiejczuk.webp";
 import malgorzataTImg from "@/assets/leaders/malgorzata-tomaka.png";
+import mariuszTImg from "@/assets/leaders/mariusz-tomaka.jpg";
 
 const baseLeaders = [
   { name: "Piotr Moncarz", role: "USPTC General Chair", image: piotrImg, linkedin: "https://www.linkedin.com/in/piotr-d-moncarz-ph-d-p-e-nae-8989a41/" },
@@ -27,7 +28,7 @@ const baseLeaders = [
   { name: "Alicja Orkiszewski", role: "Private practice", image: alicjaImg, linkedin: "https://www.linkedin.com/in/alicja-orkiszewski-md-phd-63563160/" },
   { name: "Anna Timofiejczuk", role: "PolSV, Silesian University of Technology", image: annaTImg, linkedin: "https://www.linkedin.com/in/anna-timofiejczuk-3a5a9a244/" },
   { name: "Małgorzata Tomaka", role: "US-Polish Trade Council / Fieldfisher Poland", image: malgorzataTImg, linkedin: "https://www.linkedin.com/in/ma%C5%82gorzata-tomaka/?locale=en" },
-  { name: "Joanna Wójcik", role: "Advisory Board", image: "", linkedin: "#" },
+  { name: "Mariusz Tomaka", role: "US-Polish Trade Council, Tritem", image: mariuszTImg, linkedin: "https://www.linkedin.com/in/mariusztomaka/" },
   { name: "Krzysztof Szymański", role: "Advisory Board", image: "", linkedin: "#" },
   { name: "Barbara Dąbrowska", role: "Advisory Board", image: "", linkedin: "#" },
   { name: "Adam Olszewski", role: "Advisory Board", image: "", linkedin: "#" },
