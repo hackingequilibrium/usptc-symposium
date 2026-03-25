@@ -68,11 +68,11 @@ const Speakers = () => {
               </div>
 
               {/* Info overlay */}
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 via-navy/60 to-transparent p-3 pt-10">
-                <h3 className="font-sans text-xs sm:text-sm font-semibold text-navy-foreground leading-snug">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 via-navy/60 to-transparent p-3 pb-4 pt-10">
+                <h3 className="font-sans text-xs sm:text-sm font-semibold text-navy-foreground leading-snug pr-9">
                   {speaker.name}
                 </h3>
-                <p className="font-sans text-[10px] sm:text-xs text-navy-foreground/60 mt-0.5">
+                <p className="font-sans text-[10px] sm:text-xs text-navy-foreground/60 mt-0.5 pr-9">
                   {speaker.role}
                 </p>
               </div>
@@ -82,10 +82,10 @@ const Speakers = () => {
                 href={speaker.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute bottom-2 right-2 w-7 h-7 rounded-sm bg-navy-foreground/10 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-navy-foreground/20 z-10"
+                className="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-sm bg-[#0A66C2] flex items-center justify-center transition-opacity hover:brightness-110 z-10"
                 aria-label={`${speaker.name} on LinkedIn`}
               >
-                <Linkedin className="w-3.5 h-3.5 text-navy-foreground" />
+                <Linkedin className="w-3.5 h-3.5 text-white fill-white" />
               </a>
             </div>
           ))}
