@@ -41,6 +41,48 @@ export type Database = {
         }
         Relationships: []
       }
+      partnership_inquiries: {
+        Row: {
+          areas_of_interest: string[]
+          created_at: string
+          description: string | null
+          email: string
+          id: string
+          linkedin: string | null
+          name: string
+          org_type: string
+          organization: string
+          role_title: string | null
+          website: string | null
+        }
+        Insert: {
+          areas_of_interest?: string[]
+          created_at?: string
+          description?: string | null
+          email: string
+          id?: string
+          linkedin?: string | null
+          name: string
+          org_type: string
+          organization: string
+          role_title?: string | null
+          website?: string | null
+        }
+        Update: {
+          areas_of_interest?: string[]
+          created_at?: string
+          description?: string | null
+          email?: string
+          id?: string
+          linkedin?: string | null
+          name?: string
+          org_type?: string
+          organization?: string
+          role_title?: string | null
+          website?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
