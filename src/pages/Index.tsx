@@ -5,6 +5,7 @@ import { SpeakersSection } from "@/components/SpeakersSection";
 import { TracksSection } from "@/components/TracksSection";
 import { VenueSection } from "@/components/VenueSection";
 import { PartnersSection } from "@/components/PartnersSection";
+import { LeadershipSection } from "@/components/LeadershipSection";
 import { CTASection } from "@/components/CTASection";
 import { Footer } from "@/components/Footer";
 
