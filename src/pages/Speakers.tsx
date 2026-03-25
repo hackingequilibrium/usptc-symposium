@@ -21,8 +21,8 @@ const baseSpeakers = [
   { name: "Alexandre Bayen", role: "EECS at UC Berkeley", image: alexanderImg, linkedin: "https://www.linkedin.com/in/alexandre-bayen-8479598/", virtual: false },
 ];
 
-const speakers = Array.from({ length: 30 }, (_, i) => ({
-  ...baseSpeakers[i % baseSpeakers.length],
+const speakers = baseSpeakers.map((speaker, i) => ({
+  ...speaker,
   id: i,
 }));
 
