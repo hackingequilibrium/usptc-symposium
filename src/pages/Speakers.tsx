@@ -18,7 +18,7 @@ const baseSpeakers = [
   { name: "Anna Mikulska", role: "CGCN", image: annaImg, linkedin: "https://www.linkedin.com/in/anna-mikulska-410a846/", virtual: false },
   { name: "Michał Kurtyka", role: "OECD", image: michalImg, linkedin: "https://www.linkedin.com/in/kurtyka-michal/", virtual: false },
   { name: "Jennifer Granholm", role: "DGA Group", image: jenniferImg, linkedin: "https://www.linkedin.com/in/jennifergranholm/", virtual: false },
-  { name: "Alexander Bayen", role: "EECS at UC Berkeley", image: alexanderImg, linkedin: "#", virtual: false },
+  { name: "Alexandre Bayen", role: "EECS at UC Berkeley", image: alexanderImg, linkedin: "https://www.linkedin.com/in/alexandre-bayen-8479598/", virtual: false },
 ];
 
 const speakers = Array.from({ length: 30 }, (_, i) => ({
