@@ -214,8 +214,9 @@ const Partner = () => {
               </label>
               <div className="space-y-2">
                 {INTEREST_AREAS.map((area) => (
-                  <label
+                  <div
                     key={area}
+                    onClick={() => toggleInterest(area)}
                     className="flex items-center gap-3 cursor-pointer group"
                   >
                     <div
@@ -231,8 +232,8 @@ const Partner = () => {
                         </svg>
                       )}
                     </div>
-                    <span className="text-sm text-foreground/80">{area}</span>
-                  </label>
+                    <span className="text-sm text-foreground/80 select-none">{area}</span>
+                  </div>
                 ))}
               </div>
             </div>
