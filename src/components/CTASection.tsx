@@ -9,7 +9,7 @@ export const CTASection = () => {
   return (
     <section id="register" className="relative py-24 sm:py-32 overflow-hidden bg-background">
       {/* Gradient background */}
-      <div className="absolute top-0 right-0 bottom-0 w-[70%]" style={{ maskImage: 'linear-gradient(to right, transparent 0%, black 40%)', WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%)' }}>
+      <div className="absolute top-0 right-0 bottom-0 w-[70%] hidden md:block" style={{ maskImage: 'linear-gradient(to right, transparent 0%, black 40%)', WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%)' }}>
         <AnimatedGradient />
         <div className="absolute inset-0 noise-overlay pointer-events-none" />
       </div>
@@ -78,7 +78,7 @@ export const CTASection = () => {
             </div>
           </div>
 
-          {/* Right — poster */}
+          {/* Right — poster (desktop) */}
           <div className="hidden lg:block w-72 xl:w-96 shrink-0">
             <img
               src={symposiumPoster}
@@ -86,6 +86,15 @@ export const CTASection = () => {
               className="w-full rounded-md shadow-[0_10px_40px_-10px_hsl(var(--foreground)/0.15)]"
             />
           </div>
+        </div>
+
+        {/* Poster — mobile, below content */}
+        <div className="block lg:hidden mt-12">
+          <img
+            src={symposiumPoster}
+            alt="XXV US-Poland Science and Technology Symposium poster"
+            className="w-64 mx-auto rounded-md shadow-[0_10px_40px_-10px_hsl(var(--foreground)/0.15)]"
+          />
         </div>
       </div>
     </section>
