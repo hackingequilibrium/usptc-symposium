@@ -1,10 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { CalendarDays, MapPin, Users } from "lucide-react";
 import { ContactDialog } from "@/components/ContactDialog";
+import { AnimatedGradient } from "@/components/AnimatedGradient";
 
 export const CTASection = () => {
   return (
     <section id="register" className="relative py-24 sm:py-32 overflow-hidden bg-background">
+      {/* Gradient background — mirrored to the left */}
+      <div className="absolute top-0 left-0 bottom-0 w-[70%]" style={{ maskImage: 'linear-gradient(to left, transparent 0%, black 40%)', WebkitMaskImage: 'linear-gradient(to left, transparent 0%, black 40%)' }}>
+        <AnimatedGradient />
+        <div className="absolute inset-0 noise-overlay pointer-events-none" />
+      </div>
+
       <div className="container max-w-5xl mx-auto px-6 text-left relative z-10">
         {/* Eyebrow */}
         <p className="font-mono text-xs sm:text-sm tracking-[0.25em] uppercase text-muted-foreground mb-6">
@@ -57,7 +64,7 @@ export const CTASection = () => {
         <Button
           variant="hero-outline"
           size="lg"
-          className="px-10 py-6 rounded-sm border-foreground/20 text-foreground hover:bg-foreground/10"
+          className="px-10 py-6 rounded-sm border-2 border-foreground/40 text-foreground hover:bg-foreground/10"
         >
           Partner with Us
         </Button>
