@@ -1,37 +1,119 @@
+import { ArrowRight } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import piotrImg from "@/assets/leaders/piotr-moncarz.png";
+
 const leaders = [
-  { name: "Piotr Moncarz", role: "USPTC General Chair" },
-  { name: "Jerzy Orkiszewski", role: "USPTC Co-Chair" },
-  { name: "Michał Bańka", role: "Warsaw University of Technology" },
+  { name: "Piotr Moncarz", role: "USPTC General Chair", image: piotrImg },
+  { name: "Jerzy Orkiszewski", role: "USPTC Co-Chair", image: "" },
+  { name: "Michał Bańka", role: "Warsaw University of Technology", image: "" },
 ];
 
 export const LeadershipSection = () => {
-  return (
-    <section id="leadership" className="py-24 sm:py-32 bg-background">
-      <div className="container max-w-7xl mx-auto px-6 md:px-12">
-        <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight text-foreground mb-4">
-          Leadership & Advisory
-        </h2>
-        <p className="text-muted-foreground max-w-2xl mb-16 text-base sm:text-lg">
-          The Symposium is guided by leaders across academia, industry, and public institutions, shaping long-term US–Poland collaboration in science and technology.
-        </p>
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          {leaders.map((leader) => (
-            <div
-              key={leader.name}
-              className="rounded-md border border-border bg-card p-6 text-center hover:shadow-md transition-shadow"
-            >
-              <div className="w-16 h-16 rounded-full bg-muted mx-auto mb-4 flex items-center justify-center">
-                <span className="font-serif text-xl text-foreground">
-                  {leader.name.split(" ").map((n) => n[0]).join("")}
-                </span>
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.15 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section id="leadership" ref={sectionRef} className="bg-background py-24 md:py-32">
+      <div className="container max-w-7xl mx-auto px-6 md:px-12">
+        <div
+          className={`transition-all duration-800 ease-out ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+          }`}
+        >
+          <p className="font-mono text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4">
+            Guiding the Vision
+          </p>
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight text-foreground mb-6">
+            Leadership & Advisory
+          </h2>
+          <div className="w-16 h-px bg-foreground/20 mb-8" />
+          <p className="font-sans text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed mb-16">
+            The Symposium is guided by leaders across academia, industry, and
+            public institutions, shaping long-term US–Poland collaboration in
+            science and technology.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {leaders.map((leader, index) => {
+            const initials = leader.name
+              .split(" ")
+              .map((n) => n[0])
+              .join("");
+
+            return (
+              <div
+                key={leader.name}
+                className={`group relative rounded-md bg-secondary overflow-hidden transition-all duration-700 ease-out hover:scale-[1.02] ${
+                  isVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-10"
+                }`}
+                style={{
+                  transitionDelay: isVisible ? `${300 + index * 100}ms` : "0ms",
+                }}
+              >
+                <div className="aspect-[3/4] bg-gradient-to-br from-accent-blue/40 to-accent-pink/30 flex items-center justify-center">
+                  {leader.image ? (
+                    <img
+                      src={leader.image}
+                      alt={leader.name}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  ) : (
+                    <span className="font-serif text-4xl text-foreground/25 select-none">
+                      {initials}
+                    </span>
+                  )}
+                </div>
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 via-navy/60 to-transparent p-6 pt-16">
+                  <h3 className="font-sans text-base font-semibold text-navy-foreground leading-snug">
+                    {leader.name}
+                  </h3>
+                  <p className="font-sans text-sm text-navy-foreground/60 mt-1">
+                    {leader.role}
+                  </p>
+                </div>
               </div>
-              <h3 className="font-serif text-lg text-foreground mb-1">{leader.name}</h3>
-              <p className="font-mono text-xs tracking-wide uppercase text-muted-foreground">
-                {leader.role}
-              </p>
+            );
+          })}
+
+          {/* View All card */}
+          <div
+            className={`group relative rounded-md bg-navy overflow-hidden flex flex-col items-center justify-center aspect-[3/4] transition-all duration-700 ease-out hover:scale-[1.02] cursor-pointer ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
+            }`}
+            style={{
+              transitionDelay: isVisible
+                ? `${300 + leaders.length * 100}ms`
+                : "0ms",
+            }}
+          >
+            <div className="flex flex-col items-center gap-4">
+              <div className="w-14 h-14 rounded-full border border-navy-foreground/20 flex items-center justify-center transition-transform group-hover:scale-110">
+                <ArrowRight className="w-6 h-6 text-navy-foreground" />
+              </div>
+              <span className="font-sans text-sm font-semibold tracking-wide uppercase text-navy-foreground">
+                View All
+              </span>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
