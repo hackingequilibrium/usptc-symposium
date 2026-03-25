@@ -134,7 +134,7 @@ const Partner = () => {
           </div>
         ) : (
         <div>
-          <h2 className="font-serif text-2xl text-foreground mb-8">Express Interest in Partnership</h2>
+          <h2 className="font-serif text-2xl text-foreground mb-8"><h2 className="font-serif text-2xl text-foreground mb-8">Partner with Us</h2></h2>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Name */}
