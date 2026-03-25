@@ -8,7 +8,7 @@ const partnerCategories = [
   {
     label: "Organizers",
     partners: [
-      { name: "US-Polish Trade Council", logo: usptcLogo },
+      { name: "US-Polish Trade Council", logo: usptcLogo, url: "https://usptc.org/" },
       { name: "Poland in Silicon Valley Center", logo: polsvLogo },
       { name: "Taube Philanthropies", logo: taubeLogo },
     ],
@@ -42,24 +42,37 @@ export const PartnersSection = () => {
                 {category.label}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                {category.partners.map((partner) => (
-                  <div
-                    key={partner.name}
-                    className="flex items-center justify-center rounded-md border border-border bg-white p-4 min-h-[100px] hover:shadow-md transition-shadow"
-                  >
-                    {partner.logo ? (
-                      <img
-                        src={partner.logo}
-                        alt={partner.name}
-                        className="max-h-20 object-contain"
-                      />
-                    ) : (
-                      <span className="text-sm font-semibold text-foreground text-center tracking-tight">
-                        {partner.name}
-                      </span>
-                    )}
-                  </div>
-                ))}
+                {category.partners.map((partner) => {
+                  const content = partner.logo ? (
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className="max-h-20 object-contain"
+                    />
+                  ) : (
+                    <span className="text-sm font-semibold text-foreground text-center tracking-tight">
+                      {partner.name}
+                    </span>
+                  );
+
+                  const cardClass = "flex items-center justify-center rounded-md border border-border bg-white p-4 min-h-[100px] hover:shadow-md transition-shadow";
+
+                  return 'url' in partner && partner.url ? (
+                    <a
+                      key={partner.name}
+                      href={partner.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={cardClass}
+                    >
+                      {content}
+                    </a>
+                  ) : (
+                    <div key={partner.name} className={cardClass}>
+                      {content}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           ))}
