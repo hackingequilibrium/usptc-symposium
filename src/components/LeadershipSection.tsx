@@ -96,7 +96,7 @@ export const LeadershipSection = () => {
 
           {/* View All card */}
           <div
-            className={`group relative rounded-md bg-navy overflow-hidden flex flex-col items-center justify-center aspect-[3/4] transition-all duration-700 ease-out hover:scale-[1.02] cursor-pointer ${
+            className={`group relative rounded-md bg-navy border border-navy-foreground/20 overflow-hidden flex flex-col items-center justify-center aspect-[3/4] transition-all duration-700 ease-out hover:scale-[1.02] cursor-pointer ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-10"

@@ -7,7 +7,7 @@ export const CTASection = () => {
   return (
     <section id="register" className="relative py-24 sm:py-32 overflow-hidden bg-background">
       {/* Gradient background — mirrored to the left */}
-      <div className="absolute top-0 left-0 bottom-0 w-[70%]" style={{ maskImage: 'linear-gradient(to left, transparent 0%, black 40%)', WebkitMaskImage: 'linear-gradient(to left, transparent 0%, black 40%)' }}>
+      <div className="absolute top-0 right-0 bottom-0 w-[70%]" style={{ maskImage: 'linear-gradient(to right, transparent 0%, black 40%)', WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%)' }}>
         <AnimatedGradient />
         <div className="absolute inset-0 noise-overlay pointer-events-none" />
       </div>
