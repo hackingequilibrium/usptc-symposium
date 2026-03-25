@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { AnimatedGradient } from "@/components/AnimatedGradient";
 import usptcLogo from "@/assets/usptc-logo.png";
 import astronaut from "@/assets/astronaut.png";
+import drone from "@/assets/drone.png";
 
 export const HeroSection = () => {
   return (
@@ -58,6 +59,11 @@ export const HeroSection = () => {
 
         {/* Right: Astronaut on gradient */}
         <div className="hidden md:flex w-[30%] justify-center items-center relative">
+          <img
+            src={drone}
+            alt="Drone flying"
+            className="absolute -top-16 left-1/2 -translate-x-1/2 w-32 object-contain drop-shadow-xl z-20 animate-drift"
+          />
           <img
             src={astronaut}
             alt="Astronaut floating in space"
