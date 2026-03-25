@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import stanfordImg from "@/assets/venues/stanford.jpg";
 import berkeleyImg from "@/assets/venues/berkeley.jpg";
-import ucsfImg from "@/assets/venues/ucsf.jpg";
+import ucsfImg from "@/assets/ucsf.jpg";
 
 const venues = [
   {
