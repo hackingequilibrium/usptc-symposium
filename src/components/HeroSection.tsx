@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { AnimatedGradient } from "@/components/AnimatedGradient";
 import usptcLogo from "@/assets/usptc-logo.png";
@@ -53,9 +54,11 @@ export const HeroSection = () => {
                 Register Now
               </Button>
             </a>
-            <Button variant="hero-outline" size="lg" className="px-10 py-6 rounded-sm">
-              Partner with Us
-            </Button>
+            <Link to="/partner">
+              <Button variant="hero-outline" size="lg" className="px-10 py-6 rounded-sm">
+                Partner with Us
+              </Button>
+            </Link>
           </div>
         </div>
 
