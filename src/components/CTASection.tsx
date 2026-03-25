@@ -96,7 +96,6 @@ export const CTASection = () => {
             className="w-64 mx-auto rounded-md shadow-[0_10px_40px_-10px_hsl(var(--foreground)/0.15)]"
           />
         </div>
-        </div>
       </div>
     </section>
   );
