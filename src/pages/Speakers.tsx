@@ -21,16 +21,74 @@ const baseSpeakers = [
   { name: "Alexander Bayen", role: "EECS at UC Berkeley", image: alexanderImg, linkedin: "#" },
 ];
 
-// Repeat to get 30 speakers
 const speakers = Array.from({ length: 30 }, (_, i) => ({
   ...baseSpeakers[i % baseSpeakers.length],
   id: i,
 }));
 
+const SpeakerCard = ({ speaker, index }: { speaker: (typeof speakers)[0]; index: number }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  // Stagger within each row of 6
+  const colIndex = index % 6;
+
+  return (
+    <div
+      ref={ref}
+      className={`group relative rounded-md bg-secondary overflow-hidden transition-all duration-700 ease-out hover:scale-[1.02] ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}
+      style={{ transitionDelay: isVisible ? `${colIndex * 80}ms` : "0ms" }}
+    >
+      <div className="aspect-[3/4] bg-gradient-to-br from-accent-blue/40 to-accent-pink/30 flex items-center justify-center">
+        <img
+          src={speaker.image}
+          alt={speaker.name}
+          loading="lazy"
+          className="w-full h-full object-cover object-top"
+        />
+      </div>
+
+      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 via-navy/60 to-transparent p-3 pb-4 pt-10">
+        <h3 className="font-sans text-xs sm:text-sm font-semibold text-navy-foreground leading-snug pr-9">
+          {speaker.name}
+        </h3>
+        <p className="font-sans text-[10px] sm:text-xs text-navy-foreground/60 mt-0.5 pr-9">
+          {speaker.role}
+        </p>
+      </div>
+
+      <a
+        href={speaker.linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-sm flex items-center justify-center transition-opacity hover:brightness-110 z-10"
+        aria-label={`${speaker.name} on LinkedIn`}
+      >
+        <img src={linkedinIcon} alt="LinkedIn" className="w-7 h-7" />
+      </a>
+    </div>
+  );
+};
+
 const Speakers = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
       <div className="bg-navy py-20 sm:py-28">
         <div className="container max-w-7xl mx-auto px-6 md:px-12">
           <Link
@@ -52,41 +110,10 @@ const Speakers = () => {
         </div>
       </div>
 
-      {/* Grid */}
       <div className="container max-w-7xl mx-auto px-6 md:px-12 py-16">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-          {speakers.map((speaker) => (
-            <SpeakerCard key={speaker.id} speaker={speaker} />
-              <div className="aspect-[3/4] bg-gradient-to-br from-accent-blue/40 to-accent-pink/30 flex items-center justify-center">
-                <img
-                  src={speaker.image}
-                  alt={speaker.name}
-                  loading="lazy"
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-
-              {/* Info overlay */}
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 via-navy/60 to-transparent p-3 pb-4 pt-10">
-                <h3 className="font-sans text-xs sm:text-sm font-semibold text-navy-foreground leading-snug pr-9">
-                  {speaker.name}
-                </h3>
-                <p className="font-sans text-[10px] sm:text-xs text-navy-foreground/60 mt-0.5 pr-9">
-                  {speaker.role}
-                </p>
-              </div>
-
-              {/* LinkedIn icon */}
-              <a
-                href={speaker.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-sm flex items-center justify-center transition-opacity hover:brightness-110 z-10"
-                aria-label={`${speaker.name} on LinkedIn`}
-              >
-                <img src={linkedinIcon} alt="LinkedIn" className="w-7 h-7" />
-              </a>
-            </div>
+          {speakers.map((speaker, index) => (
+            <SpeakerCard key={speaker.id} speaker={speaker} index={index} />
           ))}
         </div>
       </div>
