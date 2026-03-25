@@ -12,9 +12,9 @@ import jenniferImg from "@/assets/speakers/jennifer.jpg";
 import alexanderImg from "@/assets/speakers/alexander.jpg";
 
 const baseSpeakers = [
-  { name: "Honorata Hencel", role: "Boeing", image: honorataImg, linkedin: "#" },
-  { name: "Dominik Schmidt", role: "Translarity", image: dominikImg, linkedin: "#" },
-  { name: "Sławosz Uznański-Wiśniewski", role: "European Space Agency (ESA)", image: slawoszImg, linkedin: "#" },
+  { name: "Honorata Hencel", role: "Boeing", image: honorataImg, linkedin: "#", virtual: false },
+  { name: "Dominik Schmidt", role: "Translarity", image: dominikImg, linkedin: "#", virtual: false },
+  { name: "Sławosz Uznański-Wiśniewski", role: "European Space Agency (ESA)", image: slawoszImg, linkedin: "#", virtual: true },
   { name: "Anna Mikulska", role: "CGCN", image: annaImg, linkedin: "#" },
   { name: "Michał Kurtyka", role: "OECD", image: michalImg, linkedin: "#" },
   { name: "Jennifer Granholm", role: "DGA Group", image: jenniferImg, linkedin: "#" },
