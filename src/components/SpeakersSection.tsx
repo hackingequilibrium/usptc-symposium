@@ -10,13 +10,13 @@ import jenniferImg from "@/assets/speakers/jennifer.jpg";
 import alexanderImg from "@/assets/speakers/alexander.jpg";
 
 const speakers = [
-  { name: "Honorata Hencel", role: "Boeing", image: honorataImg },
-  { name: "Dominik Schmidt", role: "Translarity", image: dominikImg },
-  { name: "Sławosz Uznański-Wiśniewski", role: "European Space Agency (ESA)", image: slawoszImg },
-  { name: "Anna Mikulska", role: "CGCN", image: annaImg },
-  { name: "Michał Kurtyka", role: "Organization for Economic Cooperation and Development", image: michalImg },
-  { name: "Jennifer Granholm", role: "DGA Group", image: jenniferImg },
-  { name: "Alexander Bayen", role: "EECS at UC Berkeley", image: alexanderImg },
+  { name: "Honorata Hencel", role: "Boeing", image: honorataImg, virtual: false },
+  { name: "Dominik Schmidt", role: "Translarity", image: dominikImg, virtual: false },
+  { name: "Sławosz Uznański-Wiśniewski", role: "European Space Agency (ESA)", image: slawoszImg, virtual: true },
+  { name: "Anna Mikulska", role: "CGCN", image: annaImg, virtual: false },
+  { name: "Michał Kurtyka", role: "Organization for Economic Cooperation and Development", image: michalImg, virtual: false },
+  { name: "Jennifer Granholm", role: "DGA Group", image: jenniferImg, virtual: false },
+  { name: "Alexander Bayen", role: "EECS at UC Berkeley", image: alexanderImg, virtual: false },
 ];
 
 export const SpeakersSection = () => {
@@ -75,6 +75,11 @@ export const SpeakersSection = () => {
                 }`}
                 style={{ transitionDelay: isVisible ? `${300 + index * 100}ms` : '0ms' }}
               >
+                {speaker.virtual && (
+                  <span className="absolute top-2 right-2 z-10 bg-accent-blue/90 text-navy-foreground text-[10px] font-mono font-semibold uppercase tracking-wider px-2 py-0.5 rounded-sm backdrop-blur-sm">
+                    Virtual
+                  </span>
+                )}
                 <div className="aspect-[3/4] bg-gradient-to-br from-accent-blue/40 to-accent-pink/30 flex items-center justify-center">
                   {speaker.image ? (
                     <img
