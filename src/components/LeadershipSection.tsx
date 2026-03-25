@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import piotrImg from "@/assets/leaders/piotr-moncarz.png";
 import jerzyImg from "@/assets/leaders/jerzy-orkiszewski.png";
