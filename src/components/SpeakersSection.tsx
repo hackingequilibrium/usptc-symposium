@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import slawoszImg from "@/assets/speakers/slawosz.jpg";
 import honorataImg from "@/assets/speakers/honorata.jpg";
-import dominikImg from "@/assets/speakers/dominik.png";
+import artImg from "@/assets/speakers/art.jpg";
 import annaImg from "@/assets/speakers/anna.jpg";
 import michalImg from "@/assets/speakers/michal.png";
 import jenniferImg from "@/assets/speakers/jennifer.jpg";
@@ -11,12 +11,12 @@ import alexanderImg from "@/assets/speakers/alexander.jpg";
 
 const speakers = [
   { name: "Honorata Hencel", role: "Boeing", image: honorataImg, virtual: false },
-  { name: "Dominik Schmidt", role: "Translarity", image: dominikImg, virtual: false },
+  { name: "Art (Artur) Chmielewski", role: "NASA", image: artImg, virtual: false },
   { name: "Sławosz Uznański-Wiśniewski", role: "European Space Agency (ESA)", image: slawoszImg, virtual: true },
   { name: "Anna Mikulska", role: "CGCN", image: annaImg, virtual: false },
   { name: "Michał Kurtyka", role: "Organization for Economic Cooperation and Development", image: michalImg, virtual: false },
   { name: "Jennifer Granholm", role: "DGA Group", image: jenniferImg, virtual: false },
-  { name: "Alexander Bayen", role: "EECS at UC Berkeley", image: alexanderImg, virtual: false },
+  { name: "Alexandre Bayen", role: "EECS at UC Berkeley", image: alexanderImg, virtual: false },
 ];
 
 export const SpeakersSection = () => {
