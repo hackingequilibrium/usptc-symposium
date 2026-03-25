@@ -291,6 +291,7 @@ const Partner = () => {
             </Button>
           </form>
         </div>
+        )}
       </div>
 
       <Footer />
