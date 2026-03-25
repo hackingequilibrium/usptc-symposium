@@ -92,6 +92,7 @@ const Speakers = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
