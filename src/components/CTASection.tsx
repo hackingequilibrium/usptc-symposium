@@ -76,7 +76,7 @@ export const CTASection = () => {
           </div>
 
           {/* Right — poster */}
-          <div className="hidden lg:block w-72 xl:w-80 shrink-0">
+          <div className="hidden lg:block w-72 xl:w-96 shrink-0">
             <img
               src={symposiumPoster}
               alt="XXV US-Poland Science and Technology Symposium poster"
