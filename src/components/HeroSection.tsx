@@ -48,9 +48,11 @@ export const HeroSection = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-start gap-4">
-            <Button variant="hero" size="lg" className="px-10 py-6 rounded-sm">
-              Register Now
-            </Button>
+            <a href="https://www.eventbrite.com/e/us-poland-science-and-technology-symposium-2026-tickets-1983374553681" target="_blank" rel="noopener noreferrer">
+              <Button variant="hero" size="lg" className="px-10 py-6 rounded-sm">
+                Register Now
+              </Button>
+            </a>
             <Button variant="hero-outline" size="lg" className="px-10 py-6 rounded-sm">
               Partner with Us
             </Button>

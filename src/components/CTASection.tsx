@@ -30,7 +30,7 @@ export const CTASection = () => {
             </p>
 
             <div className="mb-3">
-              <a href="https://eventify.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.eventbrite.com/e/us-poland-science-and-technology-symposium-2026-tickets-1983374553681" target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="hero"
                   size="lg"
