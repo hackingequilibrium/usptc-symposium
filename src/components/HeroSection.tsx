@@ -62,7 +62,7 @@ export const HeroSection = () => {
           <img
             src={drone}
             alt="Drone flying"
-            className="absolute top-4 left-1/4 -translate-x-1/2 w-32 object-contain drop-shadow-xl z-20 animate-drift"
+            className="absolute top-4 left-1/4 -translate-x-1/2 w-40 object-contain drop-shadow-xl z-20 animate-drift"
           />
           <img
             src={astronaut}
