@@ -28,7 +28,7 @@ const baseLeaders = [
   { name: "Jan Murlewski", role: "PolSV", image: janMImg, linkedin: "https://www.linkedin.com/in/murlewski/" },
   { name: "Alicja Orkiszewski", role: "Private practice", image: alicjaImg, linkedin: "https://www.linkedin.com/in/alicja-orkiszewski-md-phd-63563160/" },
   { name: "Anna Timofiejczuk", role: "PolSV, Silesian University of Technology", image: annaTImg, linkedin: "https://www.linkedin.com/in/anna-timofiejczuk-3a5a9a244/" },
-  { name: "Małgorzata Tomaka", role: "US-Polish Trade Council / Fieldfisher Poland", image: malgorzataTImg, linkedin: "https://www.linkedin.com/in/ma%C5%82gorzata-tomaka/?locale=en" },
+  { name: "Małgorzata Tomaka", role: "US-Polish Trade Council, Fieldfisher Poland", image: malgorzataTImg, linkedin: "https://www.linkedin.com/in/ma%C5%82gorzata-tomaka/?locale=en" },
   { name: "Mariusz Tomaka", role: "US-Polish Trade Council, Tritem", image: mariuszTImg, linkedin: "https://www.linkedin.com/in/mariusztomaka/" },
   { name: "Caria Tomczykowska", role: "US-Polish Trade Council", image: cariaTImg, linkedin: "https://www.linkedin.com/in/cariatomczykowska/" },
 ];
