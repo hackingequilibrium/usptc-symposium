@@ -36,7 +36,7 @@ const Admin = () => {
   const [error, setError] = useState("");
   const [tab, setTab] = useState<Tab>("contact");
 
-  const ADMIN_PASS = "usptc2026";
+  const ADMIN_PASS = "PolSV2026";
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
