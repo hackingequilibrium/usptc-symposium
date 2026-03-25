@@ -61,6 +61,7 @@ export const VenueSection = () => {
           <div className="w-16 h-px bg-navy-foreground/20 mb-16" />
         </div>
 
+
         <div className="grid md:grid-cols-3 gap-6">
           {venues.map((venue, index) => (
             <div
@@ -94,6 +95,15 @@ export const VenueSection = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className={`mt-12 text-center transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`} style={{ transitionDelay: isVisible ? '750ms' : '0ms' }}>
+          <a
+            href="/agenda"
+            className="inline-flex items-center gap-2 font-mono text-sm tracking-wide text-navy-foreground/80 hover:text-navy-foreground transition-colors underline underline-offset-4 decoration-navy-foreground/30 hover:decoration-navy-foreground/60"
+          >
+            View full agenda →
+          </a>
         </div>
       </div>
     </section>
