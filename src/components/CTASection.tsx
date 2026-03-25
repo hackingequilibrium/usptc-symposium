@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CalendarDays, MapPin, Users } from "lucide-react";
 import { ContactDialog } from "@/components/ContactDialog";
@@ -59,13 +60,15 @@ export const CTASection = () => {
               </span>
             </div>
 
-            <Button
-              variant="hero-outline"
-              size="lg"
-              className="px-10 py-6 rounded-sm border-2 border-foreground/40 text-foreground hover:bg-foreground/10"
-            >
-              Partner with Us
-            </Button>
+            <Link to="/partner">
+              <Button
+                variant="hero-outline"
+                size="lg"
+                className="px-10 py-6 rounded-sm border-2 border-foreground/40 text-foreground hover:bg-foreground/10"
+              >
+                Partner with Us
+              </Button>
+            </Link>
             <div className="mt-3">
               <ContactDialog>
                 <button className="text-muted-foreground hover:text-foreground text-xs font-mono tracking-wide underline underline-offset-4 transition-colors cursor-pointer">
