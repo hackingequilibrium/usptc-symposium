@@ -73,7 +73,6 @@ export const ContactDialog = ({ children, description = "Interested in sponsorin
           <DialogDescription>
             {description}
           </DialogDescription>
-          </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4 mt-2">
           <div className="space-y-2">
