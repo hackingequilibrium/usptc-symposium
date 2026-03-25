@@ -41,6 +41,7 @@ const Partner = () => {
     linkedin: "",
   });
   const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const toggleInterest = (area: string) => {
     setForm((prev) => ({
@@ -82,18 +83,7 @@ const Partner = () => {
       return;
     }
 
-    toast.success("Thank you! Your inquiry has been submitted.");
-    setForm({
-      name: "",
-      organization: "",
-      role_title: "",
-      email: "",
-      org_type: "",
-      areas_of_interest: [],
-      description: "",
-      website: "",
-      linkedin: "",
-    });
+    setSubmitted(true);
   };
 
   return (
@@ -129,7 +119,20 @@ const Partner = () => {
           </p>
         </div>
 
-        {/* Form */}
+        {submitted ? (
+          <div className="py-16 text-center space-y-4">
+            <h2 className="font-serif text-2xl text-foreground">Thank you for your interest</h2>
+            <p className="text-muted-foreground text-base leading-relaxed max-w-md mx-auto">
+              Your inquiry has been submitted. We'll review it and get back to you soon.
+            </p>
+            <Link
+              to="/"
+              className="inline-block mt-4 text-sm font-mono text-foreground/60 hover:text-foreground transition-colors"
+            >
+              ← Back to home
+            </Link>
+          </div>
+        ) : (
         <div>
           <h2 className="font-serif text-2xl text-foreground mb-8">Express Interest in Partnership</h2>
 
