@@ -29,21 +29,21 @@ export const LeadershipSection = () => {
   }, []);
 
   return (
-    <section id="leadership" ref={sectionRef} className="bg-background py-24 md:py-32">
+    <section id="leadership" ref={sectionRef} className="bg-navy py-24 md:py-32">
       <div className="container max-w-7xl mx-auto px-6 md:px-12">
         <div
           className={`transition-all duration-800 ease-out ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
           }`}
         >
-          <p className="font-mono text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4">
+          <p className="font-mono text-xs tracking-[0.3em] uppercase text-navy-foreground/50 mb-4">
             Guiding the Vision
           </p>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight text-foreground mb-6">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight text-navy-foreground mb-6">
             Leadership & Advisory
           </h2>
-          <div className="w-16 h-px bg-foreground/20 mb-8" />
-          <p className="font-sans text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed mb-16">
+          <div className="w-16 h-px bg-navy-foreground/20 mb-8" />
+          <p className="font-sans text-lg sm:text-xl text-navy-foreground/70 max-w-2xl leading-relaxed mb-16">
             The Symposium is guided by leaders across academia, industry, and
             public institutions, shaping long-term US–Poland collaboration in
             science and technology.
