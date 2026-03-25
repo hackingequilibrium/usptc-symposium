@@ -13,8 +13,8 @@ export const CTASection = () => {
         <div className="absolute inset-0 noise-overlay pointer-events-none" />
       </div>
 
-      <div className="container max-w-5xl mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      <div className="container max-w-6xl mx-auto px-6 relative z-10">
+        <div className="flex flex-col lg:flex-row lg:justify-between items-center gap-12 lg:gap-16">
           {/* Left — text content */}
           <div className="flex-1">
             <p className="font-mono text-xs sm:text-sm tracking-[0.25em] uppercase text-muted-foreground mb-6">
