@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import linkedinIcon from "@/assets/linkedin-icon.svg";
+import { Footer } from "@/components/Footer";
 import usptcFlag from "@/assets/usptc-flag.png";
 import slawoszImg from "@/assets/speakers/slawosz.jpg";
 import honorataImg from "@/assets/speakers/honorata.jpg";
@@ -91,6 +92,7 @@ const Speakers = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
