@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import piotrImg from "@/assets/leaders/piotr-moncarz.png";
 import jerzyImg from "@/assets/leaders/jerzy-orkiszewski.png";
@@ -95,7 +96,8 @@ export const LeadershipSection = () => {
           })}
 
           {/* View All card */}
-          <div
+          <Link
+            to="/leadership"
             className={`group relative rounded-md bg-navy border border-navy-foreground/20 overflow-hidden flex flex-col items-center justify-center aspect-[3/4] transition-all duration-700 ease-out hover:scale-[1.02] cursor-pointer ${
               isVisible
                 ? "opacity-100 translate-y-0"
@@ -115,7 +117,7 @@ export const LeadershipSection = () => {
                 View All
               </span>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </section>
