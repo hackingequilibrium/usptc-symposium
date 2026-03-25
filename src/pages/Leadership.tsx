@@ -6,12 +6,13 @@ import usptcFlag from "@/assets/usptc-flag.png";
 import piotrImg from "@/assets/leaders/piotr-moncarz.png";
 import jerzyImg from "@/assets/leaders/jerzy-orkiszewski.png";
 import michalBImg from "@/assets/leaders/michal-banka.png";
+import jacekImg from "@/assets/leaders/jacek-chmielewski.png";
 
 const baseLeaders = [
   { name: "Piotr Moncarz", role: "USPTC General Chair", image: piotrImg, linkedin: "#" },
   { name: "Jerzy Orkiszewski", role: "USPTC Co-Chair", image: jerzyImg, linkedin: "#" },
   { name: "Michał Bańka", role: "Warsaw University of Technology", image: michalBImg, linkedin: "#" },
-  { name: "Andrzej Nowak", role: "Advisory Board", image: "", linkedin: "#" },
+  { name: "Jacek Chmielewski", role: "PolSV, Auburn University, Cracow University of Technology", image: jacekImg, linkedin: "#" },
   { name: "Katarzyna Wiśniewska", role: "Advisory Board", image: "", linkedin: "#" },
   { name: "Robert Kowalski", role: "Advisory Board", image: "", linkedin: "#" },
   { name: "Tomasz Zieliński", role: "Advisory Board", image: "", linkedin: "#" },
