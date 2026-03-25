@@ -64,7 +64,7 @@ export const CTASection = () => {
               <Button
                 variant="hero-outline"
                 size="lg"
-                className="px-10 py-6 rounded-sm border-2 border-foreground/40 text-foreground hover:bg-foreground/10"
+                className="px-10 py-6 rounded-sm border border-foreground/60 text-foreground hover:bg-foreground/10"
               >
                 Partner with Us
               </Button>
