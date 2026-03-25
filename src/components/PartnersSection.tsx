@@ -10,12 +10,12 @@ const partnerCategories = [
     partners: [
       { name: "US-Polish Trade Council", logo: usptcLogo },
       { name: "Poland in Silicon Valley Center", logo: polsvLogo },
+      { name: "Taube Philanthropies", logo: taubeLogo },
     ],
   },
   {
     label: "Strategic Partners",
     partners: [
-      { name: "Taube Philanthropies", logo: taubeLogo },
       { name: "Top 500 Innovators", logo: top500Logo },
     ],
   },
