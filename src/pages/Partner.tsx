@@ -147,7 +147,7 @@ const Partner = () => {
                 required
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
-                className="w-full px-4 py-3 rounded-sm border border-input bg-background text-foreground text-sm"
+                className="w-full px-4 py-3 rounded-sm border border-foreground/30 bg-background text-foreground text-sm"
               />
             </div>
 
@@ -161,7 +161,7 @@ const Partner = () => {
                 required
                 value={form.organization}
                 onChange={(e) => setForm({ ...form, organization: e.target.value })}
-                className="w-full px-4 py-3 rounded-sm border border-input bg-background text-foreground text-sm"
+                className="w-full px-4 py-3 rounded-sm border border-foreground/30 bg-background text-foreground text-sm"
               />
             </div>
 
@@ -174,7 +174,7 @@ const Partner = () => {
                 type="text"
                 value={form.role_title}
                 onChange={(e) => setForm({ ...form, role_title: e.target.value })}
-                className="w-full px-4 py-3 rounded-sm border border-input bg-background text-foreground text-sm"
+                className="w-full px-4 py-3 rounded-sm border border-foreground/30 bg-background text-foreground text-sm"
               />
             </div>
 
@@ -188,7 +188,7 @@ const Partner = () => {
                 required
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
-                className="w-full px-4 py-3 rounded-sm border border-input bg-background text-foreground text-sm"
+                className="w-full px-4 py-3 rounded-sm border border-foreground/30 bg-background text-foreground text-sm"
               />
             </div>
 
@@ -201,7 +201,7 @@ const Partner = () => {
                 required
                 value={form.org_type}
                 onChange={(e) => setForm({ ...form, org_type: e.target.value })}
-                className="w-full px-4 py-3 rounded-sm border border-input bg-background text-foreground text-sm"
+                className="w-full px-4 py-3 rounded-sm border border-foreground/30 bg-background text-foreground text-sm"
               >
                 <option value="" disabled>Select…</option>
                 {ORG_TYPES.map((t) => (
@@ -226,7 +226,7 @@ const Partner = () => {
                       className={`w-4 h-4 rounded-sm border flex items-center justify-center transition-colors ${
                         form.areas_of_interest.includes(area)
                           ? "bg-foreground border-foreground"
-                          : "border-input group-hover:border-foreground/50"
+                          : "border-foreground/30 group-hover:border-foreground/50"
                       }`}
                     >
                       {form.areas_of_interest.includes(area) && (
@@ -250,7 +250,7 @@ const Partner = () => {
                 rows={4}
                 value={form.description}
                 onChange={(e) => setForm({ ...form, description: e.target.value })}
-                className="w-full px-4 py-3 rounded-sm border border-input bg-background text-foreground text-sm resize-y"
+                className="w-full px-4 py-3 rounded-sm border border-foreground/30 bg-background text-foreground text-sm resize-y"
               />
             </div>
 
@@ -264,7 +264,7 @@ const Partner = () => {
                 value={form.website}
                 onChange={(e) => setForm({ ...form, website: e.target.value })}
                 placeholder="https://"
-                className="w-full px-4 py-3 rounded-sm border border-input bg-background text-foreground text-sm"
+                className="w-full px-4 py-3 rounded-sm border border-foreground/30 bg-background text-foreground text-sm"
               />
             </div>
 
@@ -278,7 +278,7 @@ const Partner = () => {
                 value={form.linkedin}
                 onChange={(e) => setForm({ ...form, linkedin: e.target.value })}
                 placeholder="https://linkedin.com/in/…"
-                className="w-full px-4 py-3 rounded-sm border border-input bg-background text-foreground text-sm"
+                className="w-full px-4 py-3 rounded-sm border border-foreground/30 bg-background text-foreground text-sm"
               />
             </div>
 
