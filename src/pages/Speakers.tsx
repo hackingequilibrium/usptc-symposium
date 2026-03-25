@@ -1,5 +1,5 @@
-import { Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
+import linkedinIcon from "@/assets/linkedin-icon.svg";
 import usptcFlag from "@/assets/usptc-flag.png";
 import slawoszImg from "@/assets/speakers/slawosz.jpg";
 import honorataImg from "@/assets/speakers/honorata.jpg";
@@ -82,10 +82,10 @@ const Speakers = () => {
                 href={speaker.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-sm bg-[#0A66C2] flex items-center justify-center transition-opacity hover:brightness-110 z-10"
+                className="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-sm flex items-center justify-center transition-opacity hover:brightness-110 z-10"
                 aria-label={`${speaker.name} on LinkedIn`}
               >
-                <Linkedin className="w-3.5 h-3.5 text-white fill-white" />
+                <img src={linkedinIcon} alt="LinkedIn" className="w-7 h-7" />
               </a>
             </div>
           ))}
