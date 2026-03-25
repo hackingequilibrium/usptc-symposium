@@ -31,18 +31,6 @@ const baseLeaders = [
   { name: "Małgorzata Tomaka", role: "US-Polish Trade Council / Fieldfisher Poland", image: malgorzataTImg, linkedin: "https://www.linkedin.com/in/ma%C5%82gorzata-tomaka/?locale=en" },
   { name: "Mariusz Tomaka", role: "US-Polish Trade Council, Tritem", image: mariuszTImg, linkedin: "https://www.linkedin.com/in/mariusztomaka/" },
   { name: "Caria Tomczykowska", role: "US-Polish Trade Council", image: cariaTImg, linkedin: "https://www.linkedin.com/in/cariatomczykowska/" },
-  { name: "Barbara Dąbrowska", role: "Advisory Board", image: "", linkedin: "#" },
-  { name: "Adam Olszewski", role: "Advisory Board", image: "", linkedin: "#" },
-  { name: "Monika Krawczyk", role: "Advisory Board", image: "", linkedin: "#" },
-  { name: "Jan Pawlak", role: "Advisory Board", image: "", linkedin: "#" },
-  { name: "Dorota Sikora", role: "Advisory Board", image: "", linkedin: "#" },
-  { name: "Piotr Grabowski", role: "Advisory Board", image: "", linkedin: "#" },
-  { name: "Anna Zawadzka", role: "Advisory Board", image: "", linkedin: "#" },
-  { name: "Łukasz Baran", role: "Advisory Board", image: "", linkedin: "#" },
-  { name: "Magdalena Kubiak", role: "Advisory Board", image: "", linkedin: "#" },
-  { name: "Stanisław Górski", role: "Advisory Board", image: "", linkedin: "#" },
-  { name: "Zofia Michalska", role: "Advisory Board", image: "", linkedin: "#" },
-  { name: "Rafał Chmielewski", role: "Advisory Board", image: "", linkedin: "#" },
 ];
 
 const leaders = baseLeaders.map((leader, i) => ({ ...leader, id: i }));
