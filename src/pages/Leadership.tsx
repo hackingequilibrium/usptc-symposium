@@ -8,6 +8,7 @@ import jerzyImg from "@/assets/leaders/jerzy-orkiszewski.png";
 import michalBImg from "@/assets/leaders/michal-banka.png";
 import jacekImg from "@/assets/leaders/jacek-chmielewski.png";
 import patrickImg from "@/assets/leaders/patrick-consorti.png";
+import magdalenaHImg from "@/assets/leaders/magdalena-hryb.jpg";
 
 const baseLeaders = [
   { name: "Piotr Moncarz", role: "USPTC General Chair", image: piotrImg, linkedin: "#" },
@@ -15,7 +16,7 @@ const baseLeaders = [
   { name: "Michał Bańka", role: "Warsaw University of Technology", image: michalBImg, linkedin: "#" },
   { name: "Jacek Chmielewski", role: "PolSV, Auburn University, Cracow University of Technology", image: jacekImg, linkedin: "#" },
   { name: "Patrick Consorti", role: "PolSV", image: patrickImg, linkedin: "https://www.linkedin.com/in/patrickconsorti/" },
-  { name: "Robert Kowalski", role: "Advisory Board", image: "", linkedin: "#" },
+  { name: "Magdalena Hryb", role: "Poznan University of Technology", image: magdalenaHImg, linkedin: "https://www.linkedin.com/in/magdalena-hryb-33b70155/" },
   { name: "Tomasz Zieliński", role: "Advisory Board", image: "", linkedin: "#" },
   { name: "Agnieszka Lewandowska", role: "Advisory Board", image: "", linkedin: "#" },
   { name: "Paweł Jankowski", role: "Advisory Board", image: "", linkedin: "#" },
