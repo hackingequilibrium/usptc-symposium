@@ -115,7 +115,7 @@ const Partner = () => {
         {/* Intro copy */}
         <div className="mb-12">
           <p className="text-muted-foreground text-base leading-relaxed">
-            We work with partners who contribute to advancing research, commercialization, and transatlantic cooperation — from universities and companies to public institutions, media, and ecosystem organizations.
+            We welcome partners who contribute to advancing research, commercialization, and transatlantic cooperation — from universities and companies to public institutions, media, and ecosystem organizations. who contribute to advancing research, commercialization, and transatlantic cooperation — from universities and companies to public institutions, media, and ecosystem organizations.
           </p>
         </div>
 
