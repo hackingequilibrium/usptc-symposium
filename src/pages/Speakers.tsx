@@ -12,13 +12,13 @@ import jenniferImg from "@/assets/speakers/jennifer.jpg";
 import alexanderImg from "@/assets/speakers/alexander.jpg";
 
 const baseSpeakers = [
-  { name: "Honorata Hencel", role: "Boeing", image: honorataImg, linkedin: "#" },
-  { name: "Dominik Schmidt", role: "Translarity", image: dominikImg, linkedin: "#" },
-  { name: "Sławosz Uznański-Wiśniewski", role: "European Space Agency (ESA)", image: slawoszImg, linkedin: "#" },
-  { name: "Anna Mikulska", role: "CGCN", image: annaImg, linkedin: "#" },
-  { name: "Michał Kurtyka", role: "OECD", image: michalImg, linkedin: "#" },
-  { name: "Jennifer Granholm", role: "DGA Group", image: jenniferImg, linkedin: "#" },
-  { name: "Alexander Bayen", role: "EECS at UC Berkeley", image: alexanderImg, linkedin: "#" },
+  { name: "Honorata Hencel", role: "Boeing", image: honorataImg, linkedin: "#", virtual: false },
+  { name: "Dominik Schmidt", role: "Translarity", image: dominikImg, linkedin: "#", virtual: false },
+  { name: "Sławosz Uznański-Wiśniewski", role: "European Space Agency (ESA)", image: slawoszImg, linkedin: "#", virtual: true },
+  { name: "Anna Mikulska", role: "CGCN", image: annaImg, linkedin: "#", virtual: false },
+  { name: "Michał Kurtyka", role: "OECD", image: michalImg, linkedin: "#", virtual: false },
+  { name: "Jennifer Granholm", role: "DGA Group", image: jenniferImg, linkedin: "#", virtual: false },
+  { name: "Alexander Bayen", role: "EECS at UC Berkeley", image: alexanderImg, linkedin: "#", virtual: false },
 ];
 
 const speakers = Array.from({ length: 30 }, (_, i) => ({
@@ -55,6 +55,11 @@ const SpeakerCard = ({ speaker, index }: { speaker: (typeof speakers)[0]; index:
       }`}
       style={{ transitionDelay: isVisible ? `${colIndex * 80}ms` : "0ms" }}
     >
+      {speaker.virtual && (
+        <span className="absolute top-2 right-2 z-10 bg-accent-blue/90 text-navy-foreground text-[10px] font-mono font-semibold uppercase tracking-wider px-2 py-0.5 rounded-sm backdrop-blur-sm">
+          Virtual
+        </span>
+      )}
       <div className="aspect-[3/4] bg-gradient-to-br from-accent-blue/40 to-accent-pink/30 flex items-center justify-center">
         <img
           src={speaker.image}
