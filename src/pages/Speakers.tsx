@@ -16,6 +16,7 @@ import maxImg from "@/assets/speakers/max.jpg";
 import maciejImg from "@/assets/speakers/maciej.png";
 import aleksandraImg from "@/assets/speakers/aleksandra.jpg";
 import piotrImg from "@/assets/speakers/piotr.png";
+import dariuszImg from "@/assets/speakers/dariusz.webp";
 
 const baseSpeakers = [
   { name: "Honorata Hencel", role: "Boeing", image: honorataImg, linkedin: "https://www.linkedin.com/in/honorata-hencel-2528aa56/", virtual: false },
@@ -31,6 +32,7 @@ const baseSpeakers = [
   { name: "Maciej Kawecki", role: "This is it, Lem Institute", image: maciejImg, linkedin: "https://www.linkedin.com/in/maciejkawecki/", virtual: false },
   { name: "Aleksandra Radlińska", role: "Penn State", image: aleksandraImg, linkedin: "https://www.linkedin.com/in/aleksandra-radli%C5%84ska-86708a5/", virtual: false },
   { name: "Piotr Moncarz", role: "PolSV, USPTC", image: piotrImg, linkedin: "https://www.linkedin.com/in/piotr-d-moncarz-ph-d-p-e-nae-8989a41/", virtual: false },
+  { name: "Dariusz Rosati", role: "Warsaw School of Economics", image: dariuszImg, linkedin: "", virtual: false },
 ];
 
 const speakers = baseSpeakers.map((speaker, i) => ({
@@ -90,15 +92,17 @@ const SpeakerCard = ({ speaker, index }: { speaker: (typeof speakers)[0]; index:
         </p>
       </div>
 
-      <a
-        href={speaker.linkedin}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-sm flex items-center justify-center transition-opacity hover:brightness-110 z-10"
-        aria-label={`${speaker.name} on LinkedIn`}
-      >
-        <img src={linkedinIcon} alt="LinkedIn" className="w-7 h-7" />
-      </a>
+      {speaker.linkedin && (
+        <a
+          href={speaker.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-sm flex items-center justify-center transition-opacity hover:brightness-110 z-10"
+          aria-label={`${speaker.name} on LinkedIn`}
+        >
+          <img src={linkedinIcon} alt="LinkedIn" className="w-7 h-7" />
+        </a>
+      )}
     </div>
   );
 };
