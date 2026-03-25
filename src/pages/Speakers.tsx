@@ -16,7 +16,7 @@ const baseSpeakers = [
   { name: "Dominik Schmidt", role: "Translarity", image: dominikImg, linkedin: "https://www.linkedin.com/in/dominikschmidt/", virtual: false },
   { name: "Sławosz Uznański-Wiśniewski", role: "European Space Agency (ESA)", image: slawoszImg, linkedin: "https://www.linkedin.com/in/slawoszuznanski/", virtual: true },
   { name: "Anna Mikulska", role: "CGCN", image: annaImg, linkedin: "https://www.linkedin.com/in/anna-mikulska-410a846/", virtual: false },
-  { name: "Michał Kurtyka", role: "OECD", image: michalImg, linkedin: "#", virtual: false },
+  { name: "Michał Kurtyka", role: "OECD", image: michalImg, linkedin: "https://www.linkedin.com/in/kurtyka-michal/", virtual: false },
   { name: "Jennifer Granholm", role: "DGA Group", image: jenniferImg, linkedin: "#", virtual: false },
   { name: "Alexander Bayen", role: "EECS at UC Berkeley", image: alexanderImg, linkedin: "#", virtual: false },
 ];
