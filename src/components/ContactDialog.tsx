@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 interface ContactDialogProps {
   children: React.ReactNode;
@@ -22,19 +23,44 @@ export const ContactDialog = ({ children }: ContactDialogProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate submission
-    setTimeout(() => {
+    const form = e.currentTarget;
+    const formData = {
+      name: (form.elements.namedItem("name") as HTMLInputElement).value.trim(),
+      email: (form.elements.namedItem("email") as HTMLInputElement).value.trim(),
+      organization: (form.elements.namedItem("organization") as HTMLInputElement).value.trim() || null,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value.trim(),
+    };
+
+    const { error } = await supabase.from("contact_submissions").insert(formData);
+
+    if (error) {
+      toast({ title: "Something went wrong", description: "Please try again later.", variant: "destructive" });
       setIsSubmitting(false);
-      setOpen(false);
-      toast({
-        title: "Message sent",
-        description: "We'll get back to you shortly.",
+      return;
+    }
+
+    // Try to send email notification (non-blocking)
+    try {
+      await supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "contact-notification",
+          recipientEmail: "agata.braja@polsv.org",
+          idempotencyKey: `contact-notify-${Date.now()}`,
+          templateData: { name: formData.name, email: formData.email, organization: formData.organization, message: formData.message },
+        },
       });
-    }, 800);
+    } catch {
+      // Email failure shouldn't block submission
+    }
+
+    setIsSubmitting(false);
+    setOpen(false);
+    form.reset();
+    toast({ title: "Message sent", description: "We'll get back to you shortly." });
   };
 
   return (
