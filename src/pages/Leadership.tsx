@@ -94,15 +94,17 @@ const LeaderCard = ({ leader, index }: { leader: (typeof leaders)[0]; index: num
         </p>
       </div>
 
-      <a
-        href={leader.linkedin}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-sm flex items-center justify-center transition-opacity hover:brightness-110 z-10"
-        aria-label={`${leader.name} on LinkedIn`}
-      >
-        <img src={linkedinIcon} alt="LinkedIn" className="w-7 h-7" />
-      </a>
+      {leader.linkedin && (
+        <a
+          href={leader.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-sm flex items-center justify-center transition-opacity hover:brightness-110 z-10"
+          aria-label={`${leader.name} on LinkedIn`}
+        >
+          <img src={linkedinIcon} alt="LinkedIn" className="w-7 h-7" />
+        </a>
+      )}
     </div>
   );
 };
