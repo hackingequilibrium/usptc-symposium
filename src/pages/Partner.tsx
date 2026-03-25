@@ -123,10 +123,7 @@ const Partner = () => {
       {/* Content */}
       <div className="container max-w-3xl mx-auto px-6 md:px-12 py-16">
         {/* Intro copy */}
-        <div className="mb-12 space-y-4">
-          <p className="text-foreground/80 text-base leading-relaxed">
-            This is not a sponsorship opportunity. It is a platform for collaboration.
-          </p>
+        <div className="mb-12">
           <p className="text-muted-foreground text-base leading-relaxed">
             We work with partners who contribute to advancing research, commercialization, and transatlantic cooperation — from universities and companies to public institutions, media, and ecosystem organizations.
           </p>
