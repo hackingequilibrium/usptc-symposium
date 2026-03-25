@@ -14,7 +14,7 @@ export const CTASection = () => {
       </div>
 
       <div className="container max-w-5xl mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           {/* Left — text content */}
           <div className="flex-1">
             <p className="font-mono text-xs sm:text-sm tracking-[0.25em] uppercase text-muted-foreground mb-6">
