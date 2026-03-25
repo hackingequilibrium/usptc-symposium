@@ -29,7 +29,7 @@ export const LeadershipSection = () => {
   }, []);
 
   return (
-    <section id="leadership" ref={sectionRef} className="bg-background py-24 md:py-32">
+    <section id="leadership" ref={sectionRef} className="bg-navy py-24 md:py-32">
       <div className="container max-w-7xl mx-auto px-6 md:px-12">
         <div
           className={`transition-all duration-800 ease-out ${
