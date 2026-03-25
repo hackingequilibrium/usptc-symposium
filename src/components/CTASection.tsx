@@ -62,6 +62,13 @@ export const CTASection = () => {
         >
           Partner with Us
         </Button>
+        <div className="mt-3">
+          <ContactDialog>
+            <button className="text-navy-foreground/50 hover:text-navy-foreground/80 text-xs font-mono tracking-wide underline underline-offset-4 transition-colors cursor-pointer">
+              Interested in sponsoring? Contact us
+            </button>
+          </ContactDialog>
+        </div>
       </div>
     </section>
   );
