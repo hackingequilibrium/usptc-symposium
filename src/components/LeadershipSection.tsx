@@ -117,7 +117,7 @@ export const LeadershipSection = () => {
                 View All
               </span>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </section>
