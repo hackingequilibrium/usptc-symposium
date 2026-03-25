@@ -10,6 +10,7 @@ import annaImg from "@/assets/speakers/anna.jpg";
 import michalImg from "@/assets/speakers/michal.png";
 import jenniferImg from "@/assets/speakers/jennifer.jpg";
 import alexanderImg from "@/assets/speakers/alexander.jpg";
+import artImg from "@/assets/speakers/art.jpg";
 
 const baseSpeakers = [
   { name: "Honorata Hencel", role: "Boeing", image: honorataImg, linkedin: "https://www.linkedin.com/in/honorata-hencel-2528aa56/", virtual: false },
@@ -19,6 +20,7 @@ const baseSpeakers = [
   { name: "Michał Kurtyka", role: "OECD", image: michalImg, linkedin: "https://www.linkedin.com/in/kurtyka-michal/", virtual: false },
   { name: "Jennifer Granholm", role: "DGA Group", image: jenniferImg, linkedin: "https://www.linkedin.com/in/jennifergranholm/", virtual: false },
   { name: "Alexandre Bayen", role: "EECS at UC Berkeley", image: alexanderImg, linkedin: "https://www.linkedin.com/in/alexandre-bayen-8479598/", virtual: false },
+  { name: "Art (Artur) Chmielewski", role: "NASA", image: artImg, linkedin: "https://www.linkedin.com/in/art-chmielewski-551a8023/", virtual: false },
 ];
 
 const speakers = baseSpeakers.map((speaker, i) => ({
