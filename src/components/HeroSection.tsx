@@ -9,7 +9,7 @@ export const HeroSection = () => {
   return (
     <section className="relative isolate min-h-screen flex items-center overflow-hidden bg-background">
       {/* Gradient shifted to the right half */}
-      <div className="absolute top-0 right-0 bottom-0 w-[70%]" style={{ maskImage: 'linear-gradient(to right, transparent 0%, black 40%)', WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%)' }}>
+      <div className="absolute top-0 right-0 bottom-0 w-[70%] hidden md:block" style={{ maskImage: 'linear-gradient(to right, transparent 0%, black 40%)', WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%)' }}>
         <AnimatedGradient />
         <div className="absolute inset-0 noise-overlay pointer-events-none" />
       </div>
