@@ -14,7 +14,7 @@ const baseLeaders = [
   { name: "Jerzy Orkiszewski", role: "USPTC Co-Chair", image: jerzyImg, linkedin: "#" },
   { name: "Michał Bańka", role: "Warsaw University of Technology", image: michalBImg, linkedin: "#" },
   { name: "Jacek Chmielewski", role: "PolSV, Auburn University, Cracow University of Technology", image: jacekImg, linkedin: "#" },
-  { name: "Katarzyna Wiśniewska", role: "Advisory Board", image: "", linkedin: "#" },
+  { name: "Patrick Consorti", role: "PolSV", image: patrickImg, linkedin: "https://www.linkedin.com/in/patrickconsorti/" },
   { name: "Robert Kowalski", role: "Advisory Board", image: "", linkedin: "#" },
   { name: "Tomasz Zieliński", role: "Advisory Board", image: "", linkedin: "#" },
   { name: "Agnieszka Lewandowska", role: "Advisory Board", image: "", linkedin: "#" },
