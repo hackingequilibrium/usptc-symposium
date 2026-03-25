@@ -37,7 +37,7 @@ const Speakers = () => {
           >
             ← Back to home
           </Link>
-          <img src={usptcFlag} alt="USPTC" className="w-16 h-16 object-contain mb-6" />
+          <img src={usptcFlag} alt="USPTC" className="w-28 h-28 object-contain mb-6" />
           <p className="font-mono text-xs tracking-[0.3em] uppercase text-navy-foreground/50 mb-4">
             XXV US–Poland Science & Technology Symposium
           </p>
