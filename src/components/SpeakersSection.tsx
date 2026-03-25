@@ -76,7 +76,7 @@ export const SpeakersSection = () => {
                 style={{ transitionDelay: isVisible ? `${300 + index * 100}ms` : '0ms' }}
               >
                 {speaker.virtual && (
-                  <span className="absolute top-2 right-2 z-10 bg-accent-blue/90 text-navy-foreground text-[10px] font-mono font-semibold uppercase tracking-wider px-2 py-0.5 rounded-sm backdrop-blur-sm">
+                  <span className="absolute top-2 right-2 z-10 bg-accent-blue/90 text-navy text-[10px] font-mono font-semibold uppercase tracking-wider px-2 py-0.5 rounded-sm backdrop-blur-sm">
                     Virtual
                   </span>
                 )}
