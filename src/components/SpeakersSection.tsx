@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import slawoszImg from "@/assets/speakers/slawosz.jpg";
 import honorataImg from "@/assets/speakers/honorata.jpg";
@@ -100,8 +101,8 @@ export const SpeakersSection = () => {
           })}
 
           {/* View all speakers card */}
-          <a
-            href="#speakers"
+          <Link
+            to="/speakers"
             className={`group relative rounded-md bg-navy overflow-hidden flex flex-col items-center justify-center aspect-[3/4] transition-all duration-700 ease-out hover:scale-[1.02] cursor-pointer ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
@@ -115,7 +116,7 @@ export const SpeakersSection = () => {
                 View all speakers
               </span>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
