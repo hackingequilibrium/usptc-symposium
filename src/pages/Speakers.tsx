@@ -1,5 +1,6 @@
 import { Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
+import usptcFlag from "@/assets/usptc-flag.png";
 import slawoszImg from "@/assets/speakers/slawosz.jpg";
 import honorataImg from "@/assets/speakers/honorata.jpg";
 import dominikImg from "@/assets/speakers/dominik.png";
@@ -36,6 +37,7 @@ const Speakers = () => {
           >
             ← Back to home
           </Link>
+          <img src={usptcFlag} alt="USPTC" className="w-16 h-16 object-contain mb-6" />
           <p className="font-mono text-xs tracking-[0.3em] uppercase text-navy-foreground/50 mb-4">
             XXV US–Poland Science & Technology Symposium
           </p>
