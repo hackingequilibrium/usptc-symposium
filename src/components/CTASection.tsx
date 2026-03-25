@@ -41,7 +41,7 @@ export const CTASection = () => {
               </a>
             </div>
             <p className="text-muted-foreground/60 text-xs font-mono tracking-wide mb-10">
-              Secure registration via Eventify
+              Secure registration via Eventbrite
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-8 text-muted-foreground text-sm mb-10">
