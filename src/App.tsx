@@ -8,6 +8,7 @@ import Admin from "./pages/Admin.tsx";
 import Speakers from "./pages/Speakers.tsx";
 import Agenda from "./pages/Agenda.tsx";
 import Leadership from "./pages/Leadership.tsx";
+import Partner from "./pages/Partner.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
