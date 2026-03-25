@@ -1,5 +1,6 @@
 import { Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
+import usptcFlag from "@/assets/usptc-flag.png";
 import slawoszImg from "@/assets/speakers/slawosz.jpg";
 import honorataImg from "@/assets/speakers/honorata.jpg";
 import dominikImg from "@/assets/speakers/dominik.png";
