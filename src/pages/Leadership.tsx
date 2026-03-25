@@ -104,6 +104,7 @@ const LeaderCard = ({ leader, index }: { leader: (typeof leaders)[0]; index: num
 };
 
 const Leadership = () => {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
   return (
     <div className="min-h-screen bg-background">
       <div className="bg-navy py-20 sm:py-28">

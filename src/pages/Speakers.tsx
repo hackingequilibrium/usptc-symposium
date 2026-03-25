@@ -92,6 +92,7 @@ const SpeakerCard = ({ speaker, index }: { speaker: (typeof speakers)[0]; index:
 };
 
 const Speakers = () => {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
   return (
     <div className="min-h-screen bg-background">
       <div className="bg-navy py-20 sm:py-28">
