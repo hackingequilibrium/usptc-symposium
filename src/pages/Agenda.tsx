@@ -131,16 +131,14 @@ const DaySection = ({ day, index }: { day: DaySchedule; index: number }) => {
       style={{ transitionDelay: isVisible ? `${index * 100}ms` : "0ms" }}
     >
       {/* Day header */}
-      <div className="flex flex-col sm:flex-row sm:items-end gap-2 sm:gap-6 mb-8">
-        <div>
-          <span className="font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground">
-            {day.label}
-          </span>
-          <h2 className="font-serif text-2xl sm:text-3xl tracking-tight text-foreground mt-1">
-            {day.subtitle}
-          </h2>
-        </div>
-        <div className="flex items-center gap-4 text-muted-foreground text-sm font-mono sm:mb-1">
+      <div className="mb-8">
+        <span className="inline-block bg-navy text-navy-foreground font-mono text-xs tracking-[0.2em] uppercase px-3 py-1.5 rounded-sm mb-3">
+          {day.label}
+        </span>
+        <h2 className="font-serif text-2xl sm:text-3xl tracking-tight text-foreground mt-1">
+          {day.subtitle}
+        </h2>
+        <div className="flex items-center gap-4 text-muted-foreground text-sm font-mono mt-2">
           <span className="flex items-center gap-1.5">
             <Clock className="w-3.5 h-3.5" />
             {day.date}
