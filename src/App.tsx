@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import Admin from "./pages/Admin.tsx";
 import Speakers from "./pages/Speakers.tsx";
+import Agenda from "./pages/Agenda.tsx";
 import Leadership from "./pages/Leadership.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/speakers" element={<Speakers />} />
+          <Route path="/agenda" element={<Agenda />} />
           <Route path="/leadership" element={<Leadership />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
