@@ -9,8 +9,8 @@ const partnerCategories = [
     label: "Organizers",
     partners: [
       { name: "US-Polish Trade Council", logo: usptcLogo, url: "https://usptc.org/" },
-      { name: "Poland in Silicon Valley Center", logo: polsvLogo },
-      { name: "Taube Philanthropies", logo: taubeLogo },
+      { name: "Poland in Silicon Valley Center", logo: polsvLogo, url: "https://polsv.org/" },
+      { name: "Taube Philanthropies", logo: taubeLogo, url: "https://taubephilanthropies.org/" },
     ],
   },
   {
