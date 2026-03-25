@@ -2,11 +2,12 @@ import { ArrowRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import piotrImg from "@/assets/leaders/piotr-moncarz.png";
 import jerzyImg from "@/assets/leaders/jerzy-orkiszewski.png";
+import michalImg from "@/assets/leaders/michal-banka.png";
 
 const leaders = [
   { name: "Piotr Moncarz", role: "USPTC General Chair", image: piotrImg },
   { name: "Jerzy Orkiszewski", role: "USPTC Co-Chair", image: jerzyImg },
-  { name: "Michał Bańka", role: "Warsaw University of Technology", image: "" },
+  { name: "Michał Bańka", role: "Warsaw University of Technology", image: michalImg },
 ];
 
 export const LeadershipSection = () => {
