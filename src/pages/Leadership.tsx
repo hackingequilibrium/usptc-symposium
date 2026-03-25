@@ -7,6 +7,7 @@ import piotrImg from "@/assets/leaders/piotr-moncarz.png";
 import jerzyImg from "@/assets/leaders/jerzy-orkiszewski.png";
 import michalBImg from "@/assets/leaders/michal-banka.png";
 import jacekImg from "@/assets/leaders/jacek-chmielewski.png";
+import patrickImg from "@/assets/leaders/patrick-consorti.png";
 
 const baseLeaders = [
   { name: "Piotr Moncarz", role: "USPTC General Chair", image: piotrImg, linkedin: "#" },
