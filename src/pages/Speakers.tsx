@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import linkedinIcon from "@/assets/linkedin-icon.svg";
 import { Footer } from "@/components/Footer";
@@ -55,10 +56,7 @@ const Speakers = () => {
       <div className="container max-w-7xl mx-auto px-6 md:px-12 py-16">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
           {speakers.map((speaker) => (
-            <div
-              key={speaker.id}
-              className="group relative rounded-md bg-secondary overflow-hidden"
-            >
+            <SpeakerCard key={speaker.id} speaker={speaker} />
               <div className="aspect-[3/4] bg-gradient-to-br from-accent-blue/40 to-accent-pink/30 flex items-center justify-center">
                 <img
                   src={speaker.image}
