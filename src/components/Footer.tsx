@@ -15,7 +15,7 @@ export const Footer = () => {
             </button>
           </ContactDialog>
           <a
-            href="https://www.linkedin.com/company/us-polish-trade-council"
+            href="https://www.linkedin.com/company/us-polish-trade-council/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-foreground transition-colors"
