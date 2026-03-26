@@ -48,16 +48,19 @@ export const PartnersSection = () => {
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                   {category.partners.map((partner) => {
-                    const content = partner.logo ? (
-                      <img
-                        src={partner.logo}
-                        alt={partner.name}
-                        className="max-h-20 object-contain"
-                      />
-                    ) : (
-                      <span className="text-sm font-semibold text-foreground text-center tracking-tight">
-                        {partner.name}
-                      </span>
+                    const content = (
+                      <div className="flex flex-col items-center gap-2">
+                        {partner.logo ? (
+                          <img
+                            src={partner.logo}
+                            alt={partner.name}
+                            className="max-h-20 object-contain"
+                          />
+                        ) : null}
+                        <span className="text-xs font-medium text-foreground/70 text-center leading-tight">
+                          {partner.name}
+                        </span>
+                      </div>
                     );
 
                     const cardClass = "flex items-center justify-center rounded-md border border-border bg-white p-4 min-h-[100px] hover:shadow-md transition-shadow";
