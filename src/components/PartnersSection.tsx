@@ -10,6 +10,7 @@ const partnerCategories = [
   {
     label: "Organizers",
     partners: [
+      { name: "Polsko Amerykańska Rada Współpracy", logo: usptcLogo, url: "https://usptc.org/" },
       { name: "US-Polish Trade Council", logo: usptcLogo, url: "https://usptc.org/" },
       { name: "Poland in Silicon Valley Center for Science, Innovation, and Entrepreneurship", logo: polsvLogo, url: "https://polsv.org/" },
       { name: "Taube Philanthropies", logo: taubeLogo, url: "https://taubephilanthropies.org/" },
