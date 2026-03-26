@@ -17,6 +17,7 @@ import maciejImg from "@/assets/speakers/maciej.png";
 import aleksandraImg from "@/assets/speakers/aleksandra.jpg";
 import piotrImg from "@/assets/speakers/piotr.png";
 import dariuszImg from "@/assets/speakers/dariusz.webp";
+import soodyImg from "@/assets/speakers/soody.png";
 
 const baseSpeakers = [
   { name: "Honorata Hencel", role: "Boeing", image: honorataImg, linkedin: "https://www.linkedin.com/in/honorata-hencel-2528aa56/", virtual: false },
