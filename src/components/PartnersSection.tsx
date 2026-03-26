@@ -3,6 +3,7 @@ import polsvLogo from "@/assets/partners/polsv.png";
 import taubeLogo from "@/assets/partners/taube.png";
 import top500Logo from "@/assets/partners/top500.webp";
 import embassyLogo from "@/assets/partners/embassy.png";
+import tripleRingLogo from "@/assets/partners/triple-ring.jpg";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const partnerCategories = [
