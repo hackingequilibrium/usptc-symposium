@@ -19,6 +19,7 @@ const partnerCategories = [
     label: "Strategic Partners",
     partners: [
       { name: "Top 500 Innovators Program Alumni", logo: top500Logo },
+      { name: "Triple Ring Technologies", logo: tripleRingLogo, url: "https://www.tripleringtech.com/" },
     ],
   },
   {
