@@ -1,13 +1,18 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const navItems = [
   { label: "Focus Areas", href: "#why" },
   { label: "Speakers", href: "#speakers" },
+  { label: "Leadership", href: "/leadership" },
   { label: "Venues & Agenda", href: "#venues" },
   { label: "Partners", href: "#partners" },
   { label: "Register", href: "#register" },
 ];
+
+const linkClass = "px-4 py-2 text-sm font-medium text-foreground/70 hover:text-foreground rounded-full hover:bg-black/5 transition-colors";
+const mobileLinkClass = "px-4 py-2.5 text-sm font-medium text-foreground/70 hover:text-foreground rounded-xl hover:bg-black/5 transition-colors";
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -16,15 +21,17 @@ export const Navbar = () => {
     <nav className="fixed top-4 right-4 sm:top-6 sm:right-6 md:right-12 z-50">
       {/* Desktop */}
       <div className="hidden md:flex items-center gap-1 rounded-full border border-black/10 bg-white/70 backdrop-blur-xl px-2 py-1.5">
-        {navItems.map((item) => (
-          <a
-            key={item.href}
-            href={item.href}
-            className="px-4 py-2 text-sm font-medium text-foreground/70 hover:text-foreground rounded-full hover:bg-black/5 transition-colors"
-          >
-            {item.label}
-          </a>
-        ))}
+        {navItems.map((item) =>
+          item.href.startsWith("/") ? (
+            <Link key={item.href} to={item.href} className={linkClass}>
+              {item.label}
+            </Link>
+          ) : (
+            <a key={item.href} href={item.href} className={linkClass}>
+              {item.label}
+            </a>
+          )
+        )}
       </div>
 
       {/* Mobile toggle */}
@@ -39,16 +46,17 @@ export const Navbar = () => {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden absolute top-14 right-0 flex flex-col gap-1 rounded-2xl border border-black/10 bg-white/70 backdrop-blur-xl p-2 min-w-[180px]">
-          {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              onClick={() => setOpen(false)}
-              className="px-4 py-2.5 text-sm font-medium text-foreground/70 hover:text-foreground rounded-xl hover:bg-black/5 transition-colors"
-            >
-              {item.label}
-            </a>
-          ))}
+          {navItems.map((item) =>
+            item.href.startsWith("/") ? (
+              <Link key={item.href} to={item.href} onClick={() => setOpen(false)} className={mobileLinkClass}>
+                {item.label}
+              </Link>
+            ) : (
+              <a key={item.href} href={item.href} onClick={() => setOpen(false)} className={mobileLinkClass}>
+                {item.label}
+              </a>
+            )
+          )}
         </div>
       )}
     </nav>
