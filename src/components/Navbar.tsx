@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 const navItems = [
   { label: "Focus Areas", href: "#why" },
   { label: "Speakers", href: "#speakers" },
+  { label: "Leadership", href: "/leadership" },
   { label: "Venues & Agenda", href: "#venues" },
   { label: "Partners", href: "#partners" },
   { label: "Register", href: "#register" },
