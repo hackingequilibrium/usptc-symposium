@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 const navItems = [
   { label: "Focus Areas", href: "#why" },
   { label: "Speakers", href: "#speakers" },
-  { label: "Leadership", href: "/leadership" },
   { label: "Venues & Agenda", href: "#venues" },
   { label: "Partners", href: "#partners" },
+  { label: "Leadership", href: "#leadership" },
   { label: "Register", href: "#register" },
 ];
 
