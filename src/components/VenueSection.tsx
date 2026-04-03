@@ -100,7 +100,7 @@ export const VenueSection = () => {
         <div className={`mt-12 text-center transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`} style={{ transitionDelay: isVisible ? '750ms' : '0ms' }}>
           <a
             href="/agenda"
-            className="inline-flex items-center gap-2 px-8 py-3 rounded-md bg-accent-blue text-white font-sans text-sm font-semibold tracking-wide uppercase hover:bg-accent-blue/90 transition-colors shadow-lg shadow-accent-blue/20"
+            className="inline-flex items-center gap-2 px-8 py-3 rounded-md bg-navy text-navy-foreground font-sans text-sm font-semibold tracking-wide uppercase hover:bg-navy/90 transition-colors shadow-lg shadow-navy/20"
           >
             View Full Agenda →
           </a>
