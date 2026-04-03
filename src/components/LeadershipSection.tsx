@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import piotrImg from "@/assets/leaders/piotr-moncarz.png";
 import jerzyImg from "@/assets/leaders/jerzy-orkiszewski.png";
-import michalImg from "@/assets/leaders/michal-banka.png";
+import mariuszImg from "@/assets/leaders/mariusz-tomaka.png";
 
 const leaders = [
   { name: "Piotr Moncarz", role: "USPTC General Chair", image: piotrImg },
   { name: "Jerzy Orkiszewski", role: "USPTC Co-Chair", image: jerzyImg },
-  { name: "Michał Bańka", role: "Warsaw University of Technology", image: michalImg },
+  { name: "Mariusz Tomaka", role: "US-Polish Trade Council, Tritem", image: mariuszImg },
 ];
 
 export const LeadershipSection = () => {
