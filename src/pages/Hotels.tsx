@@ -137,8 +137,6 @@ const Hotels = () => {
                     <span className="text-muted-foreground">{item.venue}</span>
                   </p>
                 ))}
-              </div>
-              </div>
             </div>
           </div>
         </section>
