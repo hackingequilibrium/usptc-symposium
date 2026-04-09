@@ -37,9 +37,9 @@ const Hotels = () => {
       <div className="container max-w-4xl mx-auto px-6 md:px-12 py-16 space-y-16">
         {/* Recommended Hotel */}
         <section>
-          <div className="flex items-center gap-2 mb-6">
-            <Hotel className="w-5 h-5 text-accent-blue" />
-            <span className="inline-block bg-navy text-navy-foreground font-mono text-xs tracking-[0.2em] uppercase px-3 py-1.5 rounded-sm">
+          <div className="flex items-center mb-6">
+            <span className="inline-flex items-center gap-2 bg-navy text-navy-foreground font-mono text-xs tracking-[0.2em] uppercase px-3 py-1.5 rounded-sm">
+              <Hotel className="w-4 h-4" />
               Recommended Hotel
             </span>
           </div>
@@ -102,9 +102,9 @@ const Hotels = () => {
 
         {/* Transportation */}
         <section>
-          <div className="flex items-center gap-2 mb-6">
-            <Bus className="w-5 h-5 text-accent-blue" />
-            <span className="inline-block bg-navy text-navy-foreground font-mono text-xs tracking-[0.2em] uppercase px-3 py-1.5 rounded-sm">
+          <div className="flex items-center mb-6">
+            <span className="inline-flex items-center gap-2 bg-navy text-navy-foreground font-mono text-xs tracking-[0.2em] uppercase px-3 py-1.5 rounded-sm">
+              <Bus className="w-4 h-4" />
               Transportation
             </span>
           </div>
@@ -147,9 +147,9 @@ const Hotels = () => {
 
         {/* Why stay */}
         <section>
-          <div className="flex items-center gap-2 mb-6">
-            <Users className="w-5 h-5 text-accent-blue" />
-            <span className="inline-block bg-navy text-navy-foreground font-mono text-xs tracking-[0.2em] uppercase px-3 py-1.5 rounded-sm">
+          <div className="flex items-center mb-6">
+            <span className="inline-flex items-center gap-2 bg-navy text-navy-foreground font-mono text-xs tracking-[0.2em] uppercase px-3 py-1.5 rounded-sm">
+              <Users className="w-4 h-4" />
               Why Stay at the Recommended Hotel
             </span>
           </div>
