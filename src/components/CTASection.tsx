@@ -41,8 +41,14 @@ export const CTASection = () => {
                 </Button>
               </a>
             </div>
-            <p className="text-muted-foreground/60 text-xs font-mono tracking-wide mb-10">
+            <p className="text-muted-foreground/60 text-xs font-mono tracking-wide mb-2">
               Secure registration via Eventbrite
+            </p>
+            <p className="text-sm text-muted-foreground mb-10">
+              Attending from out of town?{" "}
+              <Link to="/hotels" className="underline underline-offset-4 hover:text-foreground transition-colors">
+                See recommended hotel options
+              </Link>
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-8 text-muted-foreground text-sm mb-10">
