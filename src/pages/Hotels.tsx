@@ -126,20 +126,18 @@ const Hotels = () => {
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                 Transportation will be provided for attendees staying at the Westin to and from each day's venue:
               </p>
-              <div className="relative pl-6 border-l border-border space-y-4">
+              <div className="space-y-3 pl-2">
                 {[
                   { day: "Monday", venue: "Stanford University" },
                   { day: "Tuesday", venue: "UC Berkeley" },
                   { day: "Wednesday", venue: "UCSF" },
                 ].map((item) => (
-                  <div key={item.day} className="relative">
-                    <div className="absolute -left-[calc(1.5rem+4.5px)] top-1.5 w-[9px] h-[9px] rounded-full bg-muted-foreground/30" />
-                    <p className="text-sm text-foreground">
-                      <span className="font-semibold">{item.day}:</span>{" "}
-                      <span className="text-muted-foreground">{item.venue}</span>
-                    </p>
-                  </div>
+                  <p key={item.day} className="text-sm text-foreground">
+                    <span className="font-semibold">{item.day}:</span>{" "}
+                    <span className="text-muted-foreground">{item.venue}</span>
+                  </p>
                 ))}
+              </div>
               </div>
             </div>
           </div>
