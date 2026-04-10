@@ -4,6 +4,7 @@ import taubeLogo from "@/assets/partners/taube.png";
 import top500Logo from "@/assets/partners/top500.webp";
 import embassyLogo from "@/assets/partners/embassy.png";
 import tripleRingLogo from "@/assets/partners/triple-ring.jpg";
+import consulateLaLogo from "@/assets/partners/consulate-la.jpg";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const partnerCategories = [
@@ -27,6 +28,7 @@ const partnerCategories = [
     label: "Honorary Patrons",
     partners: [
       { name: "Embassy of the Republic of Poland in Washington, D.C.", logo: embassyLogo },
+      { name: "Consulate General of the Republic of Poland in Los Angeles", logo: consulateLaLogo },
     ],
   },
 ];
