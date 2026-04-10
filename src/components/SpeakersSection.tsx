@@ -16,7 +16,7 @@ const speakers = [
   { name: "Art (Artur) Chmielewski", role: "NASA", image: artImg, virtual: false },
   { name: "Sławosz Uznański-Wiśniewski", role: "European Space Agency (ESA)", image: slawoszImg, virtual: true },
   { name: "Anna Mikulska", role: "CGCN", image: annaImg, virtual: false },
-  { name: "Michał Kurtyka", role: "Organization for Economic Cooperation and Development", image: michalImg, virtual: false },
+  
   { name: "Jennifer Granholm", role: "DGA Group", image: jenniferImg, virtual: false },
   { name: "Alexandre Bayen", role: "EECS at UC Berkeley", image: alexanderImg, virtual: false },
 ];
