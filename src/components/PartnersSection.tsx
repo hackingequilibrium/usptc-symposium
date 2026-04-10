@@ -2,7 +2,7 @@ import usptcLogo from "@/assets/partners/usptc.png";
 import polsvLogo from "@/assets/partners/polsv.png";
 import taubeLogo from "@/assets/partners/taube.png";
 import top500Logo from "@/assets/partners/top500.webp";
-import embassyLogo from "@/assets/partners/embassy.png";
+import embassyLogo from "@/assets/partners/embassy.webp";
 import tripleRingLogo from "@/assets/partners/triple-ring.jpg";
 import consulateLaLogo from "@/assets/partners/consulate-la.jpg";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
