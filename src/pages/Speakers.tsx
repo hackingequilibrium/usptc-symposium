@@ -17,7 +17,7 @@ import maxImg from "@/assets/speakers/max.jpg";
 import maciejImg from "@/assets/speakers/maciej.png";
 import aleksandraImg from "@/assets/speakers/aleksandra.jpg";
 import piotrImg from "@/assets/speakers/piotr.png";
-import dariuszImg from "@/assets/speakers/dariusz.webp";
+import dariuszImg from "@/assets/speakers/dariusz.png";
 import soodyImg from "@/assets/speakers/soody.png";
 
 const baseSpeakers = [
