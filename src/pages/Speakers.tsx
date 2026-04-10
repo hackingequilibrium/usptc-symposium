@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import linkedinIcon from "@/assets/linkedin-icon.svg";
 import { Footer } from "@/components/Footer";
 import usptcFlag from "@/assets/usptc-flag.png";
+import victoriaImg from "@/assets/speakers/victoria.png";
 import slawoszImg from "@/assets/speakers/slawosz.jpg";
 import honorataImg from "@/assets/speakers/honorata.jpg";
 import dominikImg from "@/assets/speakers/dominik.png";
@@ -20,6 +21,7 @@ import dariuszImg from "@/assets/speakers/dariusz.webp";
 import soodyImg from "@/assets/speakers/soody.png";
 
 const baseSpeakers = [
+  { name: "Victoria Coleman", role: "Berkeley Air & Space Center", image: victoriaImg, linkedin: "https://www.linkedin.com/in/victoriastavridoucoleman/", virtual: false },
   { name: "Honorata Hencel", role: "Boeing", image: honorataImg, linkedin: "https://www.linkedin.com/in/honorata-hencel-2528aa56/", virtual: false },
   { name: "Dominik Schmidt", role: "Translarity", image: dominikImg, linkedin: "https://www.linkedin.com/in/dominikschmidt/", virtual: false },
   { name: "Sławosz Uznański-Wiśniewski", role: "European Space Agency (ESA)", image: slawoszImg, linkedin: "https://www.linkedin.com/in/slawoszuznanski/", virtual: true },

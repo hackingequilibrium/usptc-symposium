@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
+import victoriaImg from "@/assets/speakers/victoria.png";
 import slawoszImg from "@/assets/speakers/slawosz.jpg";
 import honorataImg from "@/assets/speakers/honorata.jpg";
 import artImg from "@/assets/speakers/art.jpg";
@@ -10,6 +11,7 @@ import jenniferImg from "@/assets/speakers/jennifer.jpg";
 import alexanderImg from "@/assets/speakers/alexander.jpg";
 
 const speakers = [
+  { name: "Victoria Coleman", role: "Berkeley Air & Space Center", image: victoriaImg, virtual: false },
   { name: "Honorata Hencel", role: "Boeing", image: honorataImg, virtual: false },
   { name: "Art (Artur) Chmielewski", role: "NASA", image: artImg, virtual: false },
   { name: "Sławosz Uznański-Wiśniewski", role: "European Space Agency (ESA)", image: slawoszImg, virtual: true },
