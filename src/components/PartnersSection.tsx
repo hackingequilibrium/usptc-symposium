@@ -50,13 +50,14 @@ export const PartnersSection = () => {
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                   {category.partners.map((partner) => {
+                    const isHonoraryPatrons = category.label === "Honorary Patrons";
                     const content = (
                       <div className="flex flex-col items-center gap-2">
                         {partner.logo ? (
                           <img
                             src={partner.logo}
                             alt={partner.name}
-                            className="max-h-20 object-contain"
+                            className={`object-contain ${isHonoraryPatrons ? "max-h-40" : "max-h-20"}`}
                           />
                         ) : null}
                         <span className="text-xs font-medium text-foreground/70 text-center leading-tight">
@@ -65,7 +66,7 @@ export const PartnersSection = () => {
                       </div>
                     );
 
-                    const cardClass = "flex items-center justify-center rounded-md border border-border bg-white p-4 min-h-[100px] hover:shadow-md transition-shadow";
+                    const cardClass = `flex items-center justify-center rounded-md border border-border bg-white p-4 ${isHonoraryPatrons ? "min-h-[200px]" : "min-h-[100px]"} hover:shadow-md transition-shadow`;
 
                     const card = 'url' in partner && partner.url ? (
                       <a
