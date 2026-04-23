@@ -10,7 +10,6 @@ const schema = z.object({
 
 const AdminAuth = () => {
   const navigate = useNavigate();
-  const [mode, setMode] = useState<"login" | "signup">("login");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -32,20 +31,11 @@ const AdminAuth = () => {
     }
     setBusy(true);
     try {
-      if (mode === "signup") {
-        const { error } = await supabase.auth.signUp({
-          email: parsed.data.email,
-          password: parsed.data.password,
-          options: { emailRedirectTo: `${window.location.origin}/admin` },
-        });
-        if (error) throw error;
-      } else {
-        const { error } = await supabase.auth.signInWithPassword({
-          email: parsed.data.email,
-          password: parsed.data.password,
-        });
-        if (error) throw error;
-      }
+      const { error } = await supabase.auth.signInWithPassword({
+        email: parsed.data.email,
+        password: parsed.data.password,
+      });
+      if (error) throw error;
       navigate("/admin", { replace: true });
     } catch (err: any) {
       setError(err.message ?? "Authentication failed");
@@ -57,11 +47,9 @@ const AdminAuth = () => {
   return (
     <div className="min-h-screen bg-background flex items-center justify-center px-6">
       <form onSubmit={submit} className="w-full max-w-sm space-y-4">
-        <h1 className="font-serif text-2xl text-foreground">Admin {mode === "signup" ? "Sign up" : "Sign in"}</h1>
+        <h1 className="font-serif text-2xl text-foreground">Admin Sign in</h1>
         <p className="text-muted-foreground text-sm">
-          {mode === "signup"
-            ? "Create an admin account. An existing admin must grant you access."
-            : "Sign in with your admin email and password."}
+          Sign in with your admin email and password. Accounts are created by an existing admin.
         </p>
         <input
           type="email"
@@ -76,7 +64,7 @@ const AdminAuth = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"
-          autoComplete={mode === "signup" ? "new-password" : "current-password"}
+          autoComplete="current-password"
           className="w-full px-4 py-3 rounded-sm border border-input bg-background text-foreground text-sm"
         />
         {error && <p className="text-destructive text-xs">{error}</p>}
@@ -85,14 +73,7 @@ const AdminAuth = () => {
           disabled={busy}
           className="w-full px-4 py-3 rounded-sm bg-foreground text-background text-sm font-medium tracking-wide uppercase disabled:opacity-50"
         >
-          {busy ? "..." : mode === "signup" ? "Sign up" : "Sign in"}
-        </button>
-        <button
-          type="button"
-          onClick={() => setMode(mode === "signup" ? "login" : "signup")}
-          className="w-full text-xs text-muted-foreground hover:text-foreground"
-        >
-          {mode === "signup" ? "Already have an account? Sign in" : "Need an account? Sign up"}
+          {busy ? "..." : "Sign in"}
         </button>
       </form>
     </div>
