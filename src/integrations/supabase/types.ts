@@ -14,6 +14,83 @@ export type Database = {
   }
   public: {
     Tables: {
+      agenda_days: {
+        Row: {
+          created_at: string
+          date_text: string
+          id: string
+          label: string
+          location: string
+          sort_order: number
+          subtitle: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          date_text: string
+          id?: string
+          label: string
+          location: string
+          sort_order?: number
+          subtitle: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          date_text?: string
+          id?: string
+          label?: string
+          location?: string
+          sort_order?: number
+          subtitle?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      agenda_items: {
+        Row: {
+          bullets: string[]
+          created_at: string
+          day_id: string
+          description: string | null
+          id: string
+          sort_order: number
+          time_text: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          bullets?: string[]
+          created_at?: string
+          day_id: string
+          description?: string | null
+          id?: string
+          sort_order?: number
+          time_text: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          bullets?: string[]
+          created_at?: string
+          day_id?: string
+          description?: string | null
+          id?: string
+          sort_order?: number
+          time_text?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "agenda_items_day_id_fkey"
+            columns: ["day_id"]
+            isOneToOne: false
+            referencedRelation: "agenda_days"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       contact_submissions: {
         Row: {
           created_at: string
@@ -38,6 +115,42 @@ export type Database = {
           message?: string
           name?: string
           organization?: string | null
+        }
+        Relationships: []
+      }
+      partners: {
+        Row: {
+          category: string
+          created_at: string
+          id: string
+          is_active: boolean
+          logo_url: string | null
+          name: string
+          sort_order: number
+          updated_at: string
+          url: string | null
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          id?: string
+          is_active?: boolean
+          logo_url?: string | null
+          name: string
+          sort_order?: number
+          updated_at?: string
+          url?: string | null
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          id?: string
+          is_active?: boolean
+          logo_url?: string | null
+          name?: string
+          sort_order?: number
+          updated_at?: string
+          url?: string | null
         }
         Relationships: []
       }
@@ -83,15 +196,84 @@ export type Database = {
         }
         Relationships: []
       }
+      speakers: {
+        Row: {
+          created_at: string
+          featured: boolean
+          id: string
+          image_url: string | null
+          is_active: boolean
+          linkedin: string | null
+          name: string
+          role: string
+          sort_order: number
+          updated_at: string
+          virtual: boolean
+        }
+        Insert: {
+          created_at?: string
+          featured?: boolean
+          id?: string
+          image_url?: string | null
+          is_active?: boolean
+          linkedin?: string | null
+          name: string
+          role: string
+          sort_order?: number
+          updated_at?: string
+          virtual?: boolean
+        }
+        Update: {
+          created_at?: string
+          featured?: boolean
+          id?: string
+          image_url?: string | null
+          is_active?: boolean
+          linkedin?: string | null
+          name?: string
+          role?: string
+          sort_order?: number
+          updated_at?: string
+          virtual?: boolean
+        }
+        Relationships: []
+      }
+      user_roles: {
+        Row: {
+          created_at: string
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -218,6 +400,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin"],
+    },
   },
 } as const
