@@ -4,7 +4,7 @@ import taubeLogo from "@/assets/partners/taube.png";
 import top500Logo from "@/assets/partners/top500.webp";
 import embassyLogo from "@/assets/partners/embassy.webp";
 import tripleRingLogo from "@/assets/partners/triple-ring.jpg";
-import parpLogo from "@/assets/partners/parp.svg";
+import parpLogo from "@/assets/partners/parp.png";
 import consulateLaLogo from "@/assets/partners/consulate-la.png";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
