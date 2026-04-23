@@ -85,11 +85,15 @@ Deno.serve(async (req) => {
 
       if (action === "grant") {
         const email = String(body.email ?? "").trim().toLowerCase();
+        const password = body.password ? String(body.password) : null;
         if (!email || !email.includes("@")) {
           return json({ error: "Valid email required" }, 400);
         }
+        if (password !== null && password.length < 6) {
+          return json({ error: "Password must be at least 6 characters" }, 400);
+        }
 
-        // Find user by email — paginate auth.users
+        // Find existing user by email — paginate auth.users
         let foundId: string | null = null;
         let page = 1;
         while (page <= 20 && !foundId) {
@@ -105,11 +109,25 @@ Deno.serve(async (req) => {
           if (data.users.length < 200) break;
           page++;
         }
+
+        // If not found and password supplied, create the user
         if (!foundId) {
-          return json(
-            { error: "No registered user with that email. Ask them to sign up first." },
-            404,
-          );
+          if (!password) {
+            return json(
+              { error: "No registered user with that email. Provide a password to create the account." },
+              404,
+            );
+          }
+          const { data: created, error: createErr } = await admin.auth.admin
+            .createUser({
+              email,
+              password,
+              email_confirm: true,
+            });
+          if (createErr || !created.user) {
+            return json({ error: createErr?.message ?? "Failed to create user" }, 500);
+          }
+          foundId = created.user.id;
         }
 
         const { error: insErr } = await admin

@@ -16,6 +16,7 @@ export const UsersAdmin = () => {
   const [admins, setAdmins] = useState<AdminRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [granting, setGranting] = useState(false);
   const [revokingId, setRevokingId] = useState<string | null>(null);
 
@@ -39,10 +40,14 @@ export const UsersAdmin = () => {
   const grant = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email.trim()) return;
+    if (password && password.length < 6) {
+      toast({ title: "Password too short", description: "Use at least 6 characters.", variant: "destructive" });
+      return;
+    }
     setGranting(true);
     const { data, error } = await supabase.functions.invoke("admin-users?action=grant", {
       method: "POST",
-      body: { email: email.trim() },
+      body: { email: email.trim(), password: password || undefined },
     });
     setGranting(false);
     if (error || data?.error) {
@@ -55,6 +60,7 @@ export const UsersAdmin = () => {
     }
     toast({ title: "Admin granted", description: `${email} is now an admin.` });
     setEmail("");
+    setPassword("");
     load();
   };
 
