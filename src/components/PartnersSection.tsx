@@ -4,6 +4,7 @@ import taubeLogo from "@/assets/partners/taube.png";
 import top500Logo from "@/assets/partners/top500.webp";
 import embassyLogo from "@/assets/partners/embassy.webp";
 import tripleRingLogo from "@/assets/partners/triple-ring.jpg";
+import parpLogo from "@/assets/partners/parp.svg";
 import consulateLaLogo from "@/assets/partners/consulate-la.png";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
@@ -22,6 +23,7 @@ const partnerCategories = [
     partners: [
       { name: "Top 500 Innovators Program Alumni", logo: top500Logo },
       { name: "Triple Ring Technologies", logo: tripleRingLogo, url: "https://www.tripleringtech.com/" },
+      { name: "Polish Agency for Enterprise Development", logo: parpLogo, url: "https://www.parp.gov.pl/" },
     ],
   },
   {
