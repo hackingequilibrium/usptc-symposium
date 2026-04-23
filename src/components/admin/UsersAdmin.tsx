@@ -91,25 +91,33 @@ export const UsersAdmin = () => {
   return (
     <div className="space-y-8">
       <section className="space-y-3">
-        <h2 className="font-serif text-xl text-foreground">Grant admin access</h2>
+        <h2 className="font-serif text-xl text-foreground">Add admin</h2>
         <p className="text-xs text-muted-foreground">
-          The user must already have an account at <span className="font-mono">/admin/auth</span>. Enter their email below.
+          Enter an email and password to create a new admin account. If the email already has an account, it will simply be granted admin access (password ignored).
         </p>
-        <form onSubmit={grant} className="flex gap-2 max-w-md">
+        <form onSubmit={grant} className="space-y-2 max-w-md">
           <input
             type="email"
             required
             placeholder="email@example.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="flex-1 px-3 py-2 text-sm border border-border rounded-sm bg-background text-foreground"
+            className="w-full px-3 py-2 text-sm border border-border rounded-sm bg-background text-foreground"
+          />
+          <input
+            type="password"
+            placeholder="Password (min 6 chars, for new accounts)"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            autoComplete="new-password"
+            className="w-full px-3 py-2 text-sm border border-border rounded-sm bg-background text-foreground"
           />
           <button
             type="submit"
             disabled={granting}
             className="px-4 py-2 rounded-sm bg-foreground text-background text-sm disabled:opacity-50"
           >
-            {granting ? "Granting…" : "Grant admin"}
+            {granting ? "Adding…" : "Add admin"}
           </button>
         </form>
       </section>
