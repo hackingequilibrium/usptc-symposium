@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { ImageUpload } from "./ImageUpload";
+import { SortableList, SortableItem } from "./Sortable";
 import { Trash2, Plus } from "lucide-react";
 
 interface Speaker {
@@ -50,65 +51,72 @@ export const SpeakersAdmin = () => {
     setItems(items.filter((i) => i.id !== id));
   };
 
+  const reorder = async (next: Speaker[]) => {
+    const withOrder = next.map((s, idx) => ({ ...s, sort_order: idx }));
+    setItems(withOrder);
+    await Promise.all(
+      withOrder.map((s) => supabase.from("speakers").update({ sort_order: s.sort_order }).eq("id", s.id))
+    );
+  };
+
   if (loading) return <p className="text-muted-foreground">Loading…</p>;
 
   return (
     <div className="space-y-4">
-      <div className="flex justify-end">
+      <div className="flex items-center justify-between">
+        <p className="text-xs text-muted-foreground">
+          Drag the handle to reorder. <strong>Featured</strong> speakers appear on the landing page (max 7 recommended).
+        </p>
         <button onClick={addNew} className="flex items-center gap-1.5 text-sm px-3 py-2 rounded-sm bg-foreground text-background">
           <Plus className="w-4 h-4" /> Add speaker
         </button>
       </div>
-      <p className="text-xs text-muted-foreground">
-        <strong>Featured</strong> speakers appear on the landing page (max 7 recommended). All active speakers appear on /speakers.
-      </p>
-      {items.map((s) => (
-        <div key={s.id} className="rounded-sm border border-input bg-card p-4 grid grid-cols-1 md:grid-cols-[auto,1fr,1fr,1fr,auto] gap-3 items-start">
-          <ImageUpload value={s.image_url} onChange={(url) => update(s.id, { image_url: url })} folder="speakers" />
-          <input
-            className="px-3 py-2 rounded-sm border border-input bg-background text-sm"
-            value={s.name}
-            onChange={(e) => update(s.id, { name: e.target.value })}
-            placeholder="Name"
-          />
-          <input
-            className="px-3 py-2 rounded-sm border border-input bg-background text-sm"
-            value={s.role}
-            onChange={(e) => update(s.id, { role: e.target.value })}
-            placeholder="Role / Affiliation"
-          />
-          <input
-            className="px-3 py-2 rounded-sm border border-input bg-background text-sm"
-            value={s.linkedin ?? ""}
-            onChange={(e) => update(s.id, { linkedin: e.target.value || null })}
-            placeholder="LinkedIn URL"
-          />
-          <div className="flex flex-col gap-1.5 text-xs">
+      <SortableList items={items} onReorder={reorder}>
+        {(s) => (
+          <SortableItem
+            key={s.id}
+            id={s.id}
+            className="rounded-sm border border-input bg-card p-4 grid grid-cols-1 md:grid-cols-[auto,auto,1fr,1fr,1fr,auto] gap-3 items-start mb-3"
+          >
+            <ImageUpload value={s.image_url} onChange={(url) => update(s.id, { image_url: url })} folder="speakers" />
             <input
-              type="number"
-              className="w-16 px-2 py-1.5 rounded-sm border border-input bg-background"
-              value={s.sort_order}
-              onChange={(e) => update(s.id, { sort_order: parseInt(e.target.value) || 0 })}
-              title="Sort order"
+              className="px-3 py-2 rounded-sm border border-input bg-background text-sm"
+              value={s.name}
+              onChange={(e) => update(s.id, { name: e.target.value })}
+              placeholder="Name"
             />
-            <label className="flex items-center gap-1">
-              <input type="checkbox" checked={s.featured} onChange={(e) => update(s.id, { featured: e.target.checked })} />
-              Featured
-            </label>
-            <label className="flex items-center gap-1">
-              <input type="checkbox" checked={s.virtual} onChange={(e) => update(s.id, { virtual: e.target.checked })} />
-              Virtual
-            </label>
-            <label className="flex items-center gap-1">
-              <input type="checkbox" checked={s.is_active} onChange={(e) => update(s.id, { is_active: e.target.checked })} />
-              Active
-            </label>
-            <button onClick={() => remove(s.id)} className="text-destructive hover:opacity-70 self-start mt-1">
-              <Trash2 className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
-      ))}
+            <input
+              className="px-3 py-2 rounded-sm border border-input bg-background text-sm"
+              value={s.role}
+              onChange={(e) => update(s.id, { role: e.target.value })}
+              placeholder="Role / Affiliation"
+            />
+            <input
+              className="px-3 py-2 rounded-sm border border-input bg-background text-sm"
+              value={s.linkedin ?? ""}
+              onChange={(e) => update(s.id, { linkedin: e.target.value || null })}
+              placeholder="LinkedIn URL"
+            />
+            <div className="flex flex-col gap-1.5 text-xs">
+              <label className="flex items-center gap-1">
+                <input type="checkbox" checked={s.featured} onChange={(e) => update(s.id, { featured: e.target.checked })} />
+                Featured
+              </label>
+              <label className="flex items-center gap-1">
+                <input type="checkbox" checked={s.virtual} onChange={(e) => update(s.id, { virtual: e.target.checked })} />
+                Virtual
+              </label>
+              <label className="flex items-center gap-1">
+                <input type="checkbox" checked={s.is_active} onChange={(e) => update(s.id, { is_active: e.target.checked })} />
+                Active
+              </label>
+              <button onClick={() => remove(s.id)} className="text-destructive hover:opacity-70 self-start mt-1">
+                <Trash2 className="w-4 h-4" />
+              </button>
+            </div>
+          </SortableItem>
+        )}
+      </SortableList>
     </div>
   );
 };
