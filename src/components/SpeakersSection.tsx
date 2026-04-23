@@ -1,29 +1,32 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
-import victoriaImg from "@/assets/speakers/victoria.png";
-import slawoszImg from "@/assets/speakers/slawosz.jpg";
-import honorataImg from "@/assets/speakers/honorata.jpg";
-import artImg from "@/assets/speakers/art.jpg";
-import annaImg from "@/assets/speakers/anna.jpg";
-import michalImg from "@/assets/speakers/michal.png";
-import jenniferImg from "@/assets/speakers/jennifer.jpg";
-import alexanderImg from "@/assets/speakers/alexander.jpg";
+import { supabase } from "@/integrations/supabase/client";
+import { speakerFallbackImage } from "@/lib/speakerImages";
 
-const speakers = [
-  { name: "Victoria Coleman", role: "Berkeley Air & Space Center", image: victoriaImg, virtual: false },
-  { name: "Honorata Hencel", role: "Boeing", image: honorataImg, virtual: false },
-  { name: "Art (Artur) Chmielewski", role: "NASA", image: artImg, virtual: false },
-  { name: "Sławosz Uznański-Wiśniewski", role: "European Space Agency (ESA)", image: slawoszImg, virtual: true },
-  { name: "Anna Mikulska", role: "CGCN", image: annaImg, virtual: false },
-  
-  { name: "Jennifer Granholm", role: "DGA Group", image: jenniferImg, virtual: false },
-  { name: "Alexandre Bayen", role: "EECS at UC Berkeley", image: alexanderImg, virtual: false },
-];
+interface Speaker {
+  id: string;
+  name: string;
+  role: string;
+  image_url: string | null;
+  virtual: boolean;
+  sort_order: number;
+}
 
 export const SpeakersSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [speakers, setSpeakers] = useState<Speaker[]>([]);
+
+  useEffect(() => {
+    supabase
+      .from("speakers")
+      .select("id,name,role,image_url,virtual,sort_order")
+      .eq("is_active", true)
+      .eq("featured", true)
+      .order("sort_order")
+      .then(({ data }) => setSpeakers((data ?? []) as Speaker[]));
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -42,7 +45,6 @@ export const SpeakersSection = () => {
   return (
     <section id="speakers" ref={sectionRef} className="bg-background py-24 md:py-32">
       <div className="container max-w-7xl mx-auto px-6 md:px-12">
-        {/* Header */}
         <div
           className={`transition-all duration-800 ease-out ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
@@ -61,17 +63,14 @@ export const SpeakersSection = () => {
           </p>
         </div>
 
-        {/* Speaker grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {speakers.map((speaker, index) => {
-            const initials = speaker.name
-              .split(" ")
-              .map((n) => n[0])
-              .join("");
+            const initials = speaker.name.split(" ").map((n) => n[0]).join("");
+            const img = speaker.image_url ?? speakerFallbackImage(speaker.name);
 
             return (
               <div
-                key={speaker.name}
+                key={speaker.id}
                 className={`group relative rounded-md bg-secondary overflow-hidden transition-all duration-700 ease-out hover:scale-[1.02] ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
@@ -83,31 +82,20 @@ export const SpeakersSection = () => {
                   </span>
                 )}
                 <div className="aspect-[3/4] bg-gradient-to-br from-accent-blue/40 to-accent-pink/30 flex items-center justify-center">
-                  {speaker.image ? (
-                    <img
-                      src={speaker.image}
-                      alt={speaker.name}
-                      className="w-full h-full object-cover object-top"
-                    />
+                  {img ? (
+                    <img src={img} alt={speaker.name} className="w-full h-full object-cover object-top" />
                   ) : (
-                    <span className="font-serif text-4xl text-foreground/25 select-none">
-                      {initials}
-                    </span>
+                    <span className="font-serif text-4xl text-foreground/25 select-none">{initials}</span>
                   )}
                 </div>
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 via-navy/60 to-transparent p-6 pt-16">
-                  <h3 className="font-sans text-base font-semibold text-navy-foreground leading-snug">
-                    {speaker.name}
-                  </h3>
-                  <p className="font-sans text-sm text-navy-foreground/60 mt-1">
-                    {speaker.role}
-                  </p>
+                  <h3 className="font-sans text-base font-semibold text-navy-foreground leading-snug">{speaker.name}</h3>
+                  <p className="font-sans text-sm text-navy-foreground/60 mt-1">{speaker.role}</p>
                 </div>
               </div>
             );
           })}
 
-          {/* View all speakers card */}
           <Link
             to="/speakers"
             className={`group relative rounded-md bg-navy overflow-hidden flex flex-col items-center justify-center aspect-[3/4] transition-all duration-700 ease-out hover:scale-[1.02] cursor-pointer ${

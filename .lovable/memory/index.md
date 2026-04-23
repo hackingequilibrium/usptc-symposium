@@ -9,7 +9,7 @@ Updated: just now
 - Layout: Main sections like Registration and Footer max-w-6xl (1152px).
 - Animations: Staggered entrance animations (fade-in and slide-up), 700-800ms duration.
 - Event: XXV US-Poland Symposium, Jun 1-3 2026. CTAs: "Register Now" (Eventbrite, new tab), "Partner with Us" (/partner).
-- Admin: /admin pass `123456`, tables `contact_submissions`, `partnership_inquiries`. Notify `agata.braja@polsv.org`.
+- Admin: /admin requires email/password login + admin role in `user_roles`. /admin/auth for sign in. Tables: contact_submissions, partnership_inquiries (read-only) + partners, speakers, agenda_days/items (full CRUD). Notify agata.braja@polsv.org.
 
 ## Memories
 - [Visual Identity](mem://style/visual-identity) — DM Serif typography, navy/white theme, pink/blue gradients
@@ -24,7 +24,8 @@ Updated: just now
 - [Registration Section](mem://features/registration-section) — Poster alignment, max-w-6xl, CTA buttons styling
 - [Entrance Animations](mem://features/animations) — Staggered scroll-triggered fade/slide animations for sections
 - [Footer](mem://style/footer) — Copyright layout, Contact Us dialog, LinkedIn link
-- [Admin System](mem://features/contact-admin-system) — /admin password, submission tables, email notification target
+- [Admin System](mem://features/contact-admin-system) — Submission tables (contact, partnership), email notification target
+- [Admin CMS](mem://features/admin-cms) — Auth-gated CRUD for partners/speakers/agenda; user_roles gate; cms-assets bucket
 - [Leadership Section](mem://features/leadership-section) — Advisory 4-column grid with 'View All' tile
 - [Leadership Page](mem://features/leadership-page) — Dedicated /leadership grid of confirmed advisory board
 - [Agenda Page](mem://features/agenda-page) — /agenda animated timeline with navy day tags

@@ -3,48 +3,20 @@ import { Link } from "react-router-dom";
 import linkedinIcon from "@/assets/linkedin-icon.svg";
 import { Footer } from "@/components/Footer";
 import usptcFlag from "@/assets/usptc-flag.png";
-import victoriaImg from "@/assets/speakers/victoria.png";
-import slawoszImg from "@/assets/speakers/slawosz.jpg";
-import honorataImg from "@/assets/speakers/honorata.jpg";
-import dominikImg from "@/assets/speakers/dominik.png";
-import annaImg from "@/assets/speakers/anna.jpg";
-import michalImg from "@/assets/speakers/michal.png";
-import jenniferImg from "@/assets/speakers/jennifer.jpg";
-import alexanderImg from "@/assets/speakers/alexander.jpg";
-import artImg from "@/assets/speakers/art.jpg";
-import mikeImg from "@/assets/speakers/mike.jpg";
-import maxImg from "@/assets/speakers/max.jpg";
-import maciejImg from "@/assets/speakers/maciej.png";
-import aleksandraImg from "@/assets/speakers/aleksandra.jpg";
-import piotrImg from "@/assets/speakers/piotr.png";
-import dariuszImg from "@/assets/speakers/dariusz.png";
-import soodyImg from "@/assets/speakers/soody.png";
+import { supabase } from "@/integrations/supabase/client";
+import { speakerFallbackImage } from "@/lib/speakerImages";
 
-const baseSpeakers = [
-  { name: "Victoria Coleman", role: "Berkeley Air & Space Center", image: victoriaImg, linkedin: "https://www.linkedin.com/in/victoriastavridoucoleman/", virtual: false },
-  { name: "Honorata Hencel", role: "Boeing", image: honorataImg, linkedin: "https://www.linkedin.com/in/honorata-hencel-2528aa56/", virtual: false },
-  { name: "Dominik Schmidt", role: "Translarity", image: dominikImg, linkedin: "https://www.linkedin.com/in/dominikschmidt/", virtual: false },
-  { name: "Sławosz Uznański-Wiśniewski", role: "European Space Agency (ESA)", image: slawoszImg, linkedin: "https://www.linkedin.com/in/slawoszuznanski/", virtual: true },
-  { name: "Anna Mikulska", role: "CGCN", image: annaImg, linkedin: "https://www.linkedin.com/in/anna-mikulska-410a846/", virtual: false },
-  { name: "Michał Kurtyka", role: "OECD", image: michalImg, linkedin: "https://www.linkedin.com/in/kurtyka-michal/", virtual: false },
-  { name: "Jennifer Granholm", role: "DGA Group", image: jenniferImg, linkedin: "https://www.linkedin.com/in/jennifergranholm/", virtual: false },
-  { name: "Alexandre Bayen", role: "EECS at UC Berkeley", image: alexanderImg, linkedin: "https://www.linkedin.com/in/alexandre-bayen-8479598/", virtual: false },
-  { name: "Art (Artur) Chmielewski", role: "NASA", image: artImg, linkedin: "https://www.linkedin.com/in/art-chmielewski-551a8023/", virtual: false },
-  { name: "Mike Lepech", role: "Stanford University", image: mikeImg, linkedin: "https://www.linkedin.com/in/mike-lepech-b6553b9/", virtual: false },
-  { name: "Max Salamonowicz", role: "Omea™", image: maxImg, linkedin: "https://www.linkedin.com/in/max-salamonowicz/", virtual: false },
-  { name: "Maciej Kawecki", role: "This is it, Lem Institute", image: maciejImg, linkedin: "https://www.linkedin.com/in/maciejkawecki/", virtual: false },
-  { name: "Aleksandra Radlińska", role: "Penn State", image: aleksandraImg, linkedin: "https://www.linkedin.com/in/aleksandra-radli%C5%84ska-86708a5/", virtual: false },
-  { name: "Piotr Moncarz", role: "PolSV, USPTC", image: piotrImg, linkedin: "https://www.linkedin.com/in/piotr-d-moncarz-ph-d-p-e-nae-8989a41/", virtual: false },
-  { name: "Dariusz Rosati", role: "Warsaw School of Economics", image: dariuszImg, linkedin: "", virtual: false },
-  { name: "Soody Tronson", role: "STLG Law Firm", image: soodyImg, linkedin: "https://www.linkedin.com/in/soodytronson/", virtual: false },
-];
+interface Speaker {
+  id: string;
+  name: string;
+  role: string;
+  image_url: string | null;
+  linkedin: string | null;
+  virtual: boolean;
+  sort_order: number;
+}
 
-const speakers = baseSpeakers.map((speaker, i) => ({
-  ...speaker,
-  id: i,
-}));
-
-const SpeakerCard = ({ speaker, index }: { speaker: (typeof speakers)[0]; index: number }) => {
+const SpeakerCard = ({ speaker, index }: { speaker: Speaker; index: number }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -62,8 +34,9 @@ const SpeakerCard = ({ speaker, index }: { speaker: (typeof speakers)[0]; index:
     return () => observer.disconnect();
   }, []);
 
-  // Stagger within each row of 6
   const colIndex = index % 6;
+  const img = speaker.image_url ?? speakerFallbackImage(speaker.name);
+  const initials = speaker.name.split(" ").map((n) => n[0]).join("");
 
   return (
     <div
@@ -79,21 +52,16 @@ const SpeakerCard = ({ speaker, index }: { speaker: (typeof speakers)[0]; index:
         </span>
       )}
       <div className="aspect-[3/4] bg-gradient-to-br from-accent-blue/40 to-accent-pink/30 flex items-center justify-center">
-        <img
-          src={speaker.image}
-          alt={speaker.name}
-          loading="lazy"
-          className="w-full h-full object-cover object-top"
-        />
+        {img ? (
+          <img src={img} alt={speaker.name} loading="lazy" className="w-full h-full object-cover object-top" />
+        ) : (
+          <span className="font-serif text-4xl text-foreground/25 select-none">{initials}</span>
+        )}
       </div>
 
       <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 via-navy/60 to-transparent p-3 pb-4 pt-10">
-        <h3 className="font-sans text-xs sm:text-sm font-semibold text-navy-foreground leading-snug pr-9">
-          {speaker.name}
-        </h3>
-        <p className="font-sans text-[10px] sm:text-xs text-navy-foreground/60 mt-0.5 pr-9">
-          {speaker.role}
-        </p>
+        <h3 className="font-sans text-xs sm:text-sm font-semibold text-navy-foreground leading-snug pr-9">{speaker.name}</h3>
+        <p className="font-sans text-[10px] sm:text-xs text-navy-foreground/60 mt-0.5 pr-9">{speaker.role}</p>
       </div>
 
       {speaker.linkedin && (
@@ -112,7 +80,18 @@ const SpeakerCard = ({ speaker, index }: { speaker: (typeof speakers)[0]; index:
 };
 
 const Speakers = () => {
-  useEffect(() => { window.scrollTo(0, 0); }, []);
+  const [speakers, setSpeakers] = useState<Speaker[]>([]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    supabase
+      .from("speakers")
+      .select("id,name,role,image_url,linkedin,virtual,sort_order")
+      .eq("is_active", true)
+      .order("sort_order")
+      .then(({ data }) => setSpeakers((data ?? []) as Speaker[]));
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <div className="bg-navy py-20 sm:py-28">

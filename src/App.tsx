@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import Admin from "./pages/Admin.tsx";
+import AdminAuth from "./pages/AdminAuth.tsx";
 import Speakers from "./pages/Speakers.tsx";
 import Agenda from "./pages/Agenda.tsx";
 import Leadership from "./pages/Leadership.tsx";
@@ -23,6 +24,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/admin/auth" element={<AdminAuth />} />
           <Route path="/speakers" element={<Speakers />} />
           <Route path="/agenda" element={<Agenda />} />
           <Route path="/leadership" element={<Leadership />} />

@@ -1,202 +1,128 @@
 import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
-import { format } from "date-fns";
+import { useAdminAuth } from "@/hooks/useAdminAuth";
+import { ContactSubmissions } from "@/components/admin/ContactSubmissions";
+import { PartnershipInquiries } from "@/components/admin/PartnershipInquiries";
+import { PartnersAdmin } from "@/components/admin/PartnersAdmin";
+import { SpeakersAdmin } from "@/components/admin/SpeakersAdmin";
+import { AgendaAdmin } from "@/components/admin/AgendaAdmin";
 
-interface Submission {
-  id: string;
-  name: string;
-  email: string;
-  organization: string | null;
-  message: string;
-  created_at: string;
-}
+type Tab = "contact" | "partnership" | "partners" | "speakers" | "agenda";
 
-interface PartnerInquiry {
-  id: string;
-  name: string;
-  email: string;
-  organization: string;
-  role_title: string | null;
-  org_type: string;
-  areas_of_interest: string[];
-  description: string | null;
-  website: string | null;
-  linkedin: string | null;
-  created_at: string;
-}
-
-type Tab = "contact" | "partnership";
+const TABS: { id: Tab; label: string }[] = [
+  { id: "partners", label: "Partners" },
+  { id: "speakers", label: "Speakers" },
+  { id: "agenda", label: "Agenda" },
+  { id: "contact", label: "Contact" },
+  { id: "partnership", label: "Partnerships" },
+];
 
 const Admin = () => {
-  const [submissions, setSubmissions] = useState<Submission[]>([]);
-  const [inquiries, setInquiries] = useState<PartnerInquiry[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [isAuthed, setIsAuthed] = useState(false);
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const [tab, setTab] = useState<Tab>("contact");
-
-  const ADMIN_PASS = "123456";
-
-  const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (password === ADMIN_PASS) {
-      setIsAuthed(true);
-      setError("");
-    } else {
-      setError("Incorrect password");
-    }
-  };
+  const navigate = useNavigate();
+  const { session, isAdmin, loading } = useAdminAuth();
+  const [tab, setTab] = useState<Tab>("partners");
+  const [grantingSelf, setGrantingSelf] = useState(false);
 
   useEffect(() => {
-    if (!isAuthed) return;
-    const fetchData = async () => {
-      const [contactRes, partnerRes] = await Promise.all([
-        supabase.from("contact_submissions").select("*").order("created_at", { ascending: false }),
-        supabase.from("partnership_inquiries").select("*").order("created_at", { ascending: false }),
-      ]);
+    if (!loading && !session) navigate("/admin/auth", { replace: true });
+  }, [loading, session, navigate]);
 
-      if (contactRes.data) setSubmissions(contactRes.data as Submission[]);
-      if (partnerRes.data) setInquiries(partnerRes.data as PartnerInquiry[]);
-      setLoading(false);
-    };
-    fetchData();
-  }, [isAuthed]);
+  const signOut = async () => {
+    await supabase.auth.signOut();
+    navigate("/admin/auth", { replace: true });
+  };
 
-  if (!isAuthed) {
+  const claimAdmin = async () => {
+    if (!session) return;
+    setGrantingSelf(true);
+    // First admin: only succeeds if no admin exists yet (per RLS, this insert needs admin role,
+    // so we use a one-time bootstrap via direct insert that works only when user_roles is empty
+    // for admin role). RLS will block otherwise.
+    const { count } = await supabase
+      .from("user_roles")
+      .select("*", { count: "exact", head: true })
+      .eq("role", "admin");
+    if ((count ?? 0) > 0) {
+      alert("An admin already exists. Ask them to grant you access in Cloud → Database → user_roles.");
+      setGrantingSelf(false);
+      return;
+    }
+    // Insert via SQL needs to bypass RLS — won't work from client.
+    alert("To grant the first admin role, open Cloud → Database → user_roles, and insert a row with your user_id and role 'admin'. Your user ID is:\n\n" + session.user.id);
+    setGrantingSelf(false);
+  };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <p className="text-muted-foreground">Loading…</p>
+      </div>
+    );
+  }
+
+  if (!session) return null;
+
+  if (!isAdmin) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center px-6">
-        <form onSubmit={handleLogin} className="w-full max-w-sm space-y-4">
-          <h1 className="font-serif text-2xl text-foreground">Admin Panel</h1>
-          <p className="text-muted-foreground text-sm">Enter the admin password to view submissions.</p>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Password"
-            className="w-full px-4 py-3 rounded-sm border border-input bg-background text-foreground text-sm"
-          />
-          {error && <p className="text-destructive text-xs">{error}</p>}
-          <button
-            type="submit"
-            className="w-full px-4 py-3 rounded-sm bg-foreground text-background text-sm font-medium tracking-wide uppercase"
-          >
-            Enter
-          </button>
-        </form>
+        <div className="max-w-md text-center space-y-4">
+          <h1 className="font-serif text-2xl text-foreground">Access required</h1>
+          <p className="text-sm text-muted-foreground">
+            You're signed in as <span className="font-mono">{session.user.email}</span> but don't have admin access yet.
+          </p>
+          <div className="flex flex-col gap-2">
+            <button
+              onClick={claimAdmin}
+              disabled={grantingSelf}
+              className="px-4 py-2 rounded-sm bg-foreground text-background text-sm"
+            >
+              How to grant admin access
+            </button>
+            <button onClick={signOut} className="text-xs text-muted-foreground hover:text-foreground">
+              Sign out
+            </button>
+          </div>
+        </div>
       </div>
     );
   }
 
   return (
     <div className="min-h-screen bg-background px-6 py-12">
-      <div className="max-w-5xl mx-auto">
-        <h1 className="font-serif text-3xl text-foreground mb-6">Admin Panel</h1>
-
-        {/* Tabs */}
-        <div className="flex gap-1 mb-8 border-b border-border">
-          <button
-            onClick={() => setTab("contact")}
-            className={`px-4 py-2.5 text-sm font-medium transition-colors border-b-2 -mb-px ${
-              tab === "contact"
-                ? "border-foreground text-foreground"
-                : "border-transparent text-muted-foreground hover:text-foreground"
-            }`}
-          >
-            Contact Submissions ({submissions.length})
-          </button>
-          <button
-            onClick={() => setTab("partnership")}
-            className={`px-4 py-2.5 text-sm font-medium transition-colors border-b-2 -mb-px ${
-              tab === "partnership"
-                ? "border-foreground text-foreground"
-                : "border-transparent text-muted-foreground hover:text-foreground"
-            }`}
-          >
-            Partnership Inquiries ({inquiries.length})
-          </button>
+      <div className="max-w-6xl mx-auto">
+        <div className="flex items-center justify-between mb-6">
+          <div>
+            <h1 className="font-serif text-3xl text-foreground">Admin Panel</h1>
+            <p className="text-xs text-muted-foreground mt-1">Signed in as {session.user.email}</p>
+          </div>
+          <div className="flex items-center gap-3">
+            <Link to="/" className="text-xs text-muted-foreground hover:text-foreground">View site</Link>
+            <button onClick={signOut} className="text-xs text-muted-foreground hover:text-foreground">Sign out</button>
+          </div>
         </div>
 
-        {loading ? (
-          <p className="text-muted-foreground">Loading…</p>
-        ) : tab === "contact" ? (
-          /* Contact Submissions */
-          submissions.length === 0 ? (
-            <p className="text-muted-foreground">No contact submissions yet.</p>
-          ) : (
-            <div className="space-y-4">
-              {submissions.map((s) => (
-                <div key={s.id} className="rounded-sm border border-input bg-card p-5 space-y-2">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-                    <h3 className="font-medium text-foreground">{s.name}</h3>
-                    <span className="text-xs text-muted-foreground font-mono">
-                      {format(new Date(s.created_at), "MMM d, yyyy · HH:mm")}
-                    </span>
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    {s.email}
-                    {s.organization && ` · ${s.organization}`}
-                  </p>
-                  <p className="text-sm text-foreground/80 whitespace-pre-wrap">{s.message}</p>
-                </div>
-              ))}
-            </div>
-          )
-        ) : (
-          /* Partnership Inquiries */
-          inquiries.length === 0 ? (
-            <p className="text-muted-foreground">No partnership inquiries yet.</p>
-          ) : (
-            <div className="space-y-4">
-              {inquiries.map((inq) => (
-                <div key={inq.id} className="rounded-sm border border-input bg-card p-5 space-y-3">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-                    <h3 className="font-medium text-foreground">{inq.name}</h3>
-                    <span className="text-xs text-muted-foreground font-mono">
-                      {format(new Date(inq.created_at), "MMM d, yyyy · HH:mm")}
-                    </span>
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    {inq.email} · {inq.organization}
-                    {inq.role_title && ` · ${inq.role_title}`}
-                  </p>
-                  <div className="flex flex-wrap gap-1.5">
-                    <span className="inline-block text-xs px-2 py-0.5 rounded-sm bg-muted text-muted-foreground font-mono">
-                      {inq.org_type}
-                    </span>
-                  </div>
-                  <div className="flex flex-wrap gap-1.5">
-                    {inq.areas_of_interest.map((area) => (
-                      <span
-                        key={area}
-                        className="inline-block text-xs px-2 py-0.5 rounded-sm bg-accent text-accent-foreground"
-                      >
-                        {area}
-                      </span>
-                    ))}
-                  </div>
-                  {inq.description && (
-                    <p className="text-sm text-foreground/80 whitespace-pre-wrap">{inq.description}</p>
-                  )}
-                  {(inq.website || inq.linkedin) && (
-                    <div className="flex gap-4 text-xs text-muted-foreground">
-                      {inq.website && (
-                        <a href={inq.website} target="_blank" rel="noopener noreferrer" className="hover:text-foreground underline">
-                          Website
-                        </a>
-                      )}
-                      {inq.linkedin && (
-                        <a href={inq.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-foreground underline">
-                          LinkedIn
-                        </a>
-                      )}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          )
-        )}
+        <div className="flex flex-wrap gap-1 mb-8 border-b border-border">
+          {TABS.map((t) => (
+            <button
+              key={t.id}
+              onClick={() => setTab(t.id)}
+              className={`px-4 py-2.5 text-sm font-medium transition-colors border-b-2 -mb-px ${
+                tab === t.id
+                  ? "border-foreground text-foreground"
+                  : "border-transparent text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
+
+        {tab === "partners" && <PartnersAdmin />}
+        {tab === "speakers" && <SpeakersAdmin />}
+        {tab === "agenda" && <AgendaAdmin />}
+        {tab === "contact" && <ContactSubmissions />}
+        {tab === "partnership" && <PartnershipInquiries />}
       </div>
     </div>
   );
