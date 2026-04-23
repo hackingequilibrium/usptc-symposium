@@ -7,8 +7,9 @@ import { PartnershipInquiries } from "@/components/admin/PartnershipInquiries";
 import { PartnersAdmin } from "@/components/admin/PartnersAdmin";
 import { SpeakersAdmin } from "@/components/admin/SpeakersAdmin";
 import { AgendaAdmin } from "@/components/admin/AgendaAdmin";
+import { UsersAdmin } from "@/components/admin/UsersAdmin";
 
-type Tab = "contact" | "partnership" | "partners" | "speakers" | "agenda";
+type Tab = "contact" | "partnership" | "partners" | "speakers" | "agenda" | "users";
 
 const TABS: { id: Tab; label: string }[] = [
   { id: "partners", label: "Partners" },
@@ -16,6 +17,7 @@ const TABS: { id: Tab; label: string }[] = [
   { id: "agenda", label: "Agenda" },
   { id: "contact", label: "Contact" },
   { id: "partnership", label: "Partnerships" },
+  { id: "users", label: "Users" },
 ];
 
 const Admin = () => {
@@ -123,6 +125,7 @@ const Admin = () => {
         {tab === "agenda" && <AgendaAdmin />}
         {tab === "contact" && <ContactSubmissions />}
         {tab === "partnership" && <PartnershipInquiries />}
+        {tab === "users" && <UsersAdmin />}
       </div>
     </div>
   );
