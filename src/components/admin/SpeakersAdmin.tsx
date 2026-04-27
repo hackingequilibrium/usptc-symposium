@@ -106,9 +106,9 @@ export const SpeakersAdmin = () => {
                 <input type="checkbox" checked={s.virtual} onChange={(e) => update(s.id, { virtual: e.target.checked })} />
                 Virtual
               </label>
-              <label className="flex items-center gap-1">
+              <label className="flex items-center gap-1" title="Uncheck to hide from the public site without deleting">
                 <input type="checkbox" checked={s.is_active} onChange={(e) => update(s.id, { is_active: e.target.checked })} />
-                Active
+                Visible
               </label>
               <button onClick={() => remove(s.id)} className="text-destructive hover:opacity-70 self-start mt-1">
                 <Trash2 className="w-4 h-4" />
