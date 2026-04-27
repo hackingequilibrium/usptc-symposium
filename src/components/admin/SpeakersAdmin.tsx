@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { ImageUpload } from "./ImageUpload";
+import { speakerFallbackImage } from "@/lib/speakerImages";
 import { SortableList, SortableItem } from "./Sortable";
 import { Trash2, Plus } from "lucide-react";
 
