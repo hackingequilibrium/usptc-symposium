@@ -5,9 +5,11 @@ interface Props {
   value: string | null;
   onChange: (url: string | null) => void;
   folder: string;
+  fallback?: string | null;
 }
 
-export const ImageUpload = ({ value, onChange, folder }: Props) => {
+export const ImageUpload = ({ value, onChange, folder, fallback }: Props) => {
+  const preview = value || fallback || null;
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
 
