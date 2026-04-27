@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { ImageUpload } from "./ImageUpload";
+import { speakerFallbackImage } from "@/lib/speakerImages";
 import { SortableList, SortableItem } from "./Sortable";
 import { Trash2, Plus } from "lucide-react";
 
@@ -78,7 +79,7 @@ export const SpeakersAdmin = () => {
             id={s.id}
             className="rounded-sm border border-input bg-card p-4 grid grid-cols-1 md:grid-cols-[auto,auto,1fr,1fr,1fr,auto] gap-3 items-start mb-3"
           >
-            <ImageUpload value={s.image_url} onChange={(url) => update(s.id, { image_url: url })} folder="speakers" />
+            <ImageUpload value={s.image_url} onChange={(url) => update(s.id, { image_url: url })} folder="speakers" fallback={speakerFallbackImage(s.name)} />
             <input
               className="px-3 py-2 rounded-sm border border-input bg-background text-sm"
               value={s.name}
