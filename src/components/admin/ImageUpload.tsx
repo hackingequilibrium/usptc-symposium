@@ -35,8 +35,8 @@ export const ImageUpload = ({ value, onChange, folder, fallback }: Props) => {
   return (
     <div className="space-y-2">
       <div className="flex items-center gap-3">
-        {value && (
-          <img src={value} alt="" className="w-16 h-16 object-contain border border-input rounded-sm bg-white" />
+        {preview && (
+          <img src={preview} alt="" className="w-16 h-16 object-cover border border-input rounded-sm bg-white" />
         )}
         <label className="cursor-pointer text-xs px-3 py-2 rounded-sm border border-input hover:bg-muted">
           {busy ? "Uploading…" : value ? "Replace" : "Upload"}
