@@ -69,21 +69,23 @@ export const PartnersSection = () => {
                     const isHonoraryPatrons = category.label === "Honorary Patrons";
                     const logo = partner.logo_url ?? fallbackLogos[partner.name] ?? null;
                     const content = (
-                      <div className="flex flex-col items-center gap-2">
-                        {logo ? (
-                          <img
-                            src={logo}
-                            alt={partner.name}
-                            className={`object-contain ${isHonoraryPatrons ? "max-h-40" : "max-h-20"}`}
-                          />
-                        ) : null}
+                      <div className="flex flex-col items-center justify-between h-full gap-2 w-full">
+                        <div className={`flex-1 flex items-center justify-center w-full ${isHonoraryPatrons ? "min-h-40" : "min-h-20"}`}>
+                          {logo ? (
+                            <img
+                              src={logo}
+                              alt={partner.name}
+                              className={`object-contain ${isHonoraryPatrons ? "max-h-40" : "max-h-20"}`}
+                            />
+                          ) : null}
+                        </div>
                         <span className="text-xs font-medium text-foreground/70 text-center leading-tight">
                           {partner.name}
                         </span>
                       </div>
                     );
 
-                    const cardClass = `flex items-center justify-center rounded-md border border-border bg-white p-4 ${isHonoraryPatrons ? "min-h-[200px]" : "min-h-[100px]"} hover:shadow-md transition-shadow`;
+                    const cardClass = `flex items-stretch justify-center rounded-md border border-border bg-white p-4 ${isHonoraryPatrons ? "min-h-[200px]" : "min-h-[100px]"} hover:shadow-md transition-shadow`;
 
                     const card = partner.url ? (
                       <a key={partner.name} href={partner.url} target="_blank" rel="noopener noreferrer" className={cardClass}>
