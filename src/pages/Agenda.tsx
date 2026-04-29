@@ -94,7 +94,7 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
                       href="/poster-template-a1.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs px-2.5 py-1 rounded-sm border border-border hover:border-accent-blue hover:text-accent-blue transition-colors"
+                      className="text-xs px-2.5 py-1 rounded-sm border border-border text-foreground hover:bg-navy hover:text-navy-foreground hover:border-navy transition-colors"
                     >
                       PDF
                     </a>
@@ -102,7 +102,7 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
                       href="/poster-template-a1.pptx"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs px-2.5 py-1 rounded-sm border border-border hover:border-accent-blue hover:text-accent-blue transition-colors"
+                      className="text-xs px-2.5 py-1 rounded-sm border border-border text-foreground hover:bg-navy hover:text-navy-foreground hover:border-navy transition-colors"
                     >
                       PPTX
                     </a>
