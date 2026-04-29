@@ -87,6 +87,27 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
                     {item.description}
                   </p>
                 )}
+                {/^poster session/i.test(item.title) && (
+                  <div className="mt-2 flex flex-wrap items-center gap-2">
+                    <span className="text-xs text-muted-foreground font-mono">A1 poster template:</span>
+                    <a
+                      href="/poster-template-a1.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs px-2.5 py-1 rounded-sm border border-border hover:border-accent-blue hover:text-accent-blue transition-colors"
+                    >
+                      PDF
+                    </a>
+                    <a
+                      href="/poster-template-a1.pptx"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs px-2.5 py-1 rounded-sm border border-border hover:border-accent-blue hover:text-accent-blue transition-colors"
+                    >
+                      PPTX
+                    </a>
+                  </div>
+                )}
                 {item.bullets.length > 0 && (
                   <ul className="mt-2 space-y-1">
                     {item.bullets.map((b, j) => (
