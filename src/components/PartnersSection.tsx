@@ -68,6 +68,12 @@ export const PartnersSection = () => {
                   {category.partners.map((partner) => {
                     const isHonoraryPatrons = category.label === "Honorary Patrons";
                     const logo = partner.logo_url ?? fallbackLogos[partner.name] ?? null;
+                    const isSmallLogo = partner.name === "Fieldfisher";
+                    const imgMaxClass = isHonoraryPatrons
+                      ? "max-h-40"
+                      : isSmallLogo
+                        ? "max-h-12"
+                        : "max-h-20";
                     const content = (
                       <div className="flex flex-col items-center justify-between h-full gap-2 w-full">
                         <div className={`flex-1 flex items-center justify-center w-full ${isHonoraryPatrons ? "min-h-40" : "min-h-20"}`}>
@@ -75,7 +81,7 @@ export const PartnersSection = () => {
                             <img
                               src={logo}
                               alt={partner.name}
-                              className={`object-contain ${isHonoraryPatrons ? "max-h-40" : "max-h-20"}`}
+                              className={`object-contain ${imgMaxClass}`}
                             />
                           ) : null}
                         </div>
