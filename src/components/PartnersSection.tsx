@@ -72,7 +72,7 @@ export const PartnersSection = () => {
                     const imgMaxClass = isHonoraryPatrons
                       ? "max-h-40"
                       : isSmallLogo
-                        ? "max-h-12"
+                        ? "max-h-9"
                         : "max-h-20";
                     const content = (
                       <div className="flex flex-col items-center justify-between h-full gap-2 w-full">
