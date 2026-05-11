@@ -71,7 +71,7 @@ export const PartnersSection = () => {
                     const isSmallHonorary = partner.name === "The National Centre for Research and Development";
                     const isSmallLogo = partner.name === "Fieldfisher";
                     const imgMaxClass = isHonoraryPatrons
-                      ? (isSmallHonorary ? "max-h-20 max-w-[55%]" : "max-h-40")
+                      ? (isSmallHonorary ? "max-h-28 max-w-[70%]" : "max-h-40")
                       : isSmallLogo
                         ? "max-h-9"
                         : "max-h-20";
