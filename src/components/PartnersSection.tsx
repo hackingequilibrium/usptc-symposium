@@ -68,9 +68,10 @@ export const PartnersSection = () => {
                   {category.partners.map((partner) => {
                     const isHonoraryPatrons = category.label === "Honorary Patrons";
                     const logo = partner.logo_url ?? fallbackLogos[partner.name] ?? null;
+                    const isSmallHonorary = partner.name === "The National Centre for Research and Development";
                     const isSmallLogo = partner.name === "Fieldfisher";
                     const imgMaxClass = isHonoraryPatrons
-                      ? "max-h-40"
+                      ? (isSmallHonorary ? "max-h-24" : "max-h-40")
                       : isSmallLogo
                         ? "max-h-9"
                         : "max-h-20";
