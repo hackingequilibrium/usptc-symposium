@@ -1,0 +1,1 @@
+UPDATE public.partners SET logo_url = 'https://yovjwewgwlkgyetytobm.supabase.co/storage/v1/object/public/cms-assets/partners%2Fncbr.svg' WHERE name = 'The National Centre for Research and Development';
