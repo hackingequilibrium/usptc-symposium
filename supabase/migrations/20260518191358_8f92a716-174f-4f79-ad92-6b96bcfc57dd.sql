@@ -1,0 +1,1 @@
+INSERT INTO partners (name, category, sort_order, url, is_active) VALUES ('Adamed', 'Sponsors & Partners', 5, 'https://www.adamed.com/en/main-page', true);
