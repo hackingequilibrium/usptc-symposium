@@ -82,11 +82,14 @@ export const PartnersSection = () => {
                     const logo = partner.logo_url ?? fallbackLogos[partner.name] ?? null;
                     const isSmallHonorary = partner.name === "The National Centre for Research and Development";
                     const isSmallLogo = partner.name === "Fieldfisher";
+                    const isMediumLogo = partner.name === "Tritem";
                     const imgMaxClass = isHonoraryPatrons
                       ? (isSmallHonorary ? "max-h-28 max-w-[70%]" : "max-h-40")
                       : isSmallLogo
                         ? "max-h-9"
-                        : "max-h-20";
+                        : isMediumLogo
+                          ? "max-h-14"
+                          : "max-h-20";
                     const content = (
                       <div className="flex flex-col items-center justify-between h-full gap-2 w-full">
                         <div className={`flex-1 flex items-center justify-center w-full ${isHonoraryPatrons ? "min-h-40" : "min-h-20"}`}>
