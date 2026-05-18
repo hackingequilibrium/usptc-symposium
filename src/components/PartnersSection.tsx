@@ -12,6 +12,7 @@ import consulateLaLogo from "@/assets/partners/consulate-la.png";
 import malopolskaLogo from "@/assets/partners/malopolska.jpg";
 import adamedLogo from "@/assets/partners/adamed.png";
 import poznanLogo from "@/assets/partners/poznan.jpg";
+import katowiceLogo from "@/assets/partners/katowice.jpg";
 
 const fallbackLogos: Record<string, string> = {
   "Polsko Amerykańska Rada Współpracy": usptcLogo,
@@ -26,6 +27,7 @@ const fallbackLogos: Record<string, string> = {
   "Lesser Poland Voivodeship": malopolskaLogo,
   "Adamed": adamedLogo,
   "City of Poznan": poznanLogo,
+  "City of Katowice": katowiceLogo,
 };
 
 interface Partner {
