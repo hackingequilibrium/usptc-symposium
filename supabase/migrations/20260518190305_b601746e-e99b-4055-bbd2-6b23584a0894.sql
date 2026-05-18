@@ -1,0 +1,3 @@
+ALTER TABLE public.partners DROP CONSTRAINT IF EXISTS partners_category_check;
+ALTER TABLE public.partners ADD CONSTRAINT partners_category_check CHECK (category IN ('Organizers','Honorary Patrons','Regional Strategic Partners','Sponsors & Partners','Strategic Partners'));
+INSERT INTO public.partners (name, category, sort_order, is_active) VALUES ('Lesser Poland Voivodeship', 'Regional Strategic Partners', 1, true);
