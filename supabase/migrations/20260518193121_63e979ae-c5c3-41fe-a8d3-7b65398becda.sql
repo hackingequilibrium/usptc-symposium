@@ -1,0 +1,3 @@
+ALTER TABLE partners DROP CONSTRAINT IF EXISTS partners_category_check;
+ALTER TABLE partners ADD CONSTRAINT partners_category_check CHECK (category IN ('Organizers', 'Honorary Patrons', 'Regional Strategic Partners', 'Sponsors & Partners', 'Media Partner', 'Partnering Organizations'));
+INSERT INTO partners (name, category, sort_order, is_active) VALUES ('This is IT Maciej Kawecki', 'Media Partner', 1, true);
