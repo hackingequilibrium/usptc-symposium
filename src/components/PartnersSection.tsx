@@ -88,7 +88,7 @@ export const PartnersSection = () => {
                       : isSmallLogo
                         ? "max-h-9"
                         : isMediumLogo
-                          ? "max-h-8 max-w-[55%]"
+                          ? "max-h-10 max-w-[70%]"
                           : "max-h-20";
                     const content = (
                       <div className="flex flex-col items-center justify-between h-full gap-2 w-full">
