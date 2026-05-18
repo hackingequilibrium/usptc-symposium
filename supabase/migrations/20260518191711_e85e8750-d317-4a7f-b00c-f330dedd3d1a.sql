@@ -1,0 +1,1 @@
+INSERT INTO partners (name, category, sort_order, is_active) VALUES ('City of Katowice', 'Sponsors & Partners', 7, true);
