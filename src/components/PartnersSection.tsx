@@ -10,6 +10,7 @@ import tripleRingLogo from "@/assets/partners/triple-ring.jpg";
 import parpLogo from "@/assets/partners/parp.png";
 import consulateLaLogo from "@/assets/partners/consulate-la.png";
 import malopolskaLogo from "@/assets/partners/malopolska.jpg";
+import adamedLogo from "@/assets/partners/adamed.png";
 
 const fallbackLogos: Record<string, string> = {
   "Polsko Amerykańska Rada Współpracy": usptcLogo,
@@ -22,6 +23,7 @@ const fallbackLogos: Record<string, string> = {
   "Embassy of the Republic of Poland in Washington, D.C.": embassyLogo,
   "Consulate General of the Republic of Poland in Los Angeles": consulateLaLogo,
   "Lesser Poland Voivodeship": malopolskaLogo,
+  "Adamed": adamedLogo,
 };
 
 interface Partner {
