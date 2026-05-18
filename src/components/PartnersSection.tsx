@@ -9,6 +9,7 @@ import embassyLogo from "@/assets/partners/embassy.webp";
 import tripleRingLogo from "@/assets/partners/triple-ring.jpg";
 import parpLogo from "@/assets/partners/parp.png";
 import consulateLaLogo from "@/assets/partners/consulate-la.png";
+import malopolskaLogo from "@/assets/partners/malopolska.jpg";
 
 const fallbackLogos: Record<string, string> = {
   "Polsko Amerykańska Rada Współpracy": usptcLogo,
@@ -20,6 +21,7 @@ const fallbackLogos: Record<string, string> = {
   "Polish Agency for Enterprise Development": parpLogo,
   "Embassy of the Republic of Poland in Washington, D.C.": embassyLogo,
   "Consulate General of the Republic of Poland in Los Angeles": consulateLaLogo,
+  "Lesser Poland Voivodeship": malopolskaLogo,
 };
 
 interface Partner {
@@ -31,7 +33,7 @@ interface Partner {
   sort_order: number;
 }
 
-const CATEGORY_ORDER = ["Organizers", "Honorary Patrons", "Sponsors & Partners"];
+const CATEGORY_ORDER = ["Organizers", "Honorary Patrons", "Regional Strategic Partners", "Sponsors & Partners"];
 
 export const PartnersSection = () => {
   const [partners, setPartners] = useState<Partner[]>([]);
