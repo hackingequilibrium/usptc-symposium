@@ -57,14 +57,14 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
         <h2 className="font-serif text-2xl sm:text-3xl tracking-tight text-foreground mt-1">
           {day.subtitle}
         </h2>
-        <div className="flex items-center gap-4 text-muted-foreground text-sm font-mono mt-2">
+        <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4 text-muted-foreground text-sm font-mono mt-2">
           <span className="flex items-center gap-1.5">
             <Clock className="w-3.5 h-3.5" />
             {day.date_text}
           </span>
-          <span className="flex items-center gap-1.5">
-            <MapPin className="w-3.5 h-3.5" />
-            {day.location}
+          <span className="flex items-start gap-1.5">
+            <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0" />
+            <span className="whitespace-pre-line">{day.location}</span>
           </span>
         </div>
       </div>
