@@ -1,0 +1,1 @@
+INSERT INTO partners (name, category, sort_order, url, is_active) VALUES ('Tritem', 'Sponsors & Partners', 9, 'http://tritem.eu', true);
