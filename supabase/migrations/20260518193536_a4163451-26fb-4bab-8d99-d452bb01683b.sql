@@ -1,0 +1,3 @@
+UPDATE agenda_days SET location = E'Stanford University, Paul Brest Hall\n555 Salvatierra Walk, Stanford, CA 94305' WHERE id = '06c208a7-9e82-4ac6-a0fb-3ff200c4a741';
+UPDATE agenda_days SET location = E'UC Berkeley, Eugene Jarvis Auditorium\nGrimes Engineering Center, Berkeley, CA 94720' WHERE id = 'bf60117b-b381-4cfc-9848-062edc7ac168';
+UPDATE agenda_days SET location = E'UCSF, Parnassus Heights Campus\n505 Parnassus Ave, San Francisco, CA 94143' WHERE id = 'bf2dd261-94fc-490b-86ca-c36adce569a4';
