@@ -31,7 +31,7 @@ interface Partner {
   sort_order: number;
 }
 
-const CATEGORY_ORDER = ["Organizers", "Honorary Patrons", "Strategic Partners"];
+const CATEGORY_ORDER = ["Organizers", "Honorary Patrons", "Sponsors & Partners"];
 
 export const PartnersSection = () => {
   const [partners, setPartners] = useState<Partner[]>([]);
