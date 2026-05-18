@@ -13,6 +13,7 @@ import malopolskaLogo from "@/assets/partners/malopolska.jpg";
 import adamedLogo from "@/assets/partners/adamed.png";
 import poznanLogo from "@/assets/partners/poznan.jpg";
 import katowiceLogo from "@/assets/partners/katowice.jpg";
+import beataDrzazgaLogo from "@/assets/partners/beata-drzazga.webp";
 
 const fallbackLogos: Record<string, string> = {
   "Polsko Amerykańska Rada Współpracy": usptcLogo,
@@ -28,6 +29,7 @@ const fallbackLogos: Record<string, string> = {
   "Adamed": adamedLogo,
   "City of Poznan": poznanLogo,
   "City of Katowice": katowiceLogo,
+  "Beata Drzazga Foundation": beataDrzazgaLogo,
 };
 
 interface Partner {

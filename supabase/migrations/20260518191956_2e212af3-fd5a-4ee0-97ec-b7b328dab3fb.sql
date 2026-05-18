@@ -1,0 +1,1 @@
+INSERT INTO partners (name, category, sort_order, is_active) VALUES ('Beata Drzazga Foundation', 'Sponsors & Partners', 8, true);
