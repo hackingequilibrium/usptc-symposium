@@ -15,6 +15,7 @@ import poznanLogo from "@/assets/partners/poznan.jpg";
 import katowiceLogo from "@/assets/partners/katowice.jpg";
 import beataDrzazgaLogo from "@/assets/partners/beata-drzazga.webp";
 import tritemLogo from "@/assets/partners/tritem.png";
+import thisIsItLogo from "@/assets/partners/this-is-it.png";
 
 const fallbackLogos: Record<string, string> = {
   "Polsko Amerykańska Rada Współpracy": usptcLogo,
@@ -32,6 +33,7 @@ const fallbackLogos: Record<string, string> = {
   "City of Katowice": katowiceLogo,
   "Beata Drzazga Foundation": beataDrzazgaLogo,
   "Tritem": tritemLogo,
+  "This is IT Maciej Kawecki": thisIsItLogo,
 };
 
 interface Partner {
@@ -43,7 +45,7 @@ interface Partner {
   sort_order: number;
 }
 
-const CATEGORY_ORDER = ["Organizers", "Honorary Patrons", "Regional Strategic Partners", "Sponsors & Partners", "Partnering Organizations"];
+const CATEGORY_ORDER = ["Organizers", "Honorary Patrons", "Regional Strategic Partners", "Sponsors & Partners", "Media Partner", "Partnering Organizations"];
 
 export const PartnersSection = () => {
   const [partners, setPartners] = useState<Partner[]>([]);
