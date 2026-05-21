@@ -87,13 +87,16 @@ export const PartnersSection = () => {
                     const isSmallHonorary = partner.name === "The National Centre for Research and Development";
                     const isSmallLogo = partner.name === "Fieldfisher";
                     const isMediumLogo = partner.name === "Tritem";
+                    const isLargeLogo = partner.name === "PLL LOT";
                     const imgMaxClass = isHonoraryPatrons
                       ? (isSmallHonorary ? "max-h-28 max-w-[70%]" : "max-h-40")
                       : isSmallLogo
                         ? "max-h-9"
                         : isMediumLogo
                           ? "max-h-10 max-w-[70%]"
-                          : "max-h-20";
+                          : isLargeLogo
+                            ? "max-h-32 max-w-[95%] scale-150"
+                            : "max-h-20";
                     const content = (
                       <div className="flex flex-col items-center justify-between h-full gap-2 w-full">
                         <div className={`flex-1 flex items-center justify-center w-full ${isHonoraryPatrons ? "min-h-40" : "min-h-20"}`}>
