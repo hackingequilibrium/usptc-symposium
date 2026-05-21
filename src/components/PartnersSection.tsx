@@ -16,6 +16,7 @@ import katowiceLogo from "@/assets/partners/katowice.jpg";
 import beataDrzazgaLogo from "@/assets/partners/beata-drzazga.webp";
 import tritemLogo from "@/assets/partners/tritem.png";
 import thisIsItLogo from "@/assets/partners/this-is-it.png";
+import lotLogo from "@/assets/partners/lot.svg";
 
 const fallbackLogos: Record<string, string> = {
   "Polsko Amerykańska Rada Współpracy": usptcLogo,
@@ -34,6 +35,7 @@ const fallbackLogos: Record<string, string> = {
   "Beata Drzazga Foundation": beataDrzazgaLogo,
   "Tritem": tritemLogo,
   "This is IT Maciej Kawecki": thisIsItLogo,
+  "PLL LOT": lotLogo,
 };
 
 interface Partner {
