@@ -37,7 +37,6 @@ const fallbackLogos: Record<string, string> = {
   "Tritem": tritemLogo,
   "This is IT Maciej Kawecki": thisIsItLogo,
   "PLL LOT": lotLogo,
-  "PLL LOT": lotLogo,
   "Marcin Kulasek – Minister of Science and Higher Education, Republic of Poland": marcinKulasekLogo,
 };
 
