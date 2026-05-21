@@ -35,6 +35,7 @@ const fallbackLogos: Record<string, string> = {
   "Beata Drzazga Foundation": beataDrzazgaLogo,
   "Tritem": tritemLogo,
   "This is IT Maciej Kawecki": thisIsItLogo,
+  "PLL LOT": lotLogo,
 };
 
 interface Partner {
