@@ -1,0 +1,1 @@
+INSERT INTO public.partners (name, url, category, sort_order, is_active) VALUES ('PLL LOT', 'https://www.lot.com/', 'Partnering Organizations', 100, true);
