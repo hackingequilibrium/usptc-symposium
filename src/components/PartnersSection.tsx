@@ -27,7 +27,7 @@ const fallbackLogos: Record<string, string> = {
   "Polish Agency for Enterprise Development": parpLogo,
   "Embassy of the Republic of Poland in Washington, D.C.": embassyLogo,
   "Consulate General of the Republic of Poland in Los Angeles": consulateLaLogo,
-  "Lesser Poland Voivodeship": malopolskaLogo,
+  "Małopolska Region": malopolskaLogo,
   "Adamed": adamedLogo,
   "City of Poznan": poznanLogo,
   "City of Katowice": katowiceLogo,
