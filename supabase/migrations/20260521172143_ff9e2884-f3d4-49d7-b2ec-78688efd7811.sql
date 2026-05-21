@@ -1,0 +1,1 @@
+UPDATE public.partners SET name='Małopolska Region' WHERE name='Lesser Poland Voivodeship';
