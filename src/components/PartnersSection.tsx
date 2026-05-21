@@ -39,6 +39,7 @@ const fallbackLogos: Record<string, string> = {
   "This is IT Maciej Kawecki": thisIsItLogo,
   "PLL LOT": lotLogo,
   "Marcin Kulasek – Minister of Science and Higher Education, Republic of Poland": marcinKulasekLogo,
+  "Polish Investment and Trade Agency (PAIH)": paihLogo,
 };
 
 interface Partner {
