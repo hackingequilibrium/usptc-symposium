@@ -18,6 +18,7 @@ import tritemLogo from "@/assets/partners/tritem.png";
 import thisIsItLogo from "@/assets/partners/this-is-it.png";
 import lotLogo from "@/assets/partners/lot.png";
 import marcinKulasekLogo from "@/assets/partners/marcin-kulasek.png";
+import paihLogo from "@/assets/partners/paih.png";
 
 const fallbackLogos: Record<string, string> = {
   "Polsko Amerykańska Rada Współpracy": usptcLogo,
