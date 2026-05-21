@@ -95,7 +95,7 @@ export const PartnersSection = () => {
                         : isMediumLogo
                           ? "max-h-10 max-w-[70%]"
                           : isLargeLogo
-                            ? "max-h-32 max-w-[95%] scale-150"
+                            ? "max-h-40 max-w-full scale-[2.2]"
                             : "max-h-20";
                     const content = (
                       <div className="flex flex-col items-center justify-between h-full gap-2 w-full">
