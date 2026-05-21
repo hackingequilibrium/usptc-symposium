@@ -16,7 +16,7 @@ import katowiceLogo from "@/assets/partners/katowice.jpg";
 import beataDrzazgaLogo from "@/assets/partners/beata-drzazga.webp";
 import tritemLogo from "@/assets/partners/tritem.png";
 import thisIsItLogo from "@/assets/partners/this-is-it.png";
-import lotLogo from "@/assets/partners/lot.svg";
+import lotLogo from "@/assets/partners/lot.png";
 
 const fallbackLogos: Record<string, string> = {
   "Polsko Amerykańska Rada Współpracy": usptcLogo,
@@ -95,7 +95,7 @@ export const PartnersSection = () => {
                         : isMediumLogo
                           ? "max-h-10 max-w-[70%]"
                           : isLargeLogo
-                            ? "max-h-40 max-w-full scale-[2.2]"
+                            ? "max-h-20"
                             : "max-h-20";
                     const content = (
                       <div className="flex flex-col items-center justify-between h-full gap-2 w-full">
