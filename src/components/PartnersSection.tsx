@@ -9,7 +9,7 @@ import embassyLogo from "@/assets/partners/embassy.webp";
 import tripleRingLogo from "@/assets/partners/triple-ring.jpg";
 import parpLogo from "@/assets/partners/parp.png";
 import consulateLaLogo from "@/assets/partners/consulate-la.png";
-import malopolskaLogo from "@/assets/partners/malopolska.jpg";
+import malopolskaLogo from "@/assets/partners/malopolska.png";
 import adamedLogo from "@/assets/partners/adamed.png";
 import poznanLogo from "@/assets/partners/poznan.jpg";
 import katowiceLogo from "@/assets/partners/katowice.jpg";
