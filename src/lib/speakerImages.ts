@@ -104,6 +104,7 @@ const map: Record<string, string> = {
   "Jennifer Granholm": jenniferImg,
   "Alexandre Bayen": alexanderImg,
   "Artur Chmielewski": artImg,
+  "Art (Artur) Chmielewski": artImg,
   "Mike Lepech": mikeImg,
   "Max Salamonowicz": maxImg,
   "Maciej Kawecki": maciejImg,
