@@ -32,6 +32,7 @@ import andrzejDomanskiImg from "@/assets/speakers/andrzej-domanski.jpeg";
 import krzysztofImg from "@/assets/speakers/krzysztof-dyczkowski.png";
 import piotrDziurdziaImg from "@/assets/speakers/piotr-dziurdzia.png";
 import hamidImg from "@/assets/speakers/hamid-farzaneh.png";
+import maryImg from "@/assets/speakers/mary-forrest.png";
 
 const map: Record<string, string> = {
   "Victoria Coleman": victoriaImg,
