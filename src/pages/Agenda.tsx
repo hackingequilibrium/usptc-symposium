@@ -89,16 +89,16 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
                     return (
                       <div className="mt-3 flex flex-wrap gap-x-4 gap-y-3">
                         {speakers.map((s) => (
-                          <div key={s.name} className="flex flex-col items-center w-16 sm:w-20">
+                          <div key={s.name} className="flex flex-col items-center w-20 sm:w-24">
                             {s.img ? (
                               <img
                                 src={s.img}
                                 alt={s.name}
                                 loading="lazy"
-                                className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover ring-1 ring-border"
+                                className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover ring-1 ring-border"
                               />
                             ) : (
-                              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-muted ring-1 ring-border flex items-center justify-center text-xs font-mono text-muted-foreground">
+                              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-muted ring-1 ring-border flex items-center justify-center text-sm font-mono text-muted-foreground">
                                 {s.name.split(" ").map(w => w[0]).slice(0, 2).join("")}
                               </div>
                             )}
