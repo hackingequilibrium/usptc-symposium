@@ -155,6 +155,7 @@ const map: Record<string, string> = {
   "Mariusz Tomaka": tomakaImg,
   "Claire Tomlin": tomlinImg,
   "Leah Walker": walkerImg,
+  "Marek Warzecha": warzechaImg,
 };
 
 export const speakerFallbackImage = (name: string): string | null => map[name] ?? null;
