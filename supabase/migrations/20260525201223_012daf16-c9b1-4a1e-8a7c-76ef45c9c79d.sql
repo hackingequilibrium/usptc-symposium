@@ -1,0 +1,1 @@
+INSERT INTO public.speakers (name, role, sort_order, is_active, featured, virtual) VALUES ('Zbigniew Paszenda', 'Silesian University of Technology', 67, true, false, false);
