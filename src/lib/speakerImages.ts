@@ -92,6 +92,7 @@ import bryzekImg from "@/assets/speakers/paul-bryzek.jpg";
 import gzikImg from "@/assets/speakers/marek-gzik.jpg";
 import alojzyImg from "@/assets/speakers/alojzy-nowak.jpg";
 import hubertImg from "@/assets/speakers/hubert-adamczyk.jpg";
+import khagramImg from "@/assets/speakers/sanjeev-khagram.jpg";
 
 const map: Record<string, string> = {
   "Victoria Coleman": victoriaImg,
@@ -165,7 +166,7 @@ const map: Record<string, string> = {
   "Natasha Scanes": scanesImg,
   "Raja Sengupta": senguptaImg,
   "Jeremy Sewell": sewellImg,
-  "Victor Kaberuka Shyaka": shyakaImg,
+  "Victor Kaberuke Shyaka": shyakaImg,
   "Paweł Skruch": skruchImg,
   "Marina Sirota": sirotaImg,
   "Dagmara Stasiowska": stasiowskaImg,
@@ -188,6 +189,7 @@ const map: Record<string, string> = {
   "Marek Gzik": gzikImg,
   "Alojzy Nowak": alojzyImg,
   "Hubert Adamczyk": hubertImg,
+  "Sanjeev Khagram": khagramImg,
 };
 
 export const speakerFallbackImage = (name: string): string | null => map[name] ?? null;
