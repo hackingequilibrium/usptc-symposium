@@ -27,6 +27,7 @@ import tadeuszImg from "@/assets/speakers/tadeusz-burczynski.png";
 import markImg from "@/assets/speakers/mark-chandler.png";
 import jacekImg from "@/assets/speakers/jacek-chmielewski.png";
 import camilleImg from "@/assets/speakers/camille-crittenden.png";
+import agnieszkaImg from "@/assets/speakers/agnieszka-czechowicz.png";
 
 const map: Record<string, string> = {
   "Victoria Coleman": victoriaImg,
