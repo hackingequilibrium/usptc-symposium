@@ -77,6 +77,7 @@ import tomlinImg from "@/assets/speakers/claire-tomlin.png";
 import walkerImg from "@/assets/speakers/leah-walker.png";
 import warzechaImg from "@/assets/speakers/marek-warzecha.png";
 import webberImg from "@/assets/speakers/mark-webber.png";
+import wojcickiImg from "@/assets/speakers/janet-wojcicki.png";
 
 const map: Record<string, string> = {
   "Victoria Coleman": victoriaImg,
