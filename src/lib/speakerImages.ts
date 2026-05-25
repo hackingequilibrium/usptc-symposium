@@ -69,6 +69,7 @@ import sewellImg from "@/assets/speakers/jeremy-sewell.png";
 import shyakaImg from "@/assets/speakers/victor-kaberuka-shyaka.png";
 import skruchImg from "@/assets/speakers/pawel-skruch.png";
 import stasiowskaImg from "@/assets/speakers/dagmara-stasiowska.png";
+import stroinskiImg from "@/assets/speakers/rafal-stroinski.png";
 
 const map: Record<string, string> = {
   "Victoria Coleman": victoriaImg,
