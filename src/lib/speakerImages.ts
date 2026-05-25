@@ -47,6 +47,7 @@ import klichImg from "@/assets/speakers/bogdan-klich.png";
 import kongImg from "@/assets/speakers/zhaodan-kong.png";
 import kordosImg from "@/assets/speakers/damian-kordos.png";
 import kosinskiImg from "@/assets/speakers/michal-kosinski.png";
+import kunaszykImg from "@/assets/speakers/rafal-kunaszyk.png";
 import leszkiewiczImg from "@/assets/speakers/adam-leszkiewicz.png";
 import loftusImg from "@/assets/speakers/david-loftus.png";
 import luebkeImg from "@/assets/speakers/alex-luebke.png";
@@ -136,6 +137,7 @@ const map: Record<string, string> = {
   "Zhaodan Kong": kongImg,
   "Damian Kordos": kordosImg,
   "Michal Kosinski": kosinskiImg,
+  "Rafał Kunaszyk": kunaszykImg,
   "Adam Leszkiewicz": leszkiewiczImg,
   "David Loftus": loftusImg,
   "Alex Luebke": luebkeImg,
