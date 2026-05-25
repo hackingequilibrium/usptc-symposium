@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import usptcFlag from "@/assets/usptc-flag.png";
 import { MapPin, Clock } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { extractSpeakers } from "@/lib/agendaSpeakers";
 
 interface AgendaItem {
   id: string;
