@@ -19,6 +19,7 @@ import mikeLyonsImg from "@/assets/speakers/mike-lyons.jpg";
 import karolinaImg from "@/assets/speakers/karolina-okreglak-hoty.jpg";
 import paulinaImg from "@/assets/speakers/paulina-zadura.jpg";
 import andrzejImg from "@/assets/speakers/andrzej-banka.png";
+import michalBankaImg from "@/assets/speakers/michal-banka.png";
 
 const map: Record<string, string> = {
   "Victoria Coleman": victoriaImg,
@@ -42,6 +43,7 @@ const map: Record<string, string> = {
   "Karolina Okręglak-Hoty": karolinaImg,
   "Paulina Zadura": paulinaImg,
   "Andrzej Bańka": andrzejImg,
+  "Michał Bańka": michalBankaImg,
 };
 
 export const speakerFallbackImage = (name: string): string | null => map[name] ?? null;
