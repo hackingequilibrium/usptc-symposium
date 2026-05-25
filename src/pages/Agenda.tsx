@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import usptcFlag from "@/assets/usptc-flag.png";
 import { MapPin, Clock } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { extractSpeakers } from "@/lib/agendaSpeakers";
 
 interface AgendaItem {
   id: string;
@@ -82,11 +83,39 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
                 <h3 className="font-sans text-sm sm:text-base font-semibold text-foreground leading-snug">
                   {item.title}
                 </h3>
-                {item.description && (
-                  <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
-                    {item.description}
-                  </p>
-                )}
+                {(() => {
+                  const speakers = extractSpeakers(item.description);
+                  if (speakers.length > 0) {
+                    return (
+                      <div className="mt-3 flex flex-wrap gap-x-4 gap-y-3">
+                        {speakers.map((s) => (
+                          <div key={s.name} className="flex flex-col items-center w-16 sm:w-20">
+                            {s.img ? (
+                              <img
+                                src={s.img}
+                                alt={s.name}
+                                loading="lazy"
+                                className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover ring-1 ring-border"
+                              />
+                            ) : (
+                              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-muted ring-1 ring-border flex items-center justify-center text-xs font-mono text-muted-foreground">
+                                {s.name.split(" ").map(w => w[0]).slice(0, 2).join("")}
+                              </div>
+                            )}
+                            <span className="mt-1.5 text-[11px] leading-tight text-center text-muted-foreground">
+                              {s.name}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    );
+                  }
+                  return item.description ? (
+                    <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                      {item.description}
+                    </p>
+                  ) : null;
+                })()}
                 {/^poster session/i.test(item.title) && (
                   <div className="mt-2 flex flex-wrap items-center gap-2">
                     <span className="text-xs text-muted-foreground font-mono">A1 poster template:</span>
