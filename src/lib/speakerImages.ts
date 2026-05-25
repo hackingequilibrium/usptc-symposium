@@ -56,6 +56,7 @@ import maulikImg from "@/assets/speakers/sunil-maulik.png";
 import mcguinessImg from "@/assets/speakers/ryan-mcguiness.png";
 import mendrokImg from "@/assets/speakers/krzysztof-mendrok.png";
 import muellerImg from "@/assets/speakers/mark-mueller.png";
+import nowakowskiImg from "@/assets/speakers/tomasz-nowakowski.png";
 import orkiszewskiImg from "@/assets/speakers/jerzy-orkiszewski.png";
 import paszendaImg from "@/assets/speakers/zbigniew-paszenda.png";
 import rakasImg from "@/assets/speakers/jasenka-rakas.png";
@@ -144,6 +145,7 @@ const map: Record<string, string> = {
   "Ryan McGuiness": mcguinessImg,
   "Krzysztof Mendrok": mendrokImg,
   "Mark Mueller": muellerImg,
+  "Tomasz Nowakowski": nowakowskiImg,
   "Jerzy Orkiszewski": orkiszewskiImg,
   "Zbigniew Paszenda": paszendaImg,
   "Jasenka Rakas": rakasImg,
