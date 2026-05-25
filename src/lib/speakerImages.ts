@@ -49,6 +49,7 @@ const map: Record<string, string> = {
   "Michał Bańka": michalBankaImg,
   "Bartosz Bliuj-Stodulski": bartoszImg,
   "Agata Braja": agataImg,
+  "Jordan Bramble": jordanImg,
 };
 
 export const speakerFallbackImage = (name: string): string | null => map[name] ?? null;
