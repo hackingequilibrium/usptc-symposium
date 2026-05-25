@@ -66,6 +66,7 @@ import sawyerImg from "@/assets/speakers/aenor-sawyer.png";
 import scanesImg from "@/assets/speakers/natasha-scanes.png";
 import senguptaImg from "@/assets/speakers/raja-sengupta.png";
 import sewellImg from "@/assets/speakers/jeremy-sewell.png";
+import shyakaImg from "@/assets/speakers/victor-kaberuka-shyaka.png";
 
 const map: Record<string, string> = {
   "Victoria Coleman": victoriaImg,
