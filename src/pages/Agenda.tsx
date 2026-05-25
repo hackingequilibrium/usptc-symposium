@@ -116,6 +116,18 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
                     </p>
                   ) : null;
                 })()}
+                {/welcome reception|pre-registration/i.test(item.title) && (
+                  <div className="mt-2">
+                    <a
+                      href="https://luma.com/k825a6yl"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block text-xs px-2.5 py-1 rounded-sm border border-border text-foreground hover:bg-navy hover:text-navy-foreground hover:border-navy transition-colors"
+                    >
+                      RSVP on Luma →
+                    </a>
+                  </div>
+                )}
                 {/^poster session/i.test(item.title) && (
                   <div className="mt-2 flex flex-wrap items-center gap-2">
                     <span className="text-xs text-muted-foreground font-mono">A1 poster template:</span>
