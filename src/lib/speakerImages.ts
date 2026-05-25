@@ -79,6 +79,7 @@ import walkerImg from "@/assets/speakers/leah-walker.png";
 import warzechaImg from "@/assets/speakers/marek-warzecha.png";
 import webberImg from "@/assets/speakers/mark-webber.png";
 import wojcickiImg from "@/assets/speakers/janet-wojcicki.png";
+import zablotskaImg from "@/assets/speakers/lydia-zablotska.png";
 import wyrebkowskiImg from "@/assets/speakers/michal-wyrebkowski.png";
 import zawistowskiImg from "@/assets/speakers/tomasz-zawistowski.png";
 import ziemackiImg from "@/assets/speakers/zbyslaw-ziemacki.png";
@@ -165,6 +166,7 @@ const map: Record<string, string> = {
   "Marek Warzecha": warzechaImg,
   "Mark Webber": webberImg,
   "Janet Wojcicki": wojcickiImg,
+  "Lydia Zablotska": zablotskaImg,
   "Michal Wyrebkowski": wyrebkowskiImg,
   "Tomasz Zawistowski": zawistowskiImg,
   "Zbysław Ziemacki": ziemackiImg,
