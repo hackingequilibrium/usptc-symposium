@@ -86,6 +86,12 @@ import zablotskaImg from "@/assets/speakers/lydia-zablotska.png";
 import wyrebkowskiImg from "@/assets/speakers/michal-wyrebkowski.png";
 import zawistowskiImg from "@/assets/speakers/tomasz-zawistowski.png";
 import ziemackiImg from "@/assets/speakers/zbyslaw-ziemacki.png";
+import tilleyImg from "@/assets/speakers/scott-tilley.jpg";
+import antaniImg from "@/assets/speakers/snehal-antani.jpg";
+import bryzekImg from "@/assets/speakers/paul-bryzek.jpg";
+import gzikImg from "@/assets/speakers/marek-gzik.jpg";
+import alojzyImg from "@/assets/speakers/alojzy-nowak.jpg";
+import hubertImg from "@/assets/speakers/hubert-adamczyk.jpg";
 
 const map: Record<string, string> = {
   "Victoria Coleman": victoriaImg,
@@ -96,7 +102,7 @@ const map: Record<string, string> = {
   "Michał Kurtyka": michalImg,
   "Jennifer Granholm": jenniferImg,
   "Alexandre Bayen": alexanderImg,
-  "Art (Artur) Chmielewski": artImg,
+  "Artur Chmielewski": artImg,
   "Mike Lepech": mikeImg,
   "Max Salamonowicz": maxImg,
   "Maciej Kawecki": maciejImg,
@@ -163,7 +169,7 @@ const map: Record<string, string> = {
   "Paweł Skruch": skruchImg,
   "Marina Sirota": sirotaImg,
   "Dagmara Stasiowska": stasiowskaImg,
-  "Rafal Stroinski": stroinskiImg,
+  "Rafał Stroiński": stroinskiImg,
   "Tomasz Szczepański": szczepanskiImg,
   "Anna Timofiejczuk": timofiejczukImg,
   "Mariusz Tomaka": tomakaImg,
@@ -176,6 +182,12 @@ const map: Record<string, string> = {
   "Michal Wyrebkowski": wyrebkowskiImg,
   "Tomasz Zawistowski": zawistowskiImg,
   "Zbysław Ziemacki": ziemackiImg,
+  "Scott Tilley": tilleyImg,
+  "Snehal Antani": antaniImg,
+  "Paul Bryzek": bryzekImg,
+  "Marek Gzik": gzikImg,
+  "Alojzy Nowak": alojzyImg,
+  "Hubert Adamczyk": hubertImg,
 };
 
 export const speakerFallbackImage = (name: string): string | null => map[name] ?? null;
