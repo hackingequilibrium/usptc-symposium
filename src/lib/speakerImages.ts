@@ -60,7 +60,7 @@ import nowakowskiImg from "@/assets/speakers/tomasz-nowakowski.png";
 import orkiszewskiImg from "@/assets/speakers/jerzy-orkiszewski.png";
 import paszendaImg from "@/assets/speakers/zbigniew-paszenda.png";
 import rakasImg from "@/assets/speakers/jasenka-rakas.png";
-import robinsonImg from "@/assets/speakers/stephen-kennedy-robinson.png";
+import robinsonImg from "@/assets/speakers/stephen-k-robinson.png";
 import rothschildImg from "@/assets/speakers/lynn-rothschild.png";
 import rogalskiImg from "@/assets/speakers/tomasz-rogalski.png";
 import sanfeliceImg from "@/assets/speakers/ricardo-sanfelice.png";
@@ -149,7 +149,7 @@ const map: Record<string, string> = {
   "Jerzy Orkiszewski": orkiszewskiImg,
   "Zbigniew Paszenda": paszendaImg,
   "Jasenka Rakas": rakasImg,
-  "Stephen Kennedy Robinson": robinsonImg,
+  "Stephen K. Robinson": robinsonImg,
   "Lynn Rothschild": rothschildImg,
   "Tomasz Rogalski": rogalskiImg,
   "Ricardo Sanfelice": sanfeliceImg,
