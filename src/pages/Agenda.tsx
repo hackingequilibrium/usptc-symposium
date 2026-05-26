@@ -110,6 +110,11 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
                                 Rector of the University of Warsaw
                               </span>
                             )}
+                            {s.name === "Jacob Helberg" && (
+                              <span className="mt-0.5 text-[10px] leading-tight text-center text-muted-foreground/70 italic">
+                                Under Secretary for Economic Affairs
+                              </span>
+                            )}
                           </div>
                         ))}
                       </div>
