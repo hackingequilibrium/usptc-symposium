@@ -98,6 +98,7 @@ import devenishImg from "@/assets/speakers/william-devenish.png";
 import shapiroImg from "@/assets/speakers/julie-shapiro.png";
 import rossiterImg from "@/assets/speakers/dione-rossiter.png";
 import robinsonImg from "@/assets/speakers/stephen-robinson.jpg";
+import helbergImg from "@/assets/speakers/jacob-helberg.png";
 
 const map: Record<string, string> = {
   "Victoria Coleman": victoriaImg,
