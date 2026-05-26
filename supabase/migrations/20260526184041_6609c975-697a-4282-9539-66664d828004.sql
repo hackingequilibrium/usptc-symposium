@@ -1,0 +1,1 @@
+UPDATE public.speakers SET image_url = NULL WHERE name = 'Stephen K. Robinson';
