@@ -93,8 +93,8 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
                   <h3 className="font-serif text-2xl sm:text-3xl text-navy-foreground leading-tight">
                     The World Today
                   </h3>
-                  <p className="mt-1 text-sm sm:text-base text-navy-foreground/70">
-                    Geopolitics, technology, and the transatlantic agenda
+                  <p className="mt-1 font-mono text-xs sm:text-sm text-navy-foreground/70">
+                    4:30–5:30 PM
                   </p>
                   <div className="mt-8 divide-y divide-navy-foreground/15">
                     {worldTodayItems.map((wt) => {
@@ -107,11 +107,8 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
                           ? "Rector, University of Warsaw"
                           : "";
                       return (
-                        <div key={wt.id} className="flex flex-col sm:flex-row sm:items-center sm:gap-8 py-6 first:pt-0 last:pb-0">
-                          <span className="font-mono text-xs text-navy-foreground/70 whitespace-nowrap sm:w-28 shrink-0">
-                            {wt.time_text}
-                          </span>
-                          <div className="mt-3 sm:mt-0 flex items-center gap-5 flex-1">
+                        <div key={wt.id} className="py-6 first:pt-0 last:pb-0">
+                          <div className="flex items-center gap-5">
                             {speaker?.img ? (
                               <img
                                 src={speaker.img}
