@@ -89,5 +89,10 @@ export function extractSpeakers(text: string | null | undefined): AgendaSpeaker[
       out.push({ name: matched, img: speakerFallbackImage(matched) });
     }
   }
+  const surname = (full: string) => {
+    const parts = full.trim().split(/\s+/);
+    return norm(parts[parts.length - 1] || full);
+  };
+  out.sort((a, b) => surname(a.name).localeCompare(surname(b.name)));
   return out;
 }
