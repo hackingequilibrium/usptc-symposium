@@ -82,55 +82,61 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
             return (
               <div key={item.id} className="relative pb-8 last:pb-0 group">
                 <div className="absolute -left-[calc(1.5rem+4.5px)] top-1.5 w-[9px] h-[9px] rounded-full bg-muted-foreground/30 group-hover:bg-accent-blue transition-colors" />
-                <div className="bg-navy text-navy-foreground rounded-md px-5 py-5 w-fit max-w-full">
-                  <span className="inline-block font-mono text-[11px] tracking-[0.2em] uppercase bg-navy-foreground text-navy px-3 py-1.5 rounded-full mb-5">
-                    The World Today
+                <div className="-ml-6 flex items-center gap-4 mb-6">
+                  <div className="h-px flex-1 bg-border" />
+                  <span className="font-mono text-[11px] tracking-[0.25em] uppercase text-muted-foreground">
+                    Closing Keynotes
                   </span>
-                  <div className="space-y-5">
+                  <div className="h-px flex-1 bg-border" />
+                </div>
+                <div className="-ml-6 bg-navy text-navy-foreground rounded-2xl px-8 py-8 sm:px-10 sm:py-10">
+                  <h3 className="font-serif text-2xl sm:text-3xl text-navy-foreground leading-tight">
+                    The World Today
+                  </h3>
+                  <p className="mt-1 text-sm sm:text-base text-navy-foreground/70">
+                    Geopolitics, technology, and the transatlantic agenda
+                  </p>
+                  <div className="mt-8 divide-y divide-navy-foreground/15">
                     {worldTodayItems.map((wt) => {
                       const speakers = extractSpeakers(wt.description);
+                      const speaker = speakers[0];
+                      const role =
+                        speaker?.name === "Jacob Helberg"
+                          ? "Under Secretary for Economic Affairs, US State Department"
+                          : speaker?.name === "Alojzy Nowak"
+                          ? "Rector, University of Warsaw"
+                          : "";
                       return (
-                        <div key={wt.id} className="flex flex-col sm:flex-row sm:gap-6">
-                          <span className="font-mono text-xs text-navy-foreground/70 whitespace-nowrap sm:w-32 shrink-0 mt-0.5">
+                        <div key={wt.id} className="flex flex-col sm:flex-row sm:items-center sm:gap-8 py-6 first:pt-0 last:pb-0">
+                          <span className="font-mono text-xs text-navy-foreground/70 whitespace-nowrap sm:w-28 shrink-0">
                             {wt.time_text}
                           </span>
-                          <div className="mt-1 sm:mt-0">
-                            <h3 className="font-sans text-sm sm:text-base font-semibold text-navy-foreground leading-snug">
-                              {wt.title}
-                            </h3>
-                            {speakers.length > 0 && (
-                              <div className="mt-3 flex flex-wrap gap-x-4 gap-y-3">
-                                {speakers.map((s) => (
-                                  <div key={s.name} className="flex flex-col items-center w-20 sm:w-24">
-                                    {s.img ? (
-                                      <img
-                                        src={s.img}
-                                        alt={s.name}
-                                        loading="lazy"
-                                        className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover ring-1 ring-navy-foreground/20"
-                                      />
-                                    ) : (
-                                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-navy-foreground/10 ring-1 ring-navy-foreground/20 flex items-center justify-center text-sm font-mono text-navy-foreground/70">
-                                        {s.name.split(" ").map((w) => w[0]).slice(0, 2).join("")}
-                                      </div>
-                                    )}
-                                    <span className="mt-1.5 text-[11px] leading-tight text-center text-navy-foreground">
-                                      {s.name}
-                                    </span>
-                                    {s.name === "Alojzy Nowak" && day.label === "Day 1" && (
-                                      <span className="mt-0.5 text-[10px] leading-tight text-center italic text-navy-foreground/70">
-                                        Rector,<br />University of Warsaw
-                                      </span>
-                                    )}
-                                    {s.name === "Jacob Helberg" && (
-                                      <span className="mt-0.5 text-[10px] leading-tight text-center italic text-navy-foreground/70">
-                                        Under Secretary for Economic Affairs, US State Department
-                                      </span>
-                                    )}
-                                  </div>
-                                ))}
-                              </div>
+                          <div className="mt-3 sm:mt-0 flex items-center gap-5 flex-1">
+                            {speaker?.img ? (
+                              <img
+                                src={speaker.img}
+                                alt={speaker.name}
+                                loading="lazy"
+                                className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover ring-1 ring-navy-foreground/20 shrink-0"
+                              />
+                            ) : (
+                              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-navy-foreground/10 ring-1 ring-navy-foreground/20 shrink-0" />
                             )}
+                            <div className="min-w-0">
+                              <h4 className="font-sans text-lg sm:text-xl font-semibold text-navy-foreground leading-snug">
+                                {wt.title}
+                              </h4>
+                              {speaker && (
+                                <p className="mt-1 text-sm sm:text-base font-semibold text-navy-foreground">
+                                  {speaker.name}
+                                </p>
+                              )}
+                              {role && (
+                                <p className="text-xs sm:text-sm italic text-navy-foreground/70 leading-snug">
+                                  {role}
+                                </p>
+                              )}
+                            </div>
                           </div>
                         </div>
                       );
