@@ -73,11 +73,11 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
       <div className="relative pl-6 border-l border-border">
         {items.map((item) => {
           const isWorldTodayFirst = /^pax silica/i.test(item.title);
-          const isWorldTodaySecond = /global economy\s*[–-]\s*new era/i.test(item.title);
+          const isWorldTodaySecond = /^global economy/i.test(item.title);
           if (isWorldTodaySecond) return null;
 
           if (isWorldTodayFirst) {
-            const partner = items.find((it) => /global economy\s*[–-]\s*new era/i.test(it.title));
+            const partner = items.find((it) => /^global economy/i.test(it.title));
             const worldTodayItems = partner ? [item, partner] : [item];
             return (
               <div key={item.id} className="relative pb-8 last:pb-0 group">
