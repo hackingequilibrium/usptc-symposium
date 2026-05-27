@@ -114,16 +114,16 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
                                 {s.name.split(" ").map(w => w[0]).slice(0, 2).join("")}
                               </div>
                             )}
-                            <span className="mt-1.5 text-[11px] leading-tight text-center text-muted-foreground">
+                            <span className={`mt-1.5 text-[11px] leading-tight text-center ${isWorldToday ? "text-navy-foreground" : "text-muted-foreground"}`}>
                               {s.name}
                             </span>
                             {s.name === "Alojzy Nowak" && day.label === "Day 1" && (
-                              <span className="mt-0.5 text-[10px] leading-tight text-center text-muted-foreground/70 italic">
+                              <span className={`mt-0.5 text-[10px] leading-tight text-center italic ${isWorldToday ? "text-navy-foreground/70" : "text-muted-foreground/70"}`}>
                                 Rector,<br />University of Warsaw
                               </span>
                             )}
                             {s.name === "Jacob Helberg" && (
-                              <span className="mt-0.5 text-[10px] leading-tight text-center text-muted-foreground/70 italic">
+                              <span className={`mt-0.5 text-[10px] leading-tight text-center italic ${isWorldToday ? "text-navy-foreground/70" : "text-muted-foreground/70"}`}>
                                 Under Secretary for Economic Affairs, US State Department
                               </span>
                             )}
