@@ -75,20 +75,20 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
           const isWorldToday = /^pax silica/i.test(item.title) || /global economy\s*[–-]\s*new era/i.test(item.title);
           const isWorldTodayFirst = /^pax silica/i.test(item.title);
           return (
-          <div key={item.id} className={`relative pb-8 last:pb-0 group ${isWorldToday ? "pl-4 pr-4 py-4 -ml-4 mb-2 last:mb-0 rounded-md bg-accent-blue/5 border border-accent-blue/20" : ""}`}>
+          <div key={item.id} className={`relative pb-8 last:pb-0 group ${isWorldToday ? `px-5 bg-navy text-navy-foreground ${isWorldTodayFirst ? "pt-5 rounded-t-md" : "pb-5 rounded-b-md"}` : ""}`}>
             <div className="absolute -left-[calc(1.5rem+4.5px)] top-1.5 w-[9px] h-[9px] rounded-full bg-muted-foreground/30 group-hover:bg-accent-blue transition-colors" />
 
             {isWorldTodayFirst && (
-              <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-accent-blue mb-3">
+              <span className="inline-block font-mono text-[11px] tracking-[0.2em] uppercase bg-navy-foreground text-navy px-3 py-1.5 rounded-full mb-4">
                 The World Today
-              </p>
+              </span>
             )}
             <div className="flex flex-col sm:flex-row sm:gap-6">
-              <span className="font-mono text-xs text-muted-foreground whitespace-nowrap sm:w-40 shrink-0 mt-0.5">
+              <span className={`font-mono text-xs whitespace-nowrap sm:w-40 shrink-0 mt-0.5 ${isWorldToday ? "text-navy-foreground/70" : "text-muted-foreground"}`}>
                 {item.time_text}
               </span>
               <div className="mt-1 sm:mt-0">
-                <h3 className="font-sans text-sm sm:text-base font-semibold text-foreground leading-snug">
+                <h3 className={`font-sans text-sm sm:text-base font-semibold leading-snug ${isWorldToday ? "text-navy-foreground" : "text-foreground"}`}>
                   {item.title}
                 </h3>
                 {/parallel event:\s*us[–-]poland space round table/i.test(item.title) && (
@@ -114,16 +114,16 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
                                 {s.name.split(" ").map(w => w[0]).slice(0, 2).join("")}
                               </div>
                             )}
-                            <span className="mt-1.5 text-[11px] leading-tight text-center text-muted-foreground">
+                            <span className={`mt-1.5 text-[11px] leading-tight text-center ${isWorldToday ? "text-navy-foreground" : "text-muted-foreground"}`}>
                               {s.name}
                             </span>
                             {s.name === "Alojzy Nowak" && day.label === "Day 1" && (
-                              <span className="mt-0.5 text-[10px] leading-tight text-center text-muted-foreground/70 italic">
+                              <span className={`mt-0.5 text-[10px] leading-tight text-center italic ${isWorldToday ? "text-navy-foreground/70" : "text-muted-foreground/70"}`}>
                                 Rector,<br />University of Warsaw
                               </span>
                             )}
                             {s.name === "Jacob Helberg" && (
-                              <span className="mt-0.5 text-[10px] leading-tight text-center text-muted-foreground/70 italic">
+                              <span className={`mt-0.5 text-[10px] leading-tight text-center italic ${isWorldToday ? "text-navy-foreground/70" : "text-muted-foreground/70"}`}>
                                 Under Secretary for Economic Affairs, US State Department
                               </span>
                             )}
