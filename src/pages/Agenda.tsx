@@ -83,7 +83,13 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
                 <h3 className="font-sans text-sm sm:text-base font-semibold text-foreground leading-snug">
                   {item.title}
                 </h3>
+                {/parallel event:\s*us[–-]poland space round table/i.test(item.title) && (
+                  <span className="mt-2 inline-block text-xs font-mono tracking-wide uppercase px-2.5 py-1 rounded-sm bg-muted text-muted-foreground border border-border">
+                    By Invitation
+                  </span>
+                )}
                 {(() => {
+                  if (/parallel event:\s*us[–-]poland space round table/i.test(item.title)) return null;
                   const speakers = extractSpeakers(item.description);
                   if (speakers.length > 0) {
                     return (
