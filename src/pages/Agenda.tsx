@@ -75,19 +75,19 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
           const isWorldToday = /^pax silica/i.test(item.title) || /global economy\s*[–-]\s*new era/i.test(item.title);
           const isWorldTodayFirst = /^pax silica/i.test(item.title);
           return (
-          <div key={item.id} className={`relative pb-8 last:pb-0 group ${isWorldToday ? `px-5 bg-navy text-navy-foreground ${isWorldTodayFirst ? "pt-5 rounded-t-md" : "pb-5 rounded-b-md"}` : ""}`}>
+          <div key={item.id} className={`relative last:pb-0 group ${isWorldTodayFirst ? "pb-0" : "pb-8"}`}>
             <div className="absolute -left-[calc(1.5rem+4.5px)] top-1.5 w-[9px] h-[9px] rounded-full bg-muted-foreground/30 group-hover:bg-accent-blue transition-colors" />
 
-            {isWorldTodayFirst && (
-              <span className="inline-block font-mono text-[11px] tracking-[0.2em] uppercase bg-navy-foreground text-navy px-3 py-1.5 rounded-full mb-4">
-                The World Today
-              </span>
-            )}
             <div className="flex flex-col sm:flex-row sm:gap-6">
-              <span className={`font-mono text-xs whitespace-nowrap sm:w-40 shrink-0 mt-0.5 ${isWorldToday ? "text-navy-foreground/70" : "text-muted-foreground"}`}>
+              <span className="font-mono text-xs text-muted-foreground whitespace-nowrap sm:w-40 shrink-0 mt-0.5">
                 {item.time_text}
               </span>
-              <div className="mt-1 sm:mt-0">
+              <div className={`mt-1 sm:mt-0 flex-1 ${isWorldToday ? `bg-navy text-navy-foreground px-5 py-5 ${isWorldTodayFirst ? "rounded-t-md" : "rounded-b-md"}` : ""}`}>
+                {isWorldTodayFirst && (
+                  <span className="inline-block font-mono text-[11px] tracking-[0.2em] uppercase bg-navy-foreground text-navy px-3 py-1.5 rounded-full mb-4">
+                    The World Today
+                  </span>
+                )}
                 <h3 className={`font-sans text-sm sm:text-base font-semibold leading-snug ${isWorldToday ? "text-navy-foreground" : "text-foreground"}`}>
                   {item.title}
                 </h3>
