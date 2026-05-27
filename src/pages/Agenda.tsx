@@ -184,7 +184,8 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
               </div>
             </div>
           </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
