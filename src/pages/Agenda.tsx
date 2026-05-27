@@ -82,13 +82,6 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
             return (
               <div key={item.id} className="relative pb-8 last:pb-0 group">
                 <div className="absolute -left-[calc(1.5rem+4.5px)] top-1.5 w-[9px] h-[9px] rounded-full bg-muted-foreground/30 group-hover:bg-accent-blue transition-colors" />
-                <div className="-ml-6 flex items-center gap-4 mb-6">
-                  <div className="h-px flex-1 bg-border" />
-                  <span className="font-mono text-[11px] tracking-[0.25em] uppercase text-muted-foreground">
-                    Closing Keynotes
-                  </span>
-                  <div className="h-px flex-1 bg-border" />
-                </div>
                 <div className="-ml-6 bg-navy text-navy-foreground rounded-2xl px-8 py-8 sm:px-10 sm:py-10">
                   <h3 className="font-serif text-2xl sm:text-3xl text-navy-foreground leading-tight">
                     The World Today
