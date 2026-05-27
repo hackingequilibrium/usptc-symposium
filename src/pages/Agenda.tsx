@@ -71,10 +71,18 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
       </div>
 
       <div className="relative pl-6 border-l border-border">
-        {items.map((item) => (
-          <div key={item.id} className="relative pb-8 last:pb-0 group">
+        {items.map((item) => {
+          const isWorldToday = /^pax silica/i.test(item.title) || /global economy\s*[–-]\s*new era/i.test(item.title);
+          const isWorldTodayFirst = /^pax silica/i.test(item.title);
+          return (
+          <div key={item.id} className={`relative pb-8 last:pb-0 group ${isWorldToday ? "pl-4 pr-4 py-4 -ml-4 mb-2 last:mb-0 rounded-md bg-accent-blue/5 border border-accent-blue/20" : ""}`}>
             <div className="absolute -left-[calc(1.5rem+4.5px)] top-1.5 w-[9px] h-[9px] rounded-full bg-muted-foreground/30 group-hover:bg-accent-blue transition-colors" />
 
+            {isWorldTodayFirst && (
+              <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-accent-blue mb-3">
+                The World Today
+              </p>
+            )}
             <div className="flex flex-col sm:flex-row sm:gap-6">
               <span className="font-mono text-xs text-muted-foreground whitespace-nowrap sm:w-40 shrink-0 mt-0.5">
                 {item.time_text}
