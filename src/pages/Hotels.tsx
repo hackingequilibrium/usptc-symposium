@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Footer } from "@/components/Footer";
+import { PartnersSection } from "@/components/PartnersSection";
 import usptcFlag from "@/assets/usptc-flag.png";
 import { MapPin, Calendar, Bus, Hotel, Users, CheckCircle } from "lucide-react";
 
@@ -174,6 +175,7 @@ const Hotels = () => {
         </section>
       </div>
 
+      <PartnersSection />
       <Footer />
     </div>
   );
