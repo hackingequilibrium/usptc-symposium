@@ -175,6 +175,7 @@ const Hotels = () => {
         </section>
       </div>
 
+      <PartnersSection />
       <Footer />
     </div>
   );
