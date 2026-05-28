@@ -67,6 +67,14 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
             <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0" />
             <span className="whitespace-pre-line">{day.location}</span>
           </span>
+          <a
+            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(day.location)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-5 text-foreground hover:text-accent-blue transition-colors w-fit"
+          >
+            View on map →
+          </a>
         </div>
       </div>
 
