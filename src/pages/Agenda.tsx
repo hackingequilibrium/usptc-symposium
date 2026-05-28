@@ -331,6 +331,7 @@ const Agenda = () => {
         ))}
       </div>
 
+      <PartnersSection />
       <Footer />
     </div>
   );
