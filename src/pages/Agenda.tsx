@@ -71,7 +71,7 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
             href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(day.location)}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-5 text-foreground hover:text-accent-blue transition-colors w-fit"
+            className="ml-5 text-navy hover:underline w-fit"
           >
             View on map →
           </a>
