@@ -295,6 +295,7 @@ const Partner = () => {
         )}
       </div>
 
+      <PartnersSection />
       <Footer />
     </div>
   );
