@@ -95,7 +95,7 @@ const Hotels = () => {
                     United States
                   </p>
                   <a
-                    href="https://maps.app.goo.gl/wJX5FiCQN6eshiUG6"
+                    href="https://maps.app.goo.gl/L1kwgmdFfgzKKvyz5"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-2 inline-block text-sm text-navy hover:underline"
