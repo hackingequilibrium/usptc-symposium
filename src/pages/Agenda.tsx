@@ -69,7 +69,7 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
           </span>
           <a
             href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(day.location)}`}
-            target="_blank"
+            target="_top"
             rel="noopener noreferrer"
             className="ml-5 text-navy hover:underline w-fit"
           >
