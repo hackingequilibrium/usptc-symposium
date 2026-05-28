@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import linkedinIcon from "@/assets/linkedin-icon.svg";
 import { Footer } from "@/components/Footer";
+import { PartnersSection } from "@/components/PartnersSection";
 import usptcFlag from "@/assets/usptc-flag.png";
 import piotrImg from "@/assets/leaders/piotr-moncarz.png";
 import jerzyImg from "@/assets/leaders/jerzy-orkiszewski.png";
@@ -135,6 +136,7 @@ const Leadership = () => {
           ))}
         </div>
       </div>
+      <PartnersSection />
       <Footer />
     </div>
   );

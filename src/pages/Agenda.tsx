@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Footer } from "@/components/Footer";
+import { PartnersSection } from "@/components/PartnersSection";
 import usptcFlag from "@/assets/usptc-flag.png";
 import { MapPin, Clock } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -330,6 +331,7 @@ const Agenda = () => {
         ))}
       </div>
 
+      <PartnersSection />
       <Footer />
     </div>
   );
