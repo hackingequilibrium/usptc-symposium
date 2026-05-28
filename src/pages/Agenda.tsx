@@ -173,7 +173,7 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
               <div className="mt-1 sm:mt-0">
                 <h3 className="font-sans text-sm sm:text-base font-semibold text-foreground leading-snug">
                   {item.title}
-                  {/genelabs|knowledge graph|space, so what/i.test(item.title) && (
+                  {/genelabs|knowledge graph|space, so what|making sense of modern ai/i.test(item.title) && (
                     <span className="ml-2 inline-block align-middle text-[10px] font-mono tracking-wider uppercase px-1.5 py-0.5 rounded-sm bg-navy text-navy-foreground">
                       Virtual
                     </span>
