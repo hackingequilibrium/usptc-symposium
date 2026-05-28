@@ -67,14 +67,26 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
             <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0" />
             <span className="whitespace-pre-line">{day.location}</span>
           </span>
-          <a
-            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(day.location)}`}
-            target="_top"
-            rel="noopener noreferrer"
-            className="ml-5 text-navy hover:underline w-fit"
-          >
-            View on map →
-          </a>
+          {(() => {
+            const dayMapUrls: Record<number, string> = {
+              0: "https://maps.app.goo.gl/Vz2yvt1SPxA8G2g3A",
+              1: "https://maps.app.goo.gl/SatcHFtxwFMi1dLx7",
+              2: "https://maps.app.goo.gl/HTwUzcFtTYhnTWET7",
+            };
+            const mapUrl =
+              dayMapUrls[index] ??
+              `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(day.location)}`;
+            return (
+              <a
+                href={mapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-5 text-navy hover:underline w-fit"
+              >
+                View on map →
+              </a>
+            );
+          })()}
         </div>
       </div>
 
