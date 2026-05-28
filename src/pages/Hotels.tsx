@@ -94,6 +94,14 @@ const Hotels = () => {
                     Millbrae, CA 94030<br />
                     United States
                   </p>
+                  <a
+                    href="https://maps.app.goo.gl/wJX5FiCQN6eshiUG6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-block text-sm text-navy hover:underline"
+                  >
+                    View on map →
+                  </a>
                 </div>
               </div>
             </div>
