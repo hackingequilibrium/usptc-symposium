@@ -1,0 +1,2 @@
+UPDATE public.speakers SET sort_order = sort_order + 1 WHERE sort_order >= 61;
+INSERT INTO public.speakers (name, role, sort_order, is_active, virtual) VALUES ('Shana Penn', 'Taube Philanthropies', 61, true, false);
