@@ -118,7 +118,9 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
                   <p className="mt-3 flex items-start gap-1.5 text-xs sm:text-sm text-navy-foreground/70">
                     <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0" />
                     <span>
-                      Mackenzie Room, Room 300, 3rd Floor Jen-Hsun Huang Engineering Center, 475 Via Ortega, Stanford, CA 94305
+                      Mackenzie Room, Room 300, 3rd Floor Jen-Hsun Huang Engineering Center
+                      <br />
+                      475 Via Ortega, Stanford, CA 94305
                       {" ("}
                       <a
                         href="https://maps.app.goo.gl/21o25fvBLutQPg6p9"
