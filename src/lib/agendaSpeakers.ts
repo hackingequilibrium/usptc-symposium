@@ -9,7 +9,7 @@ const KNOWN_NAMES: string[] = [
   "Andrzej Bańka","Michał Bańka","Bartosz Bliuj-Stodulski","Agata Braja","Jordan Bramble",
   "Tadeusz Burczyński","Mark Chandler","Jacek Chmielewski","Camille Crittenden",
   "Agnieszka Czechowicz","Andrzej Domański","Krzysztof Dyczkowski","Piotr Dziurdzia",
-  "Hamid Farzaneh","Mary Forrest","Krzysztof Gawkowski","Piotr Goliński","Robert Grey",
+  "Hamid Farzaneh","Mary Forrest","Krzysztof Gawkowski","Piotr Goliński","Shana Penn",
   "Christina Harvey","Arkadiusz Hruszowiec","Magdalena Hryb","Robert Hryniewicz",
   "Adam Januszko","Joanna Jaworek-Korjakowska","Barry Katz","Bogdan Klich","Zhaodan Kong",
   "Damian Kordos","Michal Kosinski","Rafał Kunaszyk","Adam Leszkiewicz","David Loftus",
