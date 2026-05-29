@@ -11,6 +11,7 @@ import Agenda from "./pages/Agenda.tsx";
 import Leadership from "./pages/Leadership.tsx";
 import Partner from "./pages/Partner.tsx";
 import Hotels from "./pages/Hotels.tsx";
+import TheWorldToday from "./pages/TheWorldToday.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
