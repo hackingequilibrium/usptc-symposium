@@ -35,7 +35,7 @@ import hamidImg from "@/assets/speakers/hamid-farzaneh.png";
 import maryImg from "@/assets/speakers/mary-forrest.png";
 import gawkowskiImg from "@/assets/speakers/krzysztof-gawkowski.png";
 import golinskiImg from "@/assets/speakers/piotr-golinski.png";
-import greyImg from "@/assets/speakers/robert-grey.png";
+
 import harveyImg from "@/assets/speakers/christina-harvey.png";
 import hruszowiecImg from "@/assets/speakers/arkadiusz-hruszowiec.png";
 import hrybImg from "@/assets/speakers/magdalena-hryb.png";
@@ -144,7 +144,6 @@ const map: Record<string, string> = {
   "Mary Forrest": maryImg,
   "Krzysztof Gawkowski": gawkowskiImg,
   "Piotr Goliński": golinskiImg,
-  "Robert Grey": greyImg,
   "Christina Harvey": harveyImg,
   "Arkadiusz Hruszowiec": hruszowiecImg,
   "Magdalena Hryb": hrybImg,
