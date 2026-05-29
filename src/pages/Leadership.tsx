@@ -34,7 +34,7 @@ const baseLeaders = [
   { name: "Małgorzata Tomaka", role: "US-Polish Trade Council, Fieldfisher Poland", image: malgorzataTImg, linkedin: "https://www.linkedin.com/in/ma%C5%82gorzata-tomaka/?locale=en" },
   { name: "Mariusz Tomaka", role: "US-Polish Trade Council, Tritem", image: mariuszTImg, linkedin: "https://www.linkedin.com/in/mariusztomaka/" },
   { name: "Agata Braja", role: "PolSV", image: agataImg, linkedin: "" },
-  { name: "Hamid", role: "PolSV", image: null, linkedin: "" },
+  { name: "Hamid", role: "PolSV", image: hamidImg, linkedin: "" },
 ];
 
 const leaders = baseLeaders.map((leader, i) => ({ ...leader, id: i }));
