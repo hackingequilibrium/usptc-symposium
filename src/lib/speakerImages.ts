@@ -144,7 +144,6 @@ const map: Record<string, string> = {
   "Mary Forrest": maryImg,
   "Krzysztof Gawkowski": gawkowskiImg,
   "Piotr Goliński": golinskiImg,
-  "Robert Grey": greyImg,
   "Christina Harvey": harveyImg,
   "Arkadiusz Hruszowiec": hruszowiecImg,
   "Magdalena Hryb": hrybImg,
