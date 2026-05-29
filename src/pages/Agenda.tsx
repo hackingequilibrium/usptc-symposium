@@ -115,6 +115,22 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
                   <p className="mt-1 font-mono text-xs sm:text-sm text-navy-foreground/70">
                     4:30–6:00 PM
                   </p>
+                  <p className="mt-3 flex items-start gap-1.5 text-xs sm:text-sm text-navy-foreground/70">
+                    <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0" />
+                    <span>
+                      Mackenzie Room, Room 300, 3rd Floor Jen-Hsun Huang Engineering Center, 475 Via Ortega, Stanford, CA 94305
+                      {" ("}
+                      <a
+                        href="https://maps.app.goo.gl/21o25fvBLutQPg6p9"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-navy-foreground underline hover:no-underline"
+                      >
+                        View on map →
+                      </a>
+                      {")"}
+                    </span>
+                  </p>
                   <div className="mt-8 divide-y divide-navy-foreground/15">
                     {worldTodayItems.map((wt) => {
                       const speakers = extractSpeakers(wt.description);
