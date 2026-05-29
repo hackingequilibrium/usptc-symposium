@@ -230,7 +230,7 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
                   ) : null;
                 })()}
                 {/welcome reception|pre-registration/i.test(item.title) && (
-                  <div className="mt-2 flex flex-wrap gap-2">
+                  <div className="mt-2">
                     <a
                       href="https://luma.com/k825a6yl"
                       target="_blank"
@@ -238,14 +238,6 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
                       className="inline-block text-xs px-2.5 py-1 rounded-sm border border-border text-foreground hover:bg-navy hover:text-navy-foreground hover:border-navy transition-colors"
                     >
                       RSVP on Luma →
-                    </a>
-                    <a
-                      href="https://maps.app.goo.gl/KCHJYkgMXEFqkvEw8"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block text-xs px-2.5 py-1 rounded-sm border border-border text-foreground hover:bg-navy hover:text-navy-foreground hover:border-navy transition-colors"
-                    >
-                      View on Map →
                     </a>
                   </div>
                 )}
