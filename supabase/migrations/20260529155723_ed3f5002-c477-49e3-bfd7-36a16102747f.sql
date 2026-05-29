@@ -1,0 +1,1 @@
+UPDATE public.partners SET url = 'https://businessinmalopolska.pl/en' WHERE name = 'Małopolska Region';
