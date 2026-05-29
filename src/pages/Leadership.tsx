@@ -16,13 +16,12 @@ import alicjaImg from "@/assets/leaders/alicja-orkiszewski.webp";
 import annaTImg from "@/assets/leaders/anna-timofiejczuk.webp";
 import malgorzataTImg from "@/assets/leaders/malgorzata-tomaka.png";
 import mariuszTImg from "@/assets/leaders/mariusz-tomaka.png";
+import agataImg from "@/assets/leaders/agata-braja.png";
 
 
 const baseLeaders = [
   { name: "Piotr Moncarz", role: "USPTC General Chair", image: piotrImg, linkedin: "https://www.linkedin.com/in/piotr-d-moncarz-ph-d-p-e-nae-8989a41/" },
   { name: "Jerzy Orkiszewski", role: "USPTC Co-Chair", image: jerzyImg, linkedin: "https://www.linkedin.com/in/jerzy-orkiszewski-b062b68/" },
-  { name: "Agata Braja", role: "PolSV", image: null, linkedin: "" },
-  { name: "Hamid", role: "PolSV", image: null, linkedin: "" },
   { name: "Michał Bańka", role: "Warsaw University of Technology", image: michalBImg, linkedin: "https://www.linkedin.com/in/michalbanka/" },
   { name: "Jacek Chmielewski", role: "PolSV, Auburn University, Cracow University of Technology", image: jacekImg, linkedin: "#" },
   { name: "Patrick Consorti", role: "PolSV", image: patrickImg, linkedin: "https://www.linkedin.com/in/patrickconsorti/" },
@@ -33,6 +32,8 @@ const baseLeaders = [
   { name: "Anna Timofiejczuk", role: "PolSV, Silesian University of Technology", image: annaTImg, linkedin: "https://www.linkedin.com/in/anna-timofiejczuk-3a5a9a244/" },
   { name: "Małgorzata Tomaka", role: "US-Polish Trade Council, Fieldfisher Poland", image: malgorzataTImg, linkedin: "https://www.linkedin.com/in/ma%C5%82gorzata-tomaka/?locale=en" },
   { name: "Mariusz Tomaka", role: "US-Polish Trade Council, Tritem", image: mariuszTImg, linkedin: "https://www.linkedin.com/in/mariusztomaka/" },
+  { name: "Agata Braja", role: "PolSV", image: agataImg, linkedin: "" },
+  { name: "Hamid", role: "PolSV", image: null, linkedin: "" },
 ];
 
 const leaders = baseLeaders.map((leader, i) => ({ ...leader, id: i }));
