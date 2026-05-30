@@ -104,6 +104,7 @@ import andrzejNowakImg from "@/assets/speakers/andrzej-nowak.png";
 import tonyRiccoImg from "@/assets/speakers/tony-ricco.png";
 import townsendImg from "@/assets/speakers/john-townsend.jpg";
 import shanaPennImg from "@/assets/speakers/shana-penn.png";
+import robertGreyImg from "@/assets/speakers/robert-grey.png";
 
 const map: Record<string, string> = {
   "Victoria Coleman": victoriaImg,
