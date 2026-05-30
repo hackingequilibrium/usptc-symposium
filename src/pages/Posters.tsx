@@ -182,11 +182,11 @@ const PosterCard = ({ poster, index }: { poster: Poster; index: number }) => {
           <h3 className="font-serif text-lg sm:text-xl text-foreground leading-snug text-balance">
             {poster.title}
           </h3>
-          <p className="mt-2 text-sm text-foreground/80">
+          <p className="mt-2 text-base text-foreground/80">
             {poster.authors.join(", ")}
           </p>
           {poster.institution && (
-            <p className="mt-1 text-sm italic text-muted-foreground">
+            <p className="mt-1 text-base italic text-muted-foreground">
               {poster.institution}
             </p>
           )}
