@@ -278,6 +278,12 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
                     >
                       PPTX
                     </a>
+                    <Link
+                      to="/posters"
+                      className="text-xs px-2.5 py-1 rounded-sm border border-border text-foreground hover:bg-navy hover:text-navy-foreground hover:border-navy transition-colors"
+                    >
+                      View All Posters →
+                    </Link>
                   </div>
                 )}
                 {item.bullets.length > 0 && (
