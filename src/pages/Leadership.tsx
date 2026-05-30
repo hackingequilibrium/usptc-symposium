@@ -20,6 +20,7 @@ import agataImg from "@/assets/leaders/agata-braja.png";
 import hamidImg from "@/assets/leaders/hamid.png";
 import barbaraImg from "@/assets/leaders/barbara-kawalec.png";
 import andrzejNowakImg from "@/assets/speakers/andrzej-nowak.png";
+import krzysztofDyczkowskiImg from "@/assets/speakers/krzysztof-dyczkowski.png";
 
 
 const baseLeaders = [
