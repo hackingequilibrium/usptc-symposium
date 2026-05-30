@@ -23,6 +23,7 @@ import andrzejNowakImg from "@/assets/speakers/andrzej-nowak.png";
 import krzysztofDyczkowskiImg from "@/assets/speakers/krzysztof-dyczkowski.png";
 import juliaKawalecImg from "@/assets/leadership/julia-kawalec.png";
 import maryForrestImg from "@/assets/leadership/mary-forrest.png";
+import marekKozikowskiImg from "@/assets/leadership/marek-kozikowski.png";
 
 
 const baseLeaders = [
@@ -45,6 +46,7 @@ const baseLeaders = [
   { name: "Krzysztof Dyczkowski", role: "Adam Mickiewicz University", image: krzysztofDyczkowskiImg, linkedin: "" },
   { name: "Julia Kawalec", role: "USPTC", image: juliaKawalecImg, linkedin: "" },
   { name: "Mary Forrest", role: "USPTC, PolSV", image: maryForrestImg, linkedin: "" },
+  { name: "Marek Kozikowski", role: "XGS Energy", image: marekKozikowskiImg, linkedin: "" },
 ];
 
 const leaders = baseLeaders.map((leader, i) => ({ ...leader, id: i }));
