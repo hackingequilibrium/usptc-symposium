@@ -8,7 +8,7 @@ import piotrImg from "@/assets/leaders/piotr-moncarz.png";
 import jerzyImg from "@/assets/leaders/jerzy-orkiszewski.png";
 import michalBImg from "@/assets/leaders/michal-banka.png";
 import jacekImg from "@/assets/leaders/jacek-chmielewski.png";
-import patrickImg from "@/assets/leaders/patrick-consorti.png";
+
 import magdalenaHImg from "@/assets/leaders/magdalena-hryb.jpg";
 import kamilaImg from "@/assets/leaders/kamila-krawic.png";
 import janMImg from "@/assets/leaders/jan-murlewski.png";
