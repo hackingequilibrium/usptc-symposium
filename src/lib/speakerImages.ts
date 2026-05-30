@@ -218,6 +218,7 @@ const map: Record<string, string> = {
   "John Townsend": townsendImg,
   "Shana Penn": shanaPennImg,
   "Robert Grey": robertGreyImg,
+  "Wiktoria Fabian": wiktoriaFabianImg,
 };
 
 export const speakerFallbackImage = (name: string): string | null => map[name] ?? null;
