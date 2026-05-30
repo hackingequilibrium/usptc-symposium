@@ -71,9 +71,12 @@ const POSTERS: Poster[] = [
   {
     title:
       "Poland–US Relations in the Area of LNG Supply: Trade Dynamics, the Role of Infrastructure, and Physical and Cyber Challenges",
-    authors: ["Wiktoria Fabian", "Mariusz Ruszel", "Adam Szurlej"],
-    institution:
-      "Ignacy Łukasiewicz Institute for Energy Policy; Rzeszow University of Technology, Faculty of Management; AGH University of Kraków, Faculty of Energy and Fuels, Faculty of Drilling, Oil and Gas",
+    authors: [
+      "Wiktoria Fabian — Ignacy Łukasiewicz Institute for Energy Policy / AGH University of Kraków, Faculty of Energy and Fuels",
+      "Mariusz Ruszel, PhD, DSc, Assoc. Prof. — Rzeszow University of Technology, Faculty of Management",
+      "Adam Szurlej, PhD, DSc, Eng. Assoc. Prof. — AGH University of Kraków, Faculty of Drilling, Oil and Gas",
+    ],
+    institution: "",
   },
   {
     title: "Digital Twin Technologies in Medical Applications",
