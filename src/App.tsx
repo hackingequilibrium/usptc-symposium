@@ -12,6 +12,7 @@ import Leadership from "./pages/Leadership.tsx";
 import Partner from "./pages/Partner.tsx";
 import Hotels from "./pages/Hotels.tsx";
 import TheWorldToday from "./pages/TheWorldToday.tsx";
+import Posters from "./pages/Posters.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/partner" element={<Partner />} />
           <Route path="/hotels" element={<Hotels />} />
           <Route path="/theworldtoday" element={<TheWorldToday />} />
+          <Route path="/posters" element={<Posters />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
