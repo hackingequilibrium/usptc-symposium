@@ -260,27 +260,29 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
                   </div>
                 )}
                 {/^poster session/i.test(item.title) && (
-                  <div className="mt-2 flex flex-wrap items-center gap-2">
-                    <span className="text-xs text-muted-foreground font-mono">A1 poster template:</span>
-                    <a
-                      href="/poster-template-a1.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs px-2.5 py-1 rounded-sm border border-border text-foreground hover:bg-navy hover:text-navy-foreground hover:border-navy transition-colors"
-                    >
-                      PDF
-                    </a>
-                    <a
-                      href="/poster-template-a1.pptx"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs px-2.5 py-1 rounded-sm border border-border text-foreground hover:bg-navy hover:text-navy-foreground hover:border-navy transition-colors"
-                    >
-                      PPTX
-                    </a>
+                  <div className="mt-2 space-y-2">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="text-xs text-muted-foreground font-mono">A1 poster template:</span>
+                      <a
+                        href="/poster-template-a1.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs px-2.5 py-1 rounded-sm border border-border text-foreground hover:bg-navy hover:text-navy-foreground hover:border-navy transition-colors"
+                      >
+                        PDF
+                      </a>
+                      <a
+                        href="/poster-template-a1.pptx"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs px-2.5 py-1 rounded-sm border border-border text-foreground hover:bg-navy hover:text-navy-foreground hover:border-navy transition-colors"
+                      >
+                        PPTX
+                      </a>
+                    </div>
                     <Link
                       to="/posters"
-                      className="text-xs px-2.5 py-1 rounded-sm border border-border text-foreground hover:bg-navy hover:text-navy-foreground hover:border-navy transition-colors"
+                      className="inline-block text-xs px-2.5 py-1 rounded-sm border border-border text-foreground hover:bg-navy hover:text-navy-foreground hover:border-navy transition-colors"
                     >
                       View All Posters →
                     </Link>
