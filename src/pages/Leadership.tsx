@@ -31,7 +31,6 @@ const baseLeaders = [
   { name: "Jerzy Orkiszewski", role: "USPTC Co-Chair", image: jerzyImg, linkedin: "https://www.linkedin.com/in/jerzy-orkiszewski-b062b68/" },
   { name: "Michał Bańka", role: "Warsaw University of Technology", image: michalBImg, linkedin: "https://www.linkedin.com/in/michalbanka/" },
   { name: "Jacek Chmielewski", role: "PolSV, Auburn University, Cracow University of Technology", image: jacekImg, linkedin: "#" },
-  { name: "Patrick Consorti", role: "PolSV", image: patrickImg, linkedin: "https://www.linkedin.com/in/patrickconsorti/" },
   { name: "Magdalena Hryb", role: "Poznan University of Technology", image: magdalenaHImg, linkedin: "https://www.linkedin.com/in/magdalena-hryb-33b70155/" },
   { name: "Kamila Krawic", role: "PolSV", image: kamilaImg, linkedin: "" },
   { name: "Jan Murlewski", role: "PolSV", image: janMImg, linkedin: "https://www.linkedin.com/in/murlewski/" },
