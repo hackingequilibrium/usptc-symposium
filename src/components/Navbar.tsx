@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 const navItems = [
   { label: "Focus Areas", href: "#why" },
-  { label: "Speakers", href: "#speakers" },
-  { label: "Venues & Agenda", href: "#venues" },
+  { label: "Speakers", href: "/speakers" },
+  { label: "Agenda", href: "/agenda" },
   { label: "Partners", href: "#partners" },
-  { label: "Leadership", href: "#leadership" },
+  { label: "Leadership", href: "/leadership" },
   { label: "Register", href: "#register" },
 ];
 
