@@ -70,7 +70,7 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
               {day.location}
               {(() => {
                 const dayMapUrls: Record<number, string> = {
-                  0: "https://maps.app.goo.gl/KCHJYkgMXEFqkvEw8",
+                  0: "https://maps.app.goo.gl/K9kLPee94KK78vK8A",
                   1: "https://maps.app.goo.gl/SatcHFtxwFMi1dLx7",
                   2: "https://maps.app.goo.gl/SatcHFtxwFMi1dLx7",
                 };
