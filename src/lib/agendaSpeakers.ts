@@ -54,6 +54,7 @@ export function extractSpeakers(text: string | null | undefined): AgendaSpeaker[
   if (!text) return [];
   // Strip parenthetical affiliations and "Moderator:" labels
   const cleaned = text
+    .replace(/\\n/g, "\n")
     .replace(/\([^)]*\)/g, " ")
     .replace(/Moderator\s*:/gi, " ")
     .replace(/\(confirmed\)/gi, " ");
