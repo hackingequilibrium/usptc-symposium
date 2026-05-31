@@ -15,6 +15,14 @@ export const Footer = () => {
             </button>
           </ContactDialog>
           <a
+            href="/USPTC_RODO.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-xs text-muted-foreground tracking-wide hover:text-foreground transition-colors"
+          >
+            Privacy Policy / Polityka prywatności (RODO)
+          </a>
+          <a
             href="https://www.linkedin.com/company/us-polish-trade-council/"
             target="_blank"
             rel="noopener noreferrer"
