@@ -69,13 +69,13 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
             <span className="whitespace-pre-line">
               {day.location}
               {(() => {
-                const dayMapUrls: Record<number, string> = {
-                  0: "https://maps.app.goo.gl/K9kLPee94KK78vK8A",
-                  1: "https://maps.app.goo.gl/SatcHFtxwFMi1dLx7",
-                  2: "https://maps.app.goo.gl/SatcHFtxwFMi1dLx7",
+                const dayMapUrls: Record<string, string> = {
+                  "Day 1": "https://maps.app.goo.gl/K9kLPee94KK78vK8A",
+                  "Day 2": "https://maps.app.goo.gl/SatcHFtxwFMi1dLx7",
+                  "Day 3": "https://maps.app.goo.gl/SatcHFtxwFMi1dLx7",
                 };
                 const mapUrl =
-                  dayMapUrls[index] ??
+                  dayMapUrls[day.label] ??
                   `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(day.location)}`;
                 return (
                   <>
