@@ -220,6 +220,7 @@ const map: Record<string, string> = {
   "Shana Penn": shanaPennImg,
   "Robert Grey": robertGreyImg,
   "Wiktoria Fabian": wiktoriaFabianImg,
+  "Andrzej Czulak": czulakImg,
 };
 
 export const speakerFallbackImage = (name: string): string | null => map[name] ?? null;
