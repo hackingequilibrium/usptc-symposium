@@ -19,6 +19,7 @@ import thisIsItLogo from "@/assets/partners/this-is-it.png";
 import lotLogo from "@/assets/partners/lot.png";
 import marcinKulasekLogo from "@/assets/partners/marcin-kulasek.png";
 import paihLogo from "@/assets/partners/paih.png";
+import sbsLogo from "@/assets/partners/sbs.jpeg";
 
 const fallbackLogos: Record<string, string> = {
   "Polsko Amerykańska Rada Współpracy": usptcLogo,
@@ -40,6 +41,7 @@ const fallbackLogos: Record<string, string> = {
   "PLL LOT": lotLogo,
   "Marcin Kulasek – Minister of Science and Higher Education, Republic of Poland": marcinKulasekLogo,
   "Polish Investment and Trade Agency (PAIH)": paihLogo,
+  "SBS Technology Poland": sbsLogo,
 };
 
 interface Partner {
