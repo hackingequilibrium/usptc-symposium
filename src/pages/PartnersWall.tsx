@@ -80,6 +80,13 @@ const PartnersWall = () => {
             : isSmall
               ? "h-10 md:h-12"
               : "h-16 md:h-20";
+          if (isMinistry) {
+            return (
+              <div key={p.id} className="flex items-center justify-center w-40 md:w-48 h-28 md:h-32">
+                <img src={logo} alt="" className="max-h-full max-w-full object-contain" />
+              </div>
+            );
+          }
           return (
             <img
               key={p.id}
