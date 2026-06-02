@@ -73,12 +73,19 @@ const PartnersWall = () => {
         {ordered.map((p) => {
           const logo = p.logo_url ?? fallbackLogos[p.name] ?? null;
           if (!logo) return null;
+          const isMinistry = /minist|embassy|consulate|national centre for research|polish investment and trade|polish agency for enterprise|space research centre/i.test(p.name);
+          const isSmall = p.name === "Fieldfisher" || p.name === "Tritem";
+          const sizeClass = isMinistry
+            ? "h-24 md:h-28"
+            : isSmall
+              ? "h-10 md:h-12"
+              : "h-16 md:h-20";
           return (
             <img
               key={p.id}
               src={logo}
               alt=""
-              className="h-16 md:h-20 w-auto object-contain"
+              className={`${sizeClass} w-auto object-contain`}
             />
           );
         })}
