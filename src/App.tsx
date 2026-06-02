@@ -13,6 +13,7 @@ import Partner from "./pages/Partner.tsx";
 import Hotels from "./pages/Hotels.tsx";
 import TheWorldToday from "./pages/TheWorldToday.tsx";
 import Posters from "./pages/Posters.tsx";
+import PartnersWall from "./pages/PartnersWall.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/hotels" element={<Hotels />} />
           <Route path="/theworldtoday" element={<TheWorldToday />} />
           <Route path="/posters" element={<Posters />} />
+          <Route path="/partners-wall" element={<PartnersWall />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
