@@ -1,0 +1,1 @@
+UPDATE public.agenda_items SET description = 'Sunil Maulik (AZCA), Hamid Farzaneh' WHERE id = 'e0dc1945-adee-4664-a296-dcaef59b9ba6';
