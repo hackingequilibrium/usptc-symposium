@@ -21,13 +21,13 @@ const TheWorldToday = () => {
     supabase
       .from("agenda_items")
       .select("id,title,description,sort_order")
-      .or("title.ilike.pax silica%,title.ilike.global economy%")
+      .or("title.ilike.ai's impact on modern warfare%,title.ilike.global economy%")
       .order("sort_order")
       .then(({ data }) => setItems((data ?? []) as AgendaItem[]));
   }, []);
 
   const ordered = [...items].sort((a, b) => {
-    const rank = (t: string) => (/^pax silica/i.test(t) ? 0 : 1);
+    const rank = (t: string) => (/ai's impact on modern warfare/i.test(t) ? 0 : 1);
     return rank(a.title) - rank(b.title);
   });
 
@@ -67,8 +67,8 @@ const TheWorldToday = () => {
               const speakers = extractSpeakers(wt.description);
               const speaker = speakers[0];
               const role =
-                speaker?.name === "Jacob Helberg"
-                  ? "Under Secretary for Economic Affairs, US State Department"
+                speaker?.name === "Christopher C. Miller"
+                  ? "Acting Secretary of Defense, U.S. Department of War"
                   : speaker?.name === "Alojzy Nowak"
                   ? "Rector, University of Warsaw"
                   : "";

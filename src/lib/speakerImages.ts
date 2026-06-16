@@ -98,7 +98,7 @@ import devenishImg from "@/assets/speakers/william-devenish.png";
 import shapiroImg from "@/assets/speakers/julie-shapiro.png";
 import rossiterImg from "@/assets/speakers/dione-rossiter.png";
 import robinsonImg from "@/assets/speakers/stephen-robinson.jpg";
-import helbergImg from "@/assets/speakers/jacob-helberg.png";
+
 import amandaImg from "@/assets/speakers/amanda-saravia-butler.png";
 import andrzejNowakImg from "@/assets/speakers/andrzej-nowak.png";
 import tonyRiccoImg from "@/assets/speakers/tony-ricco.png";
@@ -213,7 +213,7 @@ const map: Record<string, string> = {
   "Dione Rossiter": rossiterImg,
   "Stephen K. Robinson": robinsonImg,
   "Stephen Robinson": robinsonImg,
-  "Jacob Helberg": helbergImg,
+  "Christopher C. Miller": "https://yovjwewgwlkgyetytobm.supabase.co/storage/v1/object/public/cms-assets/speakers%2Fchristopher-miller-2.avif",
   "Amanda Saravia-Butler": amandaImg,
   "Andrzej Nowak": andrzejNowakImg,
   "Tony Ricco": tonyRiccoImg,

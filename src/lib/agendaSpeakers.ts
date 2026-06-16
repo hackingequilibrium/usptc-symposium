@@ -23,7 +23,7 @@ const KNOWN_NAMES: string[] = [
   "Janet Wojcicki","Lydia Zablotska","Michal Wyrebkowski","Tomasz Zawistowski",
   "Zbysław Ziemacki","Artur Chmielewski","Wojciech Wojakowski","Snehal Antani",
   "Paul Bryzek","Alojzy Nowak","Marek Gzik","Hubert Adamczyk","Scott Tilley",
-  "Sanjeev Khagram","William Devenish","Julie Shapiro","Dione Rossiter","Jacob Helberg",
+  "Sanjeev Khagram","William Devenish","Julie Shapiro","Dione Rossiter","Christopher C. Miller",
   "Amanda Saravia-Butler","Andrzej Nowak","Andrzej Czulak","Tony Ricco","John Townsend",
   "Joe Finberg",
 ];

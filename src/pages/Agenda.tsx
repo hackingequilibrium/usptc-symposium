@@ -99,7 +99,7 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
 
       <div className="relative pl-6 border-l border-border">
         {items.map((item) => {
-          const isWorldTodayFirst = /^pax silica/i.test(item.title);
+          const isWorldTodayFirst = /ai's impact on modern warfare/i.test(item.title);
           const isWorldTodaySecond = /^global economy/i.test(item.title);
           if (isWorldTodaySecond) return null;
 
@@ -138,8 +138,8 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
                       const speakers = extractSpeakers(wt.description);
                       const speaker = speakers[0];
                       const role =
-                        speaker?.name === "Jacob Helberg"
-                          ? "Under Secretary for Economic Affairs, US State Department"
+                        speaker?.name === "Christopher C. Miller"
+                          ? "Acting Secretary of Defense, U.S. Department of War"
                           : speaker?.name === "Alojzy Nowak"
                           ? "Rector, University of Warsaw"
                           : "";
@@ -231,9 +231,9 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
                                 Rector,<br />University of Warsaw
                               </span>
                             )}
-                            {s.name === "Jacob Helberg" && (
+                            {s.name === "Christopher C. Miller" && (
                               <span className="mt-0.5 text-[10px] leading-tight text-center text-muted-foreground/70 italic">
-                                Under Secretary for Economic Affairs, US State Department
+                                Acting Secretary of Defense,<br />U.S. Department of War
                               </span>
                             )}
                           </div>
