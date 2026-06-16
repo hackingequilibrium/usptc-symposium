@@ -98,7 +98,7 @@ import devenishImg from "@/assets/speakers/william-devenish.png";
 import shapiroImg from "@/assets/speakers/julie-shapiro.png";
 import rossiterImg from "@/assets/speakers/dione-rossiter.png";
 import robinsonImg from "@/assets/speakers/stephen-robinson.jpg";
-import helbergImg from "@/assets/speakers/jacob-helberg.png";
+
 import amandaImg from "@/assets/speakers/amanda-saravia-butler.png";
 import andrzejNowakImg from "@/assets/speakers/andrzej-nowak.png";
 import tonyRiccoImg from "@/assets/speakers/tony-ricco.png";
