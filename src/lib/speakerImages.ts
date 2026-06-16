@@ -213,7 +213,7 @@ const map: Record<string, string> = {
   "Dione Rossiter": rossiterImg,
   "Stephen K. Robinson": robinsonImg,
   "Stephen Robinson": robinsonImg,
-  "Jacob Helberg": helbergImg,
+  "Christopher C. Miller": "https://yovjwewgwlkgyetytobm.supabase.co/storage/v1/object/public/cms-assets/speakers%2Fchristopher-miller-2.avif",
   "Amanda Saravia-Butler": amandaImg,
   "Andrzej Nowak": andrzejNowakImg,
   "Tony Ricco": tonyRiccoImg,
