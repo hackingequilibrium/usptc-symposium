@@ -25,7 +25,7 @@ const KNOWN_NAMES: string[] = [
   "Paul Bryzek","Alojzy Nowak","Marek Gzik","Hubert Adamczyk","Scott Tilley",
   "Sanjeev Khagram","William Devenish","Julie Shapiro","Dione Rossiter","Christopher C. Miller",
   "Amanda Saravia-Butler","Andrzej Nowak","Andrzej Czulak","Tony Ricco","John Townsend",
-  "Joe Finberg",
+  "Joe Finberg","Marek Kozikowski",
 ];
 
 const norm = (s: string) =>
