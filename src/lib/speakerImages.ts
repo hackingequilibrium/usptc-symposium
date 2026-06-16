@@ -223,6 +223,7 @@ const map: Record<string, string> = {
   "Wiktoria Fabian": wiktoriaFabianImg,
   "Andrzej Czulak": czulakImg,
   "Joe Finberg": finbergImg,
+  "Marek Kozikowski": "https://yovjwewgwlkgyetytobm.supabase.co/storage/v1/object/public/cms-assets/speakers%2Fmarek-kozikowski.png",
 };
 
 export const speakerFallbackImage = (name: string): string | null => map[name] ?? null;
