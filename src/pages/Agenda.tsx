@@ -231,9 +231,9 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
                                 Rector,<br />University of Warsaw
                               </span>
                             )}
-                            {s.name === "Jacob Helberg" && (
+                            {s.name === "Christopher C. Miller" && (
                               <span className="mt-0.5 text-[10px] leading-tight text-center text-muted-foreground/70 italic">
-                                Under Secretary for Economic Affairs, US State Department
+                                Acting Secretary of Defense,<br />U.S. Department of War
                               </span>
                             )}
                           </div>
