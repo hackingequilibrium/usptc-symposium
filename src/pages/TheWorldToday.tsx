@@ -21,13 +21,13 @@ const TheWorldToday = () => {
     supabase
       .from("agenda_items")
       .select("id,title,description,sort_order")
-      .or("title.ilike.pax silica%,title.ilike.global economy%")
+      .or("title.ilike.ai's impact on modern warfare%,title.ilike.global economy%")
       .order("sort_order")
       .then(({ data }) => setItems((data ?? []) as AgendaItem[]));
   }, []);
 
   const ordered = [...items].sort((a, b) => {
-    const rank = (t: string) => (/^pax silica/i.test(t) ? 0 : 1);
+    const rank = (t: string) => (/ai's impact on modern warfare/i.test(t) ? 0 : 1);
     return rank(a.title) - rank(b.title);
   });
 
