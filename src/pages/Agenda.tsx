@@ -139,7 +139,7 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
                       const speaker = speakers[0];
                       const role =
                         speaker?.name === "Christopher C. Miller"
-                          ? "Acting Secretary of Defense, U.S. Department of War"
+                          ? "Former Acting Secretary of Defense, U.S. Department of War"
                           : speaker?.name === "Alojzy Nowak"
                           ? "Rector, University of Warsaw"
                           : "";
@@ -233,7 +233,7 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
                             )}
                             {s.name === "Christopher C. Miller" && (
                               <span className="mt-0.5 text-[10px] leading-tight text-center text-muted-foreground/70 italic">
-                                Acting Secretary of Defense,<br />U.S. Department of War
+                                Former Acting Secretary of Defense,<br />U.S. Department of War
                               </span>
                             )}
                           </div>

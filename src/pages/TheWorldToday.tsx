@@ -68,7 +68,7 @@ const TheWorldToday = () => {
               const speaker = speakers[0];
               const role =
                 speaker?.name === "Christopher C. Miller"
-                  ? "Acting Secretary of Defense, U.S. Department of War"
+                  ? "Former Acting Secretary of Defense, U.S. Department of War"
                   : speaker?.name === "Alojzy Nowak"
                   ? "Rector, University of Warsaw"
                   : "";
