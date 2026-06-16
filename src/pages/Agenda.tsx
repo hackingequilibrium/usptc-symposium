@@ -99,7 +99,7 @@ const DaySection = ({ day, items, index }: { day: Day; items: AgendaItem[]; inde
 
       <div className="relative pl-6 border-l border-border">
         {items.map((item) => {
-          const isWorldTodayFirst = /^pax silica/i.test(item.title);
+          const isWorldTodayFirst = /ai's impact on modern warfare/i.test(item.title);
           const isWorldTodaySecond = /^global economy/i.test(item.title);
           if (isWorldTodaySecond) return null;
 
