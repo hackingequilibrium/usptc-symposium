@@ -67,8 +67,8 @@ const TheWorldToday = () => {
               const speakers = extractSpeakers(wt.description);
               const speaker = speakers[0];
               const role =
-                speaker?.name === "Jacob Helberg"
-                  ? "Under Secretary for Economic Affairs, US State Department"
+                speaker?.name === "Christopher C. Miller"
+                  ? "Acting Secretary of Defense, U.S. Department of War"
                   : speaker?.name === "Alojzy Nowak"
                   ? "Rector, University of Warsaw"
                   : "";
